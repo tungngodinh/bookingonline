@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HomeController.h
 //  Booking
 //
 //  Created by Cau Ca on 11/26/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HomeController : UIViewController
 
 @end
-
