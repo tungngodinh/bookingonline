@@ -6,6 +6,10 @@
 //  Copyright © 2017 Cau Ca. All rights reserved.
 //
 
+@import SlideMenuControllerOC;
+@import FontAwesomeKit;
+@import GoogleMaps;
+
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,10 +20,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setupSlideMenu];
+    [self setupGoogleMapSDK];
     return YES;
 }
 
+- (void)setupGoogleMapSDK {
+    [GMSServices provideAPIKey:@"AIzaSyANc7efkSb78I2Rl_Ak-OvMf3iv0EcNP1c"];
+}
+
+- (void)setupSlideMenu {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    FAKIonIcons *icon = [FAKIonIcons naviconIconWithSize:40];
+    UIViewController *leftMenu = [storyboard instantiateViewControllerWithIdentifier:@"LeftMenuController"];
+    UINavigationController *home = storyboard.instantiateInitialViewController;
+    [home.topViewController addLeftBarButtonWithImage:[icon imageWithSize:CGSizeMake(30, 30)]];
+    SlideMenuController *slide = [[SlideMenuController alloc] initWithMainViewController:home leftMenuViewController:leftMenu];
+    self.window.rootViewController = slide;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
