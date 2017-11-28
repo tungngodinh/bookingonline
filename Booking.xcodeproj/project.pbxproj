@@ -14,6 +14,8 @@
 		532721041FCA694300A7D494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 532721031FCA694300A7D494 /* main.m */; };
 		53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E201FCA6D59002D1EA7 /* HomeController.m */; };
 		53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E231FCA6D97002D1EA7 /* LeftMenuController.m */; };
+		538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F19791FCD967200BDB2DA /* MakerInfoView.m */; };
+		538F197D1FCDA4E600BDB2DA /* ScheduceTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F197C1FCDA4E600BDB2DA /* ScheduceTimeController.m */; };
 		68CD9267C9E3574E0243F903 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,10 @@
 		53769E201FCA6D59002D1EA7 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		53769E221FCA6D97002D1EA7 /* LeftMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuController.h; sourceTree = "<group>"; };
 		53769E231FCA6D97002D1EA7 /* LeftMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftMenuController.m; sourceTree = "<group>"; };
+		538F19781FCD967200BDB2DA /* MakerInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerInfoView.h; sourceTree = "<group>"; };
+		538F19791FCD967200BDB2DA /* MakerInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerInfoView.m; sourceTree = "<group>"; };
+		538F197B1FCDA4E600BDB2DA /* ScheduceTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduceTimeController.h; sourceTree = "<group>"; };
+		538F197C1FCDA4E600BDB2DA /* ScheduceTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduceTimeController.m; sourceTree = "<group>"; };
 		BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +83,7 @@
 		532720F31FCA694300A7D494 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				538F19771FCD964400BDB2DA /* Views */,
 				53769E1E1FCA6D15002D1EA7 /* Controllers */,
 				532720F41FCA694300A7D494 /* AppDelegate.h */,
 				532720F51FCA694300A7D494 /* AppDelegate.m */,
@@ -96,8 +103,19 @@
 				53769E201FCA6D59002D1EA7 /* HomeController.m */,
 				53769E221FCA6D97002D1EA7 /* LeftMenuController.h */,
 				53769E231FCA6D97002D1EA7 /* LeftMenuController.m */,
+				538F197B1FCDA4E600BDB2DA /* ScheduceTimeController.h */,
+				538F197C1FCDA4E600BDB2DA /* ScheduceTimeController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		538F19771FCD964400BDB2DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				538F19781FCD967200BDB2DA /* MakerInfoView.h */,
+				538F19791FCD967200BDB2DA /* MakerInfoView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		681B746E58F33580337505D6 /* Frameworks */ = {
@@ -259,7 +277,9 @@
 			files = (
 				53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
+				538F197D1FCDA4E600BDB2DA /* ScheduceTimeController.m in Sources */,
 				532720F61FCA694300A7D494 /* AppDelegate.m in Sources */,
+				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 @import SlideMenuControllerOC;
 @import FontAwesomeKit;
 @import GoogleMaps;
+@import GooglePlaces;
 
 #import "AppDelegate.h"
 
@@ -26,7 +27,9 @@
 }
 
 - (void)setupGoogleMapSDK {
-    [GMSServices provideAPIKey:@"AIzaSyANc7efkSb78I2Rl_Ak-OvMf3iv0EcNP1c"];
+    static NSString *ggAPIKey = @"AIzaSyANc7efkSb78I2Rl_Ak-OvMf3iv0EcNP1c";
+    [GMSServices provideAPIKey:ggAPIKey];
+    [GMSPlacesClient provideAPIKey:ggAPIKey];
 }
 
 - (void)setupSlideMenu {
@@ -36,6 +39,8 @@
     UINavigationController *home = storyboard.instantiateInitialViewController;
     [home.topViewController addLeftBarButtonWithImage:[icon imageWithSize:CGSizeMake(30, 30)]];
     SlideMenuController *slide = [[SlideMenuController alloc] initWithMainViewController:home leftMenuViewController:leftMenu];
+    slide.option.panFromBezel = NO;
+    
     self.window.rootViewController = slide;
 }
 
