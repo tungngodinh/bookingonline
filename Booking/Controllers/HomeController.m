@@ -47,18 +47,11 @@
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
     _myLocation = newLocation;
-    if (_myLocation.coordinate.longitude == newLocation.coordinate.longitude && _myLocation.coordinate.latitude == newLocation.coordinate.latitude)
-    {
-        if (getLocation)
-        {
-            [self loadView];
-        }
-        getLocation = true ;
+    if (!getLocation)
+    { [self loadView];
+        getLocation = TRUE ;
     }
-    else
-    {
-        [self loadView];
-    }
+   
     
     
 }
@@ -67,7 +60,7 @@
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
                                                             longitude:_myLocation.coordinate.longitude
-                                                                 zoom:6];
+                                                                 zoom:10];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     self.view = mapView;
