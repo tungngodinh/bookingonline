@@ -60,7 +60,7 @@
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
                                                             longitude:_myLocation.coordinate.longitude
-                                                                 zoom:10];
+                                                                 zoom:15];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     self.view = mapView;
@@ -68,13 +68,13 @@
     
     // Creates a marker in the center of the map.
     NSArray* arrMarkerData = @[
-                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.037218 longitude:105.815297]},
-                             @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.020003 longitude:105.808728]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.037218 longitude:105.815297]},
+                             @{@"title": @"ATM Techcombank", @"snippet": @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.020003 longitude:105.808728]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"101 Láng Hạ, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]},
                                ];
     /*1. ATM Techcombank
      349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam
@@ -127,7 +127,7 @@
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker {
     MakerInfoView *view = [[MakerInfoView alloc] initWithFrame:CGRectMake(0, 0, 200, 140)];
-    [view setName:marker.title address:@"14 Pháo Đài Láng" peopleCount:2 timeWait:10];
+    [view setName:marker.title address:marker.snippet peopleCount:2 timeWait:10];
     CGSize size = [view systemLayoutSizeFittingSize:CGSizeMake(220, 220) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
     CGRect frame = CGRectMake(0, 0, size.width, size.height);
     view.frame = frame;
