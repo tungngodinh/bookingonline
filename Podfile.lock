@@ -27,8 +27,10 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.5.0):
     - GoogleMaps/Base (= 2.5.0)
+  - HCSStarRatingView (1.5)
   - IQKeyboardManager (5.0.6)
   - Masonry (1.1.0)
+  - NSString+Color (1.1.4)
   - SlideMenuControllerOC (1.0.2)
   - STPopup (1.8.3)
   - SVProgressHUD (2.2.2)
@@ -38,8 +40,10 @@ DEPENDENCIES:
   - FontAwesomeKit (from `https://github.com/PrideChung/FontAwesomeKit.git`)
   - GoogleMaps
   - GooglePlaces
+  - HCSStarRatingView (~> 1.5)
   - IQKeyboardManager
   - Masonry
+  - NSString+Color
   - SlideMenuControllerOC
   - STPopup
   - SVProgressHUD
@@ -58,13 +62,15 @@ SPEC CHECKSUMS:
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
+  HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  NSString+Color: ea9e33d498d634adf56766c606c9128822094473
   SlideMenuControllerOC: e5b1cdc1ff4e1c0eca58c0a64967ab25d95bf85f
   STPopup: da1167250a01584af7bcccb898653185f223ec46
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
   XLForm: 04110197c12187dd28a6c7295d3d8b95f4fdb4de
 
-PODFILE CHECKSUM: 39fbfe0fda14e154f83e72f62758176f8b0813e2
+PODFILE CHECKSUM: a755dd30ea5f8d1117f6cd8c175f404d0676bdde
 
 COCOAPODS: 1.3.1

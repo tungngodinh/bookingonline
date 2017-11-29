@@ -34,9 +34,10 @@
 
 - (void)setupSlideMenu {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    FAKIonIcons *icon = [FAKIonIcons naviconIconWithSize:40];
+    
     UIViewController *leftMenu = [storyboard instantiateViewControllerWithIdentifier:@"LeftMenuController"];
     UINavigationController *home = storyboard.instantiateInitialViewController;
+    FAKIonIcons *icon = [FAKIonIcons naviconIconWithSize:30];
     [home.topViewController addLeftBarButtonWithImage:[icon imageWithSize:CGSizeMake(30, 30)]];
     SlideMenuController *slide = [[SlideMenuController alloc] initWithMainViewController:home leftMenuViewController:leftMenu];
     slide.option.panFromBezel = NO;

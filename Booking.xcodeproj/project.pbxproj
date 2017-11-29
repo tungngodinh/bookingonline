@@ -15,7 +15,8 @@
 		532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21341FCEB3D500210506 /* MyFeedBackVC.m */; };
 		532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21361FCEB3D500210506 /* MyticketVC.m */; };
 		532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21371FCEB3D500210506 /* ScheduceTimeController.m */; };
-		53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E201FCA6D59002D1EA7 /* HomeController.m */; };
+		532B213E1FCEBB4700210506 /* ServiceProvidersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B213D1FCEBB4700210506 /* ServiceProvidersController.m */; };
+		53769E211FCA6D59002D1EA7 /* MapsDirectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E201FCA6D59002D1EA7 /* MapsDirectionController.m */; };
 		53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E231FCA6D97002D1EA7 /* LeftMenuController.m */; };
 		538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F19791FCD967200BDB2DA /* MakerInfoView.m */; };
 		68CD9267C9E3574E0243F903 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */; };
@@ -38,8 +39,10 @@
 		532B21361FCEB3D500210506 /* MyticketVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyticketVC.m; sourceTree = "<group>"; };
 		532B21371FCEB3D500210506 /* ScheduceTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduceTimeController.m; sourceTree = "<group>"; };
 		532B21381FCEB3D500210506 /* ScheduceTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduceTimeController.h; sourceTree = "<group>"; };
-		53769E1F1FCA6D59002D1EA7 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
-		53769E201FCA6D59002D1EA7 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		532B213C1FCEBB4700210506 /* ServiceProvidersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceProvidersController.h; sourceTree = "<group>"; };
+		532B213D1FCEBB4700210506 /* ServiceProvidersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceProvidersController.m; sourceTree = "<group>"; };
+		53769E1F1FCA6D59002D1EA7 /* MapsDirectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsDirectionController.h; sourceTree = "<group>"; };
+		53769E201FCA6D59002D1EA7 /* MapsDirectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsDirectionController.m; sourceTree = "<group>"; };
 		53769E221FCA6D97002D1EA7 /* LeftMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuController.h; sourceTree = "<group>"; };
 		53769E231FCA6D97002D1EA7 /* LeftMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftMenuController.m; sourceTree = "<group>"; };
 		538F19781FCD967200BDB2DA /* MakerInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerInfoView.h; sourceTree = "<group>"; };
@@ -111,10 +114,12 @@
 				532B21361FCEB3D500210506 /* MyticketVC.m */,
 				532B21381FCEB3D500210506 /* ScheduceTimeController.h */,
 				532B21371FCEB3D500210506 /* ScheduceTimeController.m */,
-				53769E1F1FCA6D59002D1EA7 /* HomeController.h */,
-				53769E201FCA6D59002D1EA7 /* HomeController.m */,
+				53769E1F1FCA6D59002D1EA7 /* MapsDirectionController.h */,
+				53769E201FCA6D59002D1EA7 /* MapsDirectionController.m */,
 				53769E221FCA6D97002D1EA7 /* LeftMenuController.h */,
 				53769E231FCA6D97002D1EA7 /* LeftMenuController.m */,
+				532B213C1FCEBB4700210506 /* ServiceProvidersController.h */,
+				532B213D1FCEBB4700210506 /* ServiceProvidersController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,7 +231,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		400A51CBC47CDA1ECCC6A081 /* [CP] Copy Pods Resources */ = {
@@ -256,8 +261,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Booking/Pods-Booking-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/HCSStarRatingView/HCSStarRatingView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NSString+Color/NSString_Color.framework",
 				"${BUILT_PRODUCTS_DIR}/STPopup/STPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerOC/SlideMenuControllerOC.framework",
@@ -266,8 +273,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCSStarRatingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSString_Color.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerOC.framework",
@@ -285,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */,
+				53769E211FCA6D59002D1EA7 /* MapsDirectionController.m in Sources */,
 				532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */,
 				532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
@@ -293,6 +302,7 @@
 				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
 				532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */,
+				532B213E1FCEBB4700210506 /* ServiceProvidersController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

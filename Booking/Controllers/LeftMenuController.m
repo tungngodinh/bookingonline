@@ -9,6 +9,7 @@
 @import FontAwesomeKit;
 @import Masonry;
 @import SlideMenuControllerOC;
+@import NSString_Color;
 
 #import "MyFeedBackVC.h"
 #import "LeftMenuController.h"
@@ -46,52 +47,78 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        
+        cell.textLabel.font = [UIFont systemFontOfSize:16];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     FAKIonIcons *icon;
     switch (indexPath.row) {
         case 0: {
             cell.textLabel.text = @"Service Providers";
-            icon = [FAKIonIcons iosPeopleOutlineIconWithSize:30];
+            icon = [FAKIonIcons iosPeopleOutlineIconWithSize:20];
             break;
         }
         case 1: {
             cell.textLabel.text = @"Maps Direction";
-            icon = [FAKIonIcons iosNavigateOutlineIconWithSize:30];
+            icon = [FAKIonIcons iosNavigateOutlineIconWithSize:20];
             break;
         }
         case 2: {
             cell.textLabel.text = @"My Favourite";
-            icon = [FAKIonIcons androidFavoriteOutlineIconWithSize:30];
+            icon = [FAKIonIcons androidFavoriteOutlineIconWithSize:20];
             break;
         }
         case 3: {
             cell.textLabel.text = @"Recent Visits";
-            icon = [FAKIonIcons compassIconWithSize:30];
+            icon = [FAKIonIcons compassIconWithSize:20];
             break;
         }
         case 4: {
             cell.textLabel.text = @"FeedBack";
-            icon = [FAKIonIcons iosMicIconWithSize:30];
+            icon = [FAKIonIcons iosMicIconWithSize:20];
             break;
         }
         default:
             break;
     }
-    cell.imageView.image = [icon imageWithSize:CGSizeMake(30, 30)];
+    cell.imageView.image = [icon imageWithSize:CGSizeMake(20, 20)];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *storyboardid = @"";
+    
     switch (indexPath.row) {
+        case 0: {
+            
+            break;
+        }
+            
+        case 1: {
+            storyboardid = @"NavMapsDirectionController";
+            break;
+        }
+        case 2: {
+            
+            break;
+        }
+        case 3: {
+            
+            break;
+        }
         case 4: {
-            MyFeedBackVC *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MyFeedBackVC"];
-           //controller.ticketId = 1;
-            [self.slideMenuController.mainViewController showViewController:controller sender:nil];
+            storyboardid = @"NavMyFeedBackVC";
             break;
         }
         default:
             break;
     }
+    
+    UINavigationController *nav = storyboardid.length > 0 ? [self.storyboard instantiateViewControllerWithIdentifier:storyboardid] : self.storyboard.instantiateInitialViewController;
+    FAKIonIcons *icon = [FAKIonIcons naviconIconWithSize:30];
+    
+    [nav.topViewController addLeftBarButtonWithImage:[icon imageWithSize:CGSizeMake(30, 30)]];
+    [self.slideMenuController setMainViewController:nav];
     [self.slideMenuController closeLeft];
 }
 

@@ -12,11 +12,11 @@
 @import FontAwesomeKit;
 
 #import <CoreLocation/CoreLocation.h>
-#import "HomeController.h"
+#import "MapsDirectionController.h"
 #import "MakerInfoView.h"
 #import "ScheduceTimeController.h"
 
-@interface HomeController ()<GMSMapViewDelegate, CLLocationManagerDelegate>{
+@interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate>{
     CLLocationManager *locationManager;
 @protected BOOL getLocation ;
 }
@@ -24,7 +24,7 @@
 @property CLLocation *myLocation;
 @end
 
-@implementation HomeController
+@implementation MapsDirectionController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,7 +57,7 @@
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
                                                             longitude:_myLocation.coordinate.longitude
-                                                                 zoom:15];
+                                                                 zoom:12];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     self.view = mapView;

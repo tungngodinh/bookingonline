@@ -1,5 +1,5 @@
 //
-//  HomeController.h
+//  MapsDirectionController.h
 //  Booking
 //
 //  Created by Cau Ca on 11/26/17.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeController : UIViewController
+@interface MapsDirectionController : UIViewController
 
 @end

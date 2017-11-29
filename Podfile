@@ -19,5 +19,6 @@ target 'Booking' do
   pod 'HCSStarRatingView', '~> 1.5'
   pod 'FontAwesomeKit', :git => 'https://github.com/PrideChung/FontAwesomeKit.git'
   pod 'Masonry'
-
+  pod 'NSString+Color'
+  
 end
