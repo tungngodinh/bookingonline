@@ -64,7 +64,7 @@
             break;
         }
         case 2: {
-            cell.textLabel.text = @"My Favourite";
+            cell.textLabel.text = @"My Tickets";
             icon = [FAKIonIcons androidFavoriteOutlineIconWithSize:20];
             break;
         }
