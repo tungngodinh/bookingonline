@@ -9,6 +9,7 @@
 @import FontAwesomeKit;
 @import Masonry;
 
+#import "MyFeedBackVC.h"
 #import "LeftMenuController.h"
 
 @interface LeftMenuController ()<UITableViewDataSource, UITableViewDelegate>
@@ -37,7 +38,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,6 +68,11 @@
                 icon = [FAKIonIcons compassIconWithSize:30];
                 break;
             }
+        case 4: {
+            cell.textLabel.text = @"FeedBack";
+            icon = [FAKIonIcons iosMicIconWithSize:30];
+            break;
+        }
         default:
             break;
     }
@@ -74,7 +80,24 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+        case 4:
+        {
+            MyFeedBackVC *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MyFeedBackVC"];
+           //controller.ticketId = 1;
+            [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
+    
+}
 
 /*
 #pragma mark - Navigation
