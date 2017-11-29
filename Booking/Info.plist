@@ -41,6 +41,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Program requires GPS to track your booking</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Program requires GPS to track your booking</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Program requires GPS to track your booking</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Program requires GPS to track your booking</string>
+    <key>LSApplicationQueriesSchemes</key>
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>googlechromes</string>
