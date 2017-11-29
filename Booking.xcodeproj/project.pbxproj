@@ -12,10 +12,11 @@
 		532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532720FD1FCA694300A7D494 /* Assets.xcassets */; };
 		532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532720FF1FCA694300A7D494 /* LaunchScreen.storyboard */; };
 		532721041FCA694300A7D494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 532721031FCA694300A7D494 /* main.m */; };
+		532B21301FCEA41200210506 /* ScheduceTime in Resources */ = {isa = PBXBuildFile; fileRef = 532B212F1FCEA41200210506 /* ScheduceTime */; };
+		532B21321FCEA44500210506 /* FeedBack in Resources */ = {isa = PBXBuildFile; fileRef = 532B21311FCEA44400210506 /* FeedBack */; };
 		53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E201FCA6D59002D1EA7 /* HomeController.m */; };
 		53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E231FCA6D97002D1EA7 /* LeftMenuController.m */; };
 		538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F19791FCD967200BDB2DA /* MakerInfoView.m */; };
-		538F197D1FCDA4E600BDB2DA /* ScheduceTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F197C1FCDA4E600BDB2DA /* ScheduceTimeController.m */; };
 		68CD9267C9E3574E0243F903 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,14 +31,14 @@
 		532721001FCA694300A7D494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		532721021FCA694300A7D494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		532721031FCA694300A7D494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		532B212F1FCEA41200210506 /* ScheduceTime */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ScheduceTime; sourceTree = "<group>"; };
+		532B21311FCEA44400210506 /* FeedBack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FeedBack; sourceTree = "<group>"; };
 		53769E1F1FCA6D59002D1EA7 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		53769E201FCA6D59002D1EA7 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		53769E221FCA6D97002D1EA7 /* LeftMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuController.h; sourceTree = "<group>"; };
 		53769E231FCA6D97002D1EA7 /* LeftMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftMenuController.m; sourceTree = "<group>"; };
 		538F19781FCD967200BDB2DA /* MakerInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerInfoView.h; sourceTree = "<group>"; };
 		538F19791FCD967200BDB2DA /* MakerInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerInfoView.m; sourceTree = "<group>"; };
-		538F197B1FCDA4E600BDB2DA /* ScheduceTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduceTimeController.h; sourceTree = "<group>"; };
-		538F197C1FCDA4E600BDB2DA /* ScheduceTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduceTimeController.m; sourceTree = "<group>"; };
 		BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,12 +100,12 @@
 		53769E1E1FCA6D15002D1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				532B21311FCEA44400210506 /* FeedBack */,
+				532B212F1FCEA41200210506 /* ScheduceTime */,
 				53769E1F1FCA6D59002D1EA7 /* HomeController.h */,
 				53769E201FCA6D59002D1EA7 /* HomeController.m */,
 				53769E221FCA6D97002D1EA7 /* LeftMenuController.h */,
 				53769E231FCA6D97002D1EA7 /* LeftMenuController.m */,
-				538F197B1FCDA4E600BDB2DA /* ScheduceTimeController.h */,
-				538F197C1FCDA4E600BDB2DA /* ScheduceTimeController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,7 +161,7 @@
 				TargetAttributes = {
 					532720F01FCA694300A7D494 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -193,8 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
+				532B21321FCEA44500210506 /* FeedBack in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
 				532720FC1FCA694300A7D494 /* Main.storyboard in Resources */,
+				532B21301FCEA41200210506 /* ScheduceTime in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +280,6 @@
 			files = (
 				53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
-				538F197D1FCDA4E600BDB2DA /* ScheduceTimeController.m in Sources */,
 				532720F61FCA694300A7D494 /* AppDelegate.m in Sources */,
 				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
@@ -417,14 +419,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nguyen Tuan Ngoc (6E4YPX6ZHR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9DJF83983R;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = V32J3679XT;
 				INFOPLIST_FILE = Booking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapdirection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "747c08a1-7b09-47c8-a0c6-28e783fc0ae5";
+				PROVISIONING_PROFILE_SPECIFIER = "CG Map Provisioning Profiles";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -436,8 +438,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nguyen Tuan Ngoc (6E4YPX6ZHR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9DJF83983R;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Booking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapdirection;
