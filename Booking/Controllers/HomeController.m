@@ -38,9 +38,9 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError: %@", error);
-    UIAlertView *errorAlert = [[UIAlertView alloc]
-                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [errorAlert show];
+
+    UIAlertController *allert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to Get Your Location" preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:allert animated:YES completion:nil];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
@@ -51,9 +51,6 @@
     { [self loadView];
         getLocation = TRUE ;
     }
-   
-    
-    
 }
 - (void)loadView {
     // Create a GMSCameraPosition that tells the map to display the
