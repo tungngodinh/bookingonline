@@ -16,6 +16,7 @@ target 'Booking' do
   pod 'SlideMenuControllerOC'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'HCSStarRatingView', '~> 1.5'
   pod 'FontAwesomeKit', :git => 'https://github.com/PrideChung/FontAwesomeKit.git'
   pod 'Masonry'
 
