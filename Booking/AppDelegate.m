@@ -24,6 +24,7 @@
     [self setupSlideMenu];
     [self setupGoogleMapSDK];
     return YES;
+    //NSLog : Test Push
 }
 
 - (void)setupGoogleMapSDK {
