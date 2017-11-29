@@ -15,12 +15,16 @@
 #import "MapsDirectionController.h"
 #import "MakerInfoView.h"
 #import "ScheduceTimeController.h"
+#import "LocationModel.h"
+#import "RecentLocationsView.h"
 
-@interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate>{
+@interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate>{
     CLLocationManager *locationManager;
-@protected BOOL getLocation ;
-}
+@protected BOOL getLocation;
 
+}
+@property (nonatomic, strong) NSArray<LocationModel *> *locationsData;
+@property (nonatomic, strong) GMSMapView *mapView;
 @property CLLocation *myLocation;
 @end
 
@@ -51,75 +55,67 @@
     { [self loadView];
         getLocation = TRUE ;
     }
+    [self showRecentLocations];
 }
+
 - (void)loadView {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
                                                             longitude:_myLocation.coordinate.longitude
                                                                  zoom:12];
-    GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView.myLocationEnabled = YES;
-    self.view = mapView;
-    mapView.delegate = self;
-    
-    // Creates a marker in the center of the map.
-    NSArray* arrMarkerData = @[
-                               @{@"title": @"ATM Techcombank", @"snippet": @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.037218 longitude:105.815297]},
-                             @{@"title": @"ATM Techcombank", @"snippet": @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.020003 longitude:105.808728]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]},
-                               @{@"title": @"ATM Techcombank", @"snippet": @"101 Láng Hạ, Hà Nội, Việt Nam", @"position": [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]},
-                               ];
-    /*1. ATM Techcombank
-     349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam
-     21.037218, 105.815297
-     
-     2. ATM Techcombank
-     91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam
-     21.020003, 105.808728
-     
-     3. Techcombank
-     52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội, Việt Nam
-     21.024392, 105.810554
-     
-     4. Techcombank
-     21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam
-     21.023014, 105.800926
-     
-     5. Techcombank Huỳnh Thúc Kháng
-     21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam
-     21.017801, 105.812087
-     
-     6. Techcombank
-     62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam
-     21.008594, 105.804751
-     
-     7. Techcombank
-     101 Láng Hạ, Hà Nội, Việt Nam
-     21.014116, 105.813553
-
-     */
+    self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    self.mapView.myLocationEnabled = YES;
+    self.view = self.mapView;
+    self.mapView.delegate = self;
     
     FAKIonIcons *icon = [FAKIonIcons iosLocationIconWithSize:40];
     [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor greenColor]}];
-    for (NSDictionary* dict in arrMarkerData)
-    {
+    for (LocationModel* lc in self.locationsData) {
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
-        marker.position = [(CLLocation*)dict[@"position"] coordinate];
-        marker.title = dict[@"title"];
-        marker.snippet = dict[@"snippet"];
+        marker.position = [lc.position coordinate];
+        marker.title = lc.title;
+        marker.snippet = lc.snippet;
         marker.appearAnimation = kGMSMarkerAnimationPop;
-        marker.map = mapView;
+        marker.map = self.mapView;
     }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (LocationModel *)estimateRecentLocations {
+    double distance = DBL_MAX;
+    LocationModel *location;
+    for (LocationModel *lc in self.locationsData) {
+        double newdistance = [_myLocation distanceFromLocation:lc.position];
+        if (distance > newdistance) {
+            distance = newdistance;
+            location = lc;
+        }
+    }
+    return location;
+}
+
+- (void)showRecentLocations {
+    CGFloat width = self.view.frame.size.width * 0.8;
+    RecentLocationsView *view = [[RecentLocationsView alloc] initWithFrame:CGRectMake(0, 0, width, 300)];
+    LocationModel *location = [self estimateRecentLocations];
+    [view setSnippet:location.snippet phone:@"19001900" distance:[_myLocation distanceFromLocation:location.position] / 1000 estimateWidth:width];
+    CGFloat x = (self.view.frame.size.width - width) / 2;
+    CGFloat y = self.view.frame.size.height - view.frame.size.height - 5;
+    view.frame = CGRectMake(x, y, view.frame.size.width, view.frame.size.height);
+    __weak typeof(self) weakSelf = self;
+    view.viewTappedBlock = ^{
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:location.position.coordinate.latitude
+                                                                longitude:location.position.coordinate.longitude
+                                                                     zoom:15];
+        [weakSelf.mapView setCamera:camera];
+    };
+    [self.mapView addSubview:view];
 }
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker {
@@ -134,6 +130,19 @@
     controller.ticketId = 1;
     [self.navigationController showViewController:controller sender:nil];
     
+}
+
+- (NSArray<LocationModel *> *)locationsData {
+    if (!_locationsData) {
+        _locationsData = @[[LocationModel locationWith: @"ATM Techcombank" snippet: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc] initWithLatitude:21.037218 longitude:105.815297]],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc] initWithLatitude:21.020003 longitude:105.808728]],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554]],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554]],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"101 Láng Hạ, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]]];
+    }
+    return _locationsData;
 }
 
 /*
