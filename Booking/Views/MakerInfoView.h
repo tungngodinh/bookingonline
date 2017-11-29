@@ -10,6 +10,10 @@
 
 @interface MakerInfoView : UIView
 
-- (void)setName:(NSString *)name address:(NSString *)address peopleCount:(NSInteger)count timeWait:(NSInteger)time;
+- (void)setName:(NSString *)name
+        address:(NSString *)address
+    peopleCount:(NSInteger)count
+       timeWait:(NSInteger)time
+       distance:(double)distance;
 
 @end

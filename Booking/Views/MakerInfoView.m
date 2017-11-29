@@ -19,6 +19,8 @@
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIImageView *countImageView;
 @property (nonatomic, strong) UIImageView *timeImageView;
+@property (nonatomic, strong) UILabel *distanceLabel;
+@property (nonatomic, strong) UIImageView *distanceImageView;
 @property (nonatomic, strong) UIButton *takeTiketButton;
 
 @end
@@ -29,20 +31,24 @@
     self = [super initWithFrame:frame];
     _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _addressLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _distanceLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _countLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _timeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _takeTiketButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    _distanceImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     _countImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     _timeImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     
     
     [self addSubview:_nameLabel];
     [self addSubview:_addressLabel];
+    [self addSubview:_distanceLabel];
     [self addSubview:_countLabel];
     [self addSubview:_timeLabel];
     [self addSubview:_takeTiketButton];
     [self addSubview:_countImageView];
     [self addSubview:_timeImageView];
+    [self addSubview:_distanceImageView];
     
     self.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1];
     self.layer.cornerRadius = 5;
@@ -69,15 +75,35 @@
         make.trailing.equalTo(self.mas_trailing);
     }];
     
-    FAKIonIcons *icon = [FAKIonIcons iosPeopleOutlineIconWithSize:15];
+    
+    FAKIonIcons *icon = [FAKIonIcons modelSIconWithSize:15];
+    [icon setAttributes:@{NSForegroundColorAttributeName: [UIColor greenColor]}];
+    _distanceImageView.contentMode = UIViewContentModeScaleAspectFit;
+    _distanceImageView.image = [icon imageWithSize:CGSizeMake(15, 15)];
+    [_distanceImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(15);
+        make.height.mas_equalTo(15);
+        make.leading.equalTo(_nameLabel.mas_leading);
+        make.top.equalTo(_addressLabel.mas_bottom).offset(8);
+    }];
+    
+    _distanceLabel.textColor = [UIColor greenColor];
+    _distanceLabel.font = [UIFont systemFontOfSize:13];
+    [_distanceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(_distanceImageView.mas_trailing).offset(5);
+        make.centerY.equalTo(_distanceImageView.mas_centerY);
+        make.trailing.equalTo(self.mas_trailingMargin);
+    }];
+    
+    icon = [FAKIonIcons iosPeopleOutlineIconWithSize:15];
     [icon setAttributes:@{NSForegroundColorAttributeName: [UIColor greenColor]}];
     _countImageView.contentMode = UIViewContentModeScaleAspectFit;
     _countImageView.image = [icon imageWithSize:CGSizeMake(15, 15)];
     [_countImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(15);
         make.height.mas_equalTo(15);
-        make.leading.equalTo(_nameLabel.mas_leading);
-        make.top.equalTo(_addressLabel.mas_bottom).offset(8);
+        make.leading.equalTo(_distanceImageView.mas_leading);
+        make.top.equalTo(_distanceImageView.mas_bottom).offset(5);
     }];
     
     _countLabel.textColor = [UIColor greenColor];
@@ -122,11 +148,19 @@
     return self;
 }
 
-- (void)setName:(NSString *)name address:(NSString *)address peopleCount:(NSInteger)count timeWait:(NSInteger)minute {
+- (void)setName:(NSString *)name
+        address:(NSString *)address
+    peopleCount:(NSInteger)count
+       timeWait:(NSInteger)minute
+       distance:(double)distance{
     _nameLabel.text = name;
     _addressLabel.text = address;
     _countLabel.text = [NSString stringWithFormat:@"%ld people", count];
     _timeLabel.text = [NSString stringWithFormat:@"~ %ld minute wait", minute];
+    _distanceLabel.text = [NSString stringWithFormat:@"About ~ %0.00f km", distance];
+    CGSize size = [self systemLayoutSizeFittingSize:CGSizeMake(220, 220) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
+    CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, size.width, size.height);
+    self.frame = frame;
 }
 
 /*

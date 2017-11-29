@@ -124,10 +124,8 @@
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker {
     MakerInfoView *view = [[MakerInfoView alloc] initWithFrame:CGRectMake(0, 0, 200, 140)];
-    [view setName:marker.title address:marker.snippet peopleCount:2 timeWait:10];
-    CGSize size = [view systemLayoutSizeFittingSize:CGSizeMake(220, 220) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
-    CGRect frame = CGRectMake(0, 0, size.width, size.height);
-    view.frame = frame;
+    double distance = [_myLocation distanceFromLocation:[[CLLocation alloc] initWithLatitude:marker.position.latitude longitude:marker.position.longitude]];
+    [view setName:marker.title address:marker.snippet peopleCount:2 timeWait:10 distance:distance / 1000];
     return view;
 }
 
@@ -135,8 +133,8 @@
     ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
     controller.ticketId = 1;
     [self.navigationController showViewController:controller sender:nil];
+    
 }
-
 
 /*
  #pragma mark - Navigation
