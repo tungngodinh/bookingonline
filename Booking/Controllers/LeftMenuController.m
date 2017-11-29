@@ -8,8 +8,9 @@
 
 @import FontAwesomeKit;
 @import Masonry;
+@import SlideMenuControllerOC;
 
-#import "FeedBack/MyFeedBackVC.h"
+#import "MyFeedBackVC.h"
 #import "LeftMenuController.h"
 
 @interface LeftMenuController ()<UITableViewDataSource, UITableViewDelegate>
@@ -48,26 +49,26 @@
     }
     FAKIonIcons *icon;
     switch (indexPath.row) {
-            case 0: {
-                cell.textLabel.text = @"Service Providers";
-                icon = [FAKIonIcons iosPeopleOutlineIconWithSize:30];
-                break;
-            }
-            case 1: {
-                cell.textLabel.text = @"Maps Direction";
-                icon = [FAKIonIcons iosNavigateOutlineIconWithSize:30];
-                break;
-            }
-            case 2: {
-                cell.textLabel.text = @"My Favourite";
-                icon = [FAKIonIcons androidFavoriteOutlineIconWithSize:30];
-                break;
-            }
-            case 3: {
-                cell.textLabel.text = @"Recent Visits";
-                icon = [FAKIonIcons compassIconWithSize:30];
-                break;
-            }
+        case 0: {
+            cell.textLabel.text = @"Service Providers";
+            icon = [FAKIonIcons iosPeopleOutlineIconWithSize:30];
+            break;
+        }
+        case 1: {
+            cell.textLabel.text = @"Maps Direction";
+            icon = [FAKIonIcons iosNavigateOutlineIconWithSize:30];
+            break;
+        }
+        case 2: {
+            cell.textLabel.text = @"My Favourite";
+            icon = [FAKIonIcons androidFavoriteOutlineIconWithSize:30];
+            break;
+        }
+        case 3: {
+            cell.textLabel.text = @"Recent Visits";
+            icon = [FAKIonIcons compassIconWithSize:30];
+            break;
+        }
         case 4: {
             cell.textLabel.text = @"FeedBack";
             icon = [FAKIonIcons iosMicIconWithSize:30];
@@ -80,23 +81,18 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
-        case 0:
-            
-            break;
-        case 4:
-        {
+        case 4: {
             MyFeedBackVC *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MyFeedBackVC"];
            //controller.ticketId = 1;
-            [self.navigationController pushViewController:controller animated:YES];
+            [self.slideMenuController.mainViewController showViewController:controller sender:nil];
             break;
         }
         default:
             break;
     }
-    
+    [self.slideMenuController closeLeft];
 }
 
 /*

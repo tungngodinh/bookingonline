@@ -12,8 +12,9 @@
 		532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532720FD1FCA694300A7D494 /* Assets.xcassets */; };
 		532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532720FF1FCA694300A7D494 /* LaunchScreen.storyboard */; };
 		532721041FCA694300A7D494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 532721031FCA694300A7D494 /* main.m */; };
-		532B21301FCEA41200210506 /* ScheduceTime in Resources */ = {isa = PBXBuildFile; fileRef = 532B212F1FCEA41200210506 /* ScheduceTime */; };
-		532B21321FCEA44500210506 /* FeedBack in Resources */ = {isa = PBXBuildFile; fileRef = 532B21311FCEA44400210506 /* FeedBack */; };
+		532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21341FCEB3D500210506 /* MyFeedBackVC.m */; };
+		532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21361FCEB3D500210506 /* MyticketVC.m */; };
+		532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21371FCEB3D500210506 /* ScheduceTimeController.m */; };
 		53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E201FCA6D59002D1EA7 /* HomeController.m */; };
 		53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E231FCA6D97002D1EA7 /* LeftMenuController.m */; };
 		538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F19791FCD967200BDB2DA /* MakerInfoView.m */; };
@@ -31,8 +32,12 @@
 		532721001FCA694300A7D494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		532721021FCA694300A7D494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		532721031FCA694300A7D494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		532B212F1FCEA41200210506 /* ScheduceTime */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ScheduceTime; sourceTree = "<group>"; };
-		532B21311FCEA44400210506 /* FeedBack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FeedBack; sourceTree = "<group>"; };
+		532B21331FCEB3D400210506 /* MyFeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFeedBackVC.h; sourceTree = "<group>"; };
+		532B21341FCEB3D500210506 /* MyFeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFeedBackVC.m; sourceTree = "<group>"; };
+		532B21351FCEB3D500210506 /* MyticketVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyticketVC.h; sourceTree = "<group>"; };
+		532B21361FCEB3D500210506 /* MyticketVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyticketVC.m; sourceTree = "<group>"; };
+		532B21371FCEB3D500210506 /* ScheduceTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduceTimeController.m; sourceTree = "<group>"; };
+		532B21381FCEB3D500210506 /* ScheduceTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduceTimeController.h; sourceTree = "<group>"; };
 		53769E1F1FCA6D59002D1EA7 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		53769E201FCA6D59002D1EA7 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		53769E221FCA6D97002D1EA7 /* LeftMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuController.h; sourceTree = "<group>"; };
@@ -100,8 +105,12 @@
 		53769E1E1FCA6D15002D1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				532B21311FCEA44400210506 /* FeedBack */,
-				532B212F1FCEA41200210506 /* ScheduceTime */,
+				532B21331FCEB3D400210506 /* MyFeedBackVC.h */,
+				532B21341FCEB3D500210506 /* MyFeedBackVC.m */,
+				532B21351FCEB3D500210506 /* MyticketVC.h */,
+				532B21361FCEB3D500210506 /* MyticketVC.m */,
+				532B21381FCEB3D500210506 /* ScheduceTimeController.h */,
+				532B21371FCEB3D500210506 /* ScheduceTimeController.m */,
 				53769E1F1FCA6D59002D1EA7 /* HomeController.h */,
 				53769E201FCA6D59002D1EA7 /* HomeController.m */,
 				53769E221FCA6D97002D1EA7 /* LeftMenuController.h */,
@@ -194,10 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
-				532B21321FCEA44500210506 /* FeedBack in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
 				532720FC1FCA694300A7D494 /* Main.storyboard in Resources */,
-				532B21301FCEA41200210506 /* ScheduceTime in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				53769E211FCA6D59002D1EA7 /* HomeController.m in Sources */,
+				532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */,
+				532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
 				532720F61FCA694300A7D494 /* AppDelegate.m in Sources */,
 				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
+				532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

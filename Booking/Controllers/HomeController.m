@@ -14,7 +14,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "HomeController.h"
 #import "MakerInfoView.h"
-#import "ScheduceTime/ScheduceTimeController.h"
+#import "ScheduceTimeController.h"
 
 @interface HomeController ()<GMSMapViewDelegate, CLLocationManagerDelegate>{
     CLLocationManager *locationManager;
