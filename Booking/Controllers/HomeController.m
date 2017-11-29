@@ -75,9 +75,44 @@
     
     // Creates a marker in the center of the map.
     NSArray* arrMarkerData = @[
-                               @{@"title": @"Sydney", @"snippet": @"Australia", @"position": [[CLLocation alloc]initWithLatitude:_myLocation.coordinate.latitude+0.02 longitude:_myLocation.coordinate.longitude+0.05]},
-                               @{@"title": @"Other location", @"snippet": @"other snippet", @"position": [[CLLocation alloc]initWithLatitude:17.398932 longitude:78.472718]}
+                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.037218 longitude:105.815297]},
+                             @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.020003 longitude:105.808728]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]},
+                               @{@"title": @"ATM Techcombank", @"snippet": @"VietNam", @"position": [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]},
                                ];
+    /*1. ATM Techcombank
+     349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam
+     21.037218, 105.815297
+     
+     2. ATM Techcombank
+     91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam
+     21.020003, 105.808728
+     
+     3. Techcombank
+     52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội, Việt Nam
+     21.024392, 105.810554
+     
+     4. Techcombank
+     21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam
+     21.023014, 105.800926
+     
+     5. Techcombank Huỳnh Thúc Kháng
+     21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam
+     21.017801, 105.812087
+     
+     6. Techcombank
+     62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam
+     21.008594, 105.804751
+     
+     7. Techcombank
+     101 Láng Hạ, Hà Nội, Việt Nam
+     21.014116, 105.813553
+
+     */
+    
     FAKIonIcons *icon = [FAKIonIcons iosLocationIconWithSize:40];
     [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor greenColor]}];
     for (NSDictionary* dict in arrMarkerData)
