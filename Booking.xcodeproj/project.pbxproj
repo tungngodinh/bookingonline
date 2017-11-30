@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532493271FD0036C00E341A1 /* ServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532493251FD0036C00E341A1 /* ServiceCell.m */; };
+		532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532493261FD0036C00E341A1 /* ServiceCell.xib */; };
 		532720F61FCA694300A7D494 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532720F51FCA694300A7D494 /* AppDelegate.m */; };
 		532720FC1FCA694300A7D494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532720FA1FCA694300A7D494 /* Main.storyboard */; };
 		532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532720FD1FCA694300A7D494 /* Assets.xcassets */; };
@@ -27,6 +29,9 @@
 /* Begin PBXFileReference section */
 		332FBCB109D5477225E12F07 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		3366CDB511AE969B1F94E088 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
+		532493241FD0036B00E341A1 /* ServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCell.h; sourceTree = "<group>"; };
+		532493251FD0036C00E341A1 /* ServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCell.m; sourceTree = "<group>"; };
+		532493261FD0036C00E341A1 /* ServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		532720F11FCA694300A7D494 /* Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		532720F41FCA694300A7D494 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		532720F51FCA694300A7D494 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +148,9 @@
 		538F19771FCD964400BDB2DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				532493241FD0036B00E341A1 /* ServiceCell.h */,
+				532493251FD0036C00E341A1 /* ServiceCell.m */,
+				532493261FD0036C00E341A1 /* ServiceCell.xib */,
 				53BF54C71FCED34700EBFBD9 /* RecentLocationsView.h */,
 				53BF54C81FCED34700EBFBD9 /* RecentLocationsView.m */,
 				538F19781FCD967200BDB2DA /* MakerInfoView.h */,
@@ -226,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
+				532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
 				532720FC1FCA694300A7D494 /* Main.storyboard in Resources */,
 			);
@@ -317,6 +326,7 @@
 				532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
 				532720F61FCA694300A7D494 /* AppDelegate.m in Sources */,
+				532493271FD0036C00E341A1 /* ServiceCell.m in Sources */,
 				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
 				532B21421FCEC6DF00210506 /* LocationModel.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
