@@ -13,6 +13,7 @@
 
 #import "MyFeedBackVC.h"
 #import "LeftMenuController.h"
+#import "MenuHeaderView.h"
 
 @interface LeftMenuController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -26,12 +27,11 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [UIView new];
-    CGFloat width = self.view.frame.size.width;
-    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, width / 2)];
-    header.backgroundColor = [UIColor colorWithRed:48 green:228 blue:247 alpha:1];
-    UIImageView *logo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width * 0.2, width * 0.2)];
-    [header addSubview:logo];
-    self.tableView.tableHeaderView = header;
+    CGFloat width = self.slideMenuController.leftContainerView.frame.size.width;
+    MenuHeaderView *view = [[MenuHeaderView alloc] initWithFrame:CGRectMake(0, 0, width, width * 0.5)];
+    view.backgroundColor = [UIColor redColor];
+    [view setUserName:@"Booking user" email:@"bookinguser@example.com"];
+    self.tableView.tableHeaderView = view;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,7 +103,7 @@
             break;
         }
         case 3: {
-            
+            storyboardid = @"NavRecentVisitsController";
             break;
         }
         case 4: {

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		532493271FD0036C00E341A1 /* ServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532493251FD0036C00E341A1 /* ServiceCell.m */; };
 		532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532493261FD0036C00E341A1 /* ServiceCell.xib */; };
+		5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5324932A1FD00BA500E341A1 /* RecentVisitsController.m */; };
+		5324932E1FD00FE000E341A1 /* ServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5324932D1FD00FE000E341A1 /* ServiceModel.m */; };
+		532493311FD01C7800E341A1 /* MenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 532493301FD01C7800E341A1 /* MenuHeaderView.m */; };
 		532720F61FCA694300A7D494 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532720F51FCA694300A7D494 /* AppDelegate.m */; };
 		532720FC1FCA694300A7D494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532720FA1FCA694300A7D494 /* Main.storyboard */; };
 		532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532720FD1FCA694300A7D494 /* Assets.xcassets */; };
@@ -32,6 +35,12 @@
 		532493241FD0036B00E341A1 /* ServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCell.h; sourceTree = "<group>"; };
 		532493251FD0036C00E341A1 /* ServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCell.m; sourceTree = "<group>"; };
 		532493261FD0036C00E341A1 /* ServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		532493291FD00BA500E341A1 /* RecentVisitsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentVisitsController.h; sourceTree = "<group>"; };
+		5324932A1FD00BA500E341A1 /* RecentVisitsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentVisitsController.m; sourceTree = "<group>"; };
+		5324932C1FD00FE000E341A1 /* ServiceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceModel.h; sourceTree = "<group>"; };
+		5324932D1FD00FE000E341A1 /* ServiceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceModel.m; sourceTree = "<group>"; };
+		5324932F1FD01C7800E341A1 /* MenuHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuHeaderView.h; sourceTree = "<group>"; };
+		532493301FD01C7800E341A1 /* MenuHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderView.m; sourceTree = "<group>"; };
 		532720F11FCA694300A7D494 /* Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		532720F41FCA694300A7D494 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		532720F51FCA694300A7D494 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +131,8 @@
 			children = (
 				532B21401FCEC6DF00210506 /* LocationModel.h */,
 				532B21411FCEC6DF00210506 /* LocationModel.m */,
+				5324932C1FD00FE000E341A1 /* ServiceModel.h */,
+				5324932D1FD00FE000E341A1 /* ServiceModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +152,8 @@
 				53769E231FCA6D97002D1EA7 /* LeftMenuController.m */,
 				532B213C1FCEBB4700210506 /* ServiceProvidersController.h */,
 				532B213D1FCEBB4700210506 /* ServiceProvidersController.m */,
+				532493291FD00BA500E341A1 /* RecentVisitsController.h */,
+				5324932A1FD00BA500E341A1 /* RecentVisitsController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,6 +161,8 @@
 		538F19771FCD964400BDB2DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5324932F1FD01C7800E341A1 /* MenuHeaderView.h */,
+				532493301FD01C7800E341A1 /* MenuHeaderView.m */,
 				532493241FD0036B00E341A1 /* ServiceCell.h */,
 				532493251FD0036C00E341A1 /* ServiceCell.m */,
 				532493261FD0036C00E341A1 /* ServiceCell.xib */,
@@ -324,15 +339,18 @@
 				53769E211FCA6D59002D1EA7 /* MapsDirectionController.m in Sources */,
 				532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */,
 				532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */,
+				5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
 				532720F61FCA694300A7D494 /* AppDelegate.m in Sources */,
 				532493271FD0036C00E341A1 /* ServiceCell.m in Sources */,
 				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
 				532B21421FCEC6DF00210506 /* LocationModel.m in Sources */,
+				532493311FD01C7800E341A1 /* MenuHeaderView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
 				532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */,
 				53BF54C91FCED34700EBFBD9 /* RecentLocationsView.m in Sources */,
 				532B213E1FCEBB4700210506 /* ServiceProvidersController.m in Sources */,
+				5324932E1FD00FE000E341A1 /* ServiceModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 @import FontAwesomeKit;
 @import GoogleMaps;
 @import GooglePlaces;
+@import NSString_Color;
 
 #import "AppDelegate.h"
 
@@ -23,6 +24,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupSlideMenu];
     [self setupGoogleMapSDK];
+    [[UINavigationBar appearance] setBarTintColor: [UIColor redColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     return YES;
 }
 

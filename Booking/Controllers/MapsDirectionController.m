@@ -44,6 +44,16 @@
     NSLog(@"didFailWithError: %@", error);
 
     UIAlertController *allert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to Get Your Location" preferredStyle:UIAlertControllerStyleAlert];
+    __weak typeof(self) weakSelf = self;
+    _myLocation = [weakSelf.locationsData firstObject].position;
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
+                                                            longitude:_myLocation.coordinate.longitude
+                                                                 zoom:12];
+    [self.mapView setCamera:camera];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [allert addAction:cancel];
     [self presentViewController:allert animated:YES completion:nil];
 }
 

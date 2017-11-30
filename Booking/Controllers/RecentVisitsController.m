@@ -1,31 +1,29 @@
 //
-//  ServiceProvidersController.m
+//  RecentVisitsController.m
 //  Booking
 //
-//  Created by Cau Ca on 11/29/17.
+//  Created by Cau Ca on 11/30/17.
 //  Copyright © 2017 Cau Ca. All rights reserved.
 //
 
-#import "ServiceProvidersController.h"
-#import "ServiceModel.h"
+#import "RecentVisitsController.h"
 #import "ServiceCell.h"
+#import "ServiceModel.h"
 
-@interface ServiceProvidersController ()<UITableViewDataSource, UITableViewDelegate>
+@interface RecentVisitsController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray<ServiceModel *> *dataSource;
 
 @end
 
-@implementation ServiceProvidersController
+@implementation RecentVisitsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // Do any additional setup after loading the view.
     [self.tableView registerNib:[UINib nibWithNibName:kServiceCellIdentifier bundle:nil] forCellReuseIdentifier:kServiceCellIdentifier];
-    self.title = @"Service Providers";
-    
+    self.title = @"Recent Visits";
     _dataSource = @[[ServiceModel serviceWithName: @"Techcombank Liễu Giai" address: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
                     [ServiceModel serviceWithName: @"Techcombank 91 Nguyễn Chí Thanh" address: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
                     [ServiceModel serviceWithName: @"Techcombank 52 Nguyễn Chí Thanh" address: @"52, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
