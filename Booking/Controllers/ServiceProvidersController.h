@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ServiceProvidersController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *btnServiceList;
 
 @end
