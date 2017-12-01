@@ -36,6 +36,7 @@
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
+    self.title = @"Bản đồ các đơn vị thành viên";
 }
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
