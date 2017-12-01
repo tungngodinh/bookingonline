@@ -130,7 +130,7 @@
             GMSPolyline *line = [GMSPolyline polylineWithPath:path];
             line.map = weakSelf.mapView;
             line.strokeColor = [UIColor redColor];
-            line.strokeWidth = 6.0f;
+            line.strokeWidth = 3.0f;
         }];
     };
     [self.mapView addSubview:view];
