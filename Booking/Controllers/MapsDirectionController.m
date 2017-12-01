@@ -62,14 +62,16 @@
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
     _myLocation = newLocation;
-    if (!getLocation)
-    { [self loadView];
+    if (!getLocation) {
+        [self loadMapView];
         getLocation = TRUE ;
     }
-    [self showRecentLocations];
+    if ([newLocation distanceFromLocation:oldLocation] > 500) {
+        [self showRecentLocations];
+    }
 }
 
-- (void)loadView {
+- (void)loadMapView {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
@@ -91,7 +93,7 @@
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.mapView;
     }
-    
+    [self showRecentLocations];
 }
 
 - (void)didReceiveMemoryWarning {
