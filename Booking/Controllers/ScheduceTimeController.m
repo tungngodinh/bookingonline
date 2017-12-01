@@ -22,7 +22,7 @@
     [super viewDidLoad];
     self.tableview_list.dataSource = self ;
     self.tableview_list.delegate = self;
-    self.title = @"Vui lòng chọn khung giờ trống" ;
+    self.title = @"Chọn khung giờ" ;
     //self.navigationController.navigationBarHidden = true ;
     // Do any additional setup after loading the view.
 }
