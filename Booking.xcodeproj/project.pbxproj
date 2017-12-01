@@ -43,6 +43,7 @@
 		53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E231FCA6D97002D1EA7 /* LeftMenuController.m */; };
 		538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F19791FCD967200BDB2DA /* MakerInfoView.m */; };
 		53BF54C91FCED34700EBFBD9 /* RecentLocationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BF54C81FCED34700EBFBD9 /* RecentLocationsView.m */; };
+		53C7769F1FD139310011AF1B /* MyTicketsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C7769E1FD139310011AF1B /* MyTicketsController.m */; };
 		68CD9267C9E3574E0243F903 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,8 @@
 		538F19791FCD967200BDB2DA /* MakerInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerInfoView.m; sourceTree = "<group>"; };
 		53BF54C71FCED34700EBFBD9 /* RecentLocationsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentLocationsView.h; sourceTree = "<group>"; };
 		53BF54C81FCED34700EBFBD9 /* RecentLocationsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentLocationsView.m; sourceTree = "<group>"; };
+		53C7769D1FD139310011AF1B /* MyTicketsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTicketsController.h; sourceTree = "<group>"; };
+		53C7769E1FD139310011AF1B /* MyTicketsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTicketsController.m; sourceTree = "<group>"; };
 		BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -289,6 +292,8 @@
 				532B213D1FCEBB4700210506 /* ServiceProvidersController.m */,
 				532493291FD00BA500E341A1 /* RecentVisitsController.h */,
 				5324932A1FD00BA500E341A1 /* RecentVisitsController.m */,
+				53C7769D1FD139310011AF1B /* MyTicketsController.h */,
+				53C7769E1FD139310011AF1B /* MyTicketsController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				26E3499D1FD1251D00800DC0 /* YRTextField.m in Sources */,
 				53769E211FCA6D59002D1EA7 /* MapsDirectionController.m in Sources */,
 				532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */,
+				53C7769F1FD139310011AF1B /* MyTicketsController.m in Sources */,
 				26E349931FD1251D00800DC0 /* NSArray+MASAdditions.m in Sources */,
 				26E3499A1FD1251D00800DC0 /* RzTextField.m in Sources */,
 				26E349951FD1251D00800DC0 /* View+MASAdditions.m in Sources */,

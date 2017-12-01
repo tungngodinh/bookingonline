@@ -99,7 +99,7 @@
             break;
         }
         case 2: {
-            
+            storyboardid = @"NavMyTicketsController";
             break;
         }
         case 3: {
