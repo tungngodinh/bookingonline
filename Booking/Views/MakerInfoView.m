@@ -8,6 +8,7 @@
 
 @import Masonry;
 @import FontAwesomeKit;
+@import NSString_Color;
 
 #import "MakerInfoView.h"
 
@@ -133,7 +134,7 @@
         make.trailing.equalTo(self.mas_trailingMargin);
     }];
     
-    _takeTiketButton.backgroundColor = [UIColor greenColor];
+    _takeTiketButton.backgroundColor = [@"#4BA157" representedColor];
     [_takeTiketButton setTintColor:[UIColor whiteColor]];
     [_takeTiketButton setTitle:@"Take ticket" forState:UIControlStateNormal];
     [_takeTiketButton mas_makeConstraints:^(MASConstraintMaker *make) {

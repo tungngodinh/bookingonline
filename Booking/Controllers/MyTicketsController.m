@@ -6,6 +6,8 @@
 //  Copyright © 2017 Cau Ca. All rights reserved.
 //
 
+@import NSString_Color;
+
 #import "MyTicketsController.h"
 #import "TicketCell.h"
 #import "TicketModel.h"
@@ -50,17 +52,17 @@
     switch (mode.status) {
         case 0: {
             cell.statusLabel.text = @"Watting";
-            cell.statusLabel.textColor = [UIColor yellowColor];
+            cell.statusLabel.textColor = [UIColor redColor];
             break;
         }
         case 1: {
             cell.statusLabel.text = @"Inprogess";
-            cell.statusLabel.textColor = [UIColor redColor];
+            cell.statusLabel.textColor = [@"#4BA157" representedColor];
             break;
         }
         case 2: {
             cell.statusLabel.text = @"Cancel";
-            cell.statusLabel.textColor = [UIColor blackColor];
+            cell.statusLabel.textColor = [UIColor lightGrayColor];
             break;
         }
         default:

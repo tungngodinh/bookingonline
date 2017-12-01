@@ -80,7 +80,7 @@
     self.mapView.delegate = self;
     
     FAKIonIcons *icon = [FAKIonIcons iosLocationIconWithSize:40];
-    [icon setAttributes:@{NSForegroundColorAttributeName : [@"#8CC63E" representedColor]}];
+    [icon setAttributes:@{NSForegroundColorAttributeName : [@"#4BA157" representedColor]}];
     for (LocationModel* lc in self.locationsData) {
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
