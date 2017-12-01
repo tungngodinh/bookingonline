@@ -122,10 +122,11 @@
     view.frame = CGRectMake(x, y, view.frame.size.width, view.frame.size.height);
     __weak typeof(self) weakSelf = self;
     view.viewTappedBlock = ^{
-        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:location.position.coordinate.latitude
-                                                                longitude:location.position.coordinate.longitude
-                                                                     zoom:15];
-        [weakSelf.mapView setCamera:camera];
+
+        [weakSelf.mapView animateToLocation:CLLocationCoordinate2DMake(location.position.coordinate.latitude, location.position.coordinate.longitude)];
+        
+        [weakSelf.mapView animateToZoom:15];
+        
         [weakSelf getDirect:location.position block:^(GMSMutablePath *path) {
             GMSPolyline *line = [GMSPolyline polylineWithPath:path];
             line.map = weakSelf.mapView;
