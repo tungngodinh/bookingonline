@@ -31,7 +31,7 @@
     
     icon = [FAKIonIcons cashIconWithSize:50];
     [icon setAttributes:@{NSForegroundColorAttributeName : [@"#76D6FF" representedColor]}];
-    self.logoImage.image = [icon imageWithSize:CGSizeMake(60, 60)];
+    self.logoImage.image = [UIImage imageNamed:@"techcombank.png"];
     
     self.logoImage.layer.cornerRadius = 30;
     self.logoImage.layer.borderWidth = 1 /[[UIScreen mainScreen] scale];

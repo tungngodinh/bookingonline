@@ -30,7 +30,7 @@
     CGFloat width = self.slideMenuController.leftContainerView.frame.size.width;
     MenuHeaderView *view = [[MenuHeaderView alloc] initWithFrame:CGRectMake(0, 0, width, width * 0.5)];
     view.backgroundColor = [UIColor redColor];
-    [view setUserName:@"Booking user" email:@"bookinguser@example.com"];
+    [view setUserName:@"Hệ thống đặt vé online" email:@"dunglt@miraway.vn"];
     self.tableView.tableHeaderView = view;
 }
 

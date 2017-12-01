@@ -51,7 +51,7 @@
     cell.addressLabel.text = model.address;
     cell.peopleLabel.text = [NSString stringWithFormat:@"%ld", model.peopleCount];
     cell.likeLabel.text = [NSString stringWithFormat:@"%ld", model.likeCount];
-    cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.0f km", model.distance];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.00f km", model.distance];
     return cell;
 }
 

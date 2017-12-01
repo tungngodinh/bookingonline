@@ -35,9 +35,7 @@
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
     [locationManager startUpdatingLocation];
-    
 }
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
@@ -48,7 +46,7 @@
     _myLocation = [weakSelf.locationsData firstObject].position;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
                                                             longitude:_myLocation.coordinate.longitude
-                                                                 zoom:12];
+                                                                 zoom:40];
     [self.mapView setCamera:camera];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
