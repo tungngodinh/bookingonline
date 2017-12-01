@@ -114,15 +114,24 @@
 
 - (void)showRecentLocations {
     CGFloat width = self.view.frame.size.width * 0.8;
+    NSInteger viewtag = 1111;
     RecentLocationsView *view = [[RecentLocationsView alloc] initWithFrame:CGRectMake(0, 0, width, 300)];
     LocationModel *location = [self estimateRecentLocations];
     [view setSnippet:location.snippet phone:@"19001900" distance:[_myLocation distanceFromLocation:location.position] / 1000 estimateWidth:width];
     CGFloat x = (self.view.frame.size.width - width) / 2;
     CGFloat y = self.view.frame.size.height - view.frame.size.height - 5;
     view.frame = CGRectMake(x, y, view.frame.size.width, view.frame.size.height);
+    view.tag = viewtag;
     __weak typeof(self) weakSelf = self;
+    
     view.viewTappedBlock = ^{
-
+        
+        for (UIView *rview in [weakSelf.mapView subviews]) {
+            if (rview.tag == viewtag) {
+                [rview removeFromSuperview];
+            }
+        }
+        
         [weakSelf.mapView animateToLocation:CLLocationCoordinate2DMake(location.position.coordinate.latitude, location.position.coordinate.longitude)];
         
         [weakSelf.mapView animateToZoom:15];
