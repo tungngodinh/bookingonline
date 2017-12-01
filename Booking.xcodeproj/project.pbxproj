@@ -44,6 +44,9 @@
 		538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F19791FCD967200BDB2DA /* MakerInfoView.m */; };
 		53BF54C91FCED34700EBFBD9 /* RecentLocationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BF54C81FCED34700EBFBD9 /* RecentLocationsView.m */; };
 		53C7769F1FD139310011AF1B /* MyTicketsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C7769E1FD139310011AF1B /* MyTicketsController.m */; };
+		53C776A81FD141320011AF1B /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C776A61FD141310011AF1B /* TicketCell.m */; };
+		53C776A91FD141320011AF1B /* TicketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C776A71FD141320011AF1B /* TicketCell.xib */; };
+		53C776AC1FD145130011AF1B /* TicketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C776AB1FD145130011AF1B /* TicketModel.m */; };
 		68CD9267C9E3574E0243F903 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +129,11 @@
 		53BF54C81FCED34700EBFBD9 /* RecentLocationsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentLocationsView.m; sourceTree = "<group>"; };
 		53C7769D1FD139310011AF1B /* MyTicketsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTicketsController.h; sourceTree = "<group>"; };
 		53C7769E1FD139310011AF1B /* MyTicketsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTicketsController.m; sourceTree = "<group>"; };
+		53C776A51FD141310011AF1B /* TicketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCell.h; sourceTree = "<group>"; };
+		53C776A61FD141310011AF1B /* TicketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCell.m; sourceTree = "<group>"; };
+		53C776A71FD141320011AF1B /* TicketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketCell.xib; sourceTree = "<group>"; };
+		53C776AA1FD145130011AF1B /* TicketModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketModel.h; sourceTree = "<group>"; };
+		53C776AB1FD145130011AF1B /* TicketModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketModel.m; sourceTree = "<group>"; };
 		BBCCA3CCFC76C4D217AD6ADE /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,6 +279,8 @@
 				532B21411FCEC6DF00210506 /* LocationModel.m */,
 				5324932C1FD00FE000E341A1 /* ServiceModel.h */,
 				5324932D1FD00FE000E341A1 /* ServiceModel.m */,
+				53C776AA1FD145130011AF1B /* TicketModel.h */,
+				53C776AB1FD145130011AF1B /* TicketModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +311,9 @@
 		538F19771FCD964400BDB2DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53C776A51FD141310011AF1B /* TicketCell.h */,
+				53C776A61FD141310011AF1B /* TicketCell.m */,
+				53C776A71FD141320011AF1B /* TicketCell.xib */,
 				5324932F1FD01C7800E341A1 /* MenuHeaderView.h */,
 				532493301FD01C7800E341A1 /* MenuHeaderView.m */,
 				532493241FD0036B00E341A1 /* ServiceCell.h */,
@@ -390,6 +403,7 @@
 			files = (
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
 				532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */,
+				53C776A91FD141320011AF1B /* TicketCell.xib in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
 				532720FC1FCA694300A7D494 /* Main.storyboard in Resources */,
 			);
@@ -487,6 +501,7 @@
 				532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */,
 				26E349921FD1251D00800DC0 /* MASViewConstraint.m in Sources */,
 				26E349981FD1251D00800DC0 /* WCSLabel.m in Sources */,
+				53C776AC1FD145130011AF1B /* TicketModel.m in Sources */,
 				5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
 				26E349971FD1251D00800DC0 /* NSDate+TimeAgo.m in Sources */,
@@ -499,6 +514,7 @@
 				26E3498D1FD1251D00800DC0 /* MASCompositeConstraint.m in Sources */,
 				532493311FD01C7800E341A1 /* MenuHeaderView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
+				53C776A81FD141320011AF1B /* TicketCell.m in Sources */,
 				26E349941FD1251D00800DC0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */,
 				26E3498F1FD1251D00800DC0 /* MASConstraintMaker.m in Sources */,
