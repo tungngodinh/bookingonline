@@ -149,9 +149,11 @@
         
         [[NSUserDefaults standardUserDefaults]setObject:model.time forKey:@"d_time"];
         [[NSUserDefaults standardUserDefaults]synchronize];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thông báo" message:@"Bạn đã booked vé thành công." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
+        [alert show];
         //    [[NSUserDefaults standardUserDefaults]setstri:(indexPath.row + 1) forKey:@"key_choose"];
         //    [[NSUserDefaults standardUserDefaults] synchronize] ;
-        [self.navigationController popViewControllerAnimated:YES] ;
+   //     [self.navigationController popViewControllerAnimated:YES] ;
     }
     
     

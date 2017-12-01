@@ -51,7 +51,7 @@
     cell.documentCode.text = mode.code;
     switch (mode.status) {
         case 0: {
-            cell.statusLabel.text = @"Watting";
+            cell.statusLabel.text = @"Waiting";
             cell.statusLabel.textColor = [UIColor redColor];
             break;
         }
