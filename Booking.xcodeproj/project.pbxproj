@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26E348E61FD104EB00800DC0 /* techcombank.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E348E51FD104EB00800DC0 /* techcombank.png */; };
+		26E349131FD10AA300800DC0 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348EB1FD10AA300800DC0 /* MASCompositeConstraint.m */; };
+		26E349141FD10AA300800DC0 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348EE1FD10AA300800DC0 /* MASConstraint.m */; };
+		26E349151FD10AA300800DC0 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348F01FD10AA300800DC0 /* MASConstraintMaker.m */; };
+		26E349161FD10AA300800DC0 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348F21FD10AA300800DC0 /* MASLayoutConstraint.m */; };
+		26E349171FD10AA300800DC0 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348F61FD10AA300800DC0 /* MASViewAttribute.m */; };
+		26E349181FD10AA300800DC0 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348F81FD10AA300800DC0 /* MASViewConstraint.m */; };
+		26E349191FD10AA300800DC0 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348FA1FD10AA300800DC0 /* NSArray+MASAdditions.m */; };
+		26E3491A1FD10AA300800DC0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348FD1FD10AA300800DC0 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		26E3491B1FD10AA300800DC0 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E348FF1FD10AA300800DC0 /* View+MASAdditions.m */; };
+		26E3491C1FD10AA300800DC0 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E349021FD10AA300800DC0 /* ViewController+MASAdditions.m */; };
+		26E3491D1FD10AA300800DC0 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E349051FD10AA300800DC0 /* NSDate+TimeAgo.m */; };
+		26E3491E1FD10AA300800DC0 /* WCSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E349081FD10AA300800DC0 /* WCSLabel.m */; };
+		26E3491F1FD10AA300800DC0 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3490A1FD10AA300800DC0 /* PickerView.m */; };
+		26E349201FD10AA300800DC0 /* RzTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3490C1FD10AA300800DC0 /* RzTextField.m */; };
+		26E349211FD10AA300800DC0 /* WCSTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3490E1FD10AA300800DC0 /* WCSTimelineCell.m */; };
+		26E349221FD10AA300800DC0 /* WCSTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E349101FD10AA300800DC0 /* WCSTimelineModel.m */; };
+		26E349231FD10AA300800DC0 /* YRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E349121FD10AA300800DC0 /* YRTextField.m */; };
 		532493271FD0036C00E341A1 /* ServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532493251FD0036C00E341A1 /* ServiceCell.m */; };
 		532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532493261FD0036C00E341A1 /* ServiceCell.xib */; };
 		5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5324932A1FD00BA500E341A1 /* RecentVisitsController.m */; };
@@ -30,6 +48,46 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26E348E51FD104EB00800DC0 /* techcombank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = techcombank.png; sourceTree = "<group>"; };
+		26E348EA1FD10AA300800DC0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		26E348EB1FD10AA300800DC0 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		26E348EC1FD10AA300800DC0 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		26E348ED1FD10AA300800DC0 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		26E348EE1FD10AA300800DC0 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		26E348EF1FD10AA300800DC0 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		26E348F01FD10AA300800DC0 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		26E348F11FD10AA300800DC0 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		26E348F21FD10AA300800DC0 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		26E348F31FD10AA300800DC0 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		26E348F41FD10AA300800DC0 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		26E348F51FD10AA300800DC0 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		26E348F61FD10AA300800DC0 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		26E348F71FD10AA300800DC0 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		26E348F81FD10AA300800DC0 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		26E348F91FD10AA300800DC0 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		26E348FA1FD10AA300800DC0 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		26E348FB1FD10AA300800DC0 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		26E348FC1FD10AA300800DC0 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		26E348FD1FD10AA300800DC0 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		26E348FE1FD10AA300800DC0 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		26E348FF1FD10AA300800DC0 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		26E349001FD10AA300800DC0 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		26E349011FD10AA300800DC0 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		26E349021FD10AA300800DC0 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		26E349041FD10AA300800DC0 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		26E349051FD10AA300800DC0 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		26E349071FD10AA300800DC0 /* WCSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSLabel.h; sourceTree = "<group>"; };
+		26E349081FD10AA300800DC0 /* WCSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSLabel.m; sourceTree = "<group>"; };
+		26E349091FD10AA300800DC0 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
+		26E3490A1FD10AA300800DC0 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
+		26E3490B1FD10AA300800DC0 /* RzTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RzTextField.h; sourceTree = "<group>"; };
+		26E3490C1FD10AA300800DC0 /* RzTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RzTextField.m; sourceTree = "<group>"; };
+		26E3490D1FD10AA300800DC0 /* WCSTimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSTimelineCell.h; sourceTree = "<group>"; };
+		26E3490E1FD10AA300800DC0 /* WCSTimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSTimelineCell.m; sourceTree = "<group>"; };
+		26E3490F1FD10AA300800DC0 /* WCSTimelineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSTimelineModel.h; sourceTree = "<group>"; };
+		26E349101FD10AA300800DC0 /* WCSTimelineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSTimelineModel.m; sourceTree = "<group>"; };
+		26E349111FD10AA300800DC0 /* YRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRTextField.h; sourceTree = "<group>"; };
+		26E349121FD10AA300800DC0 /* YRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRTextField.m; sourceTree = "<group>"; };
 		332FBCB109D5477225E12F07 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		3366CDB511AE969B1F94E088 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
 		532493241FD0036B00E341A1 /* ServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCell.h; sourceTree = "<group>"; };
@@ -82,6 +140,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26E348E71FD10AA300800DC0 /* WCSTimeline */ = {
+			isa = PBXGroup;
+			children = (
+				26E348E81FD10AA300800DC0 /* Dependencies */,
+				26E349091FD10AA300800DC0 /* PickerView.h */,
+				26E3490A1FD10AA300800DC0 /* PickerView.m */,
+				26E3490B1FD10AA300800DC0 /* RzTextField.h */,
+				26E3490C1FD10AA300800DC0 /* RzTextField.m */,
+				26E3490D1FD10AA300800DC0 /* WCSTimelineCell.h */,
+				26E3490E1FD10AA300800DC0 /* WCSTimelineCell.m */,
+				26E3490F1FD10AA300800DC0 /* WCSTimelineModel.h */,
+				26E349101FD10AA300800DC0 /* WCSTimelineModel.m */,
+				26E349111FD10AA300800DC0 /* YRTextField.h */,
+				26E349121FD10AA300800DC0 /* YRTextField.m */,
+			);
+			name = WCSTimeline;
+			path = ../../../Desktop/BookingOnline/BookingOnline/CustomizeUI/WCSTimeline;
+			sourceTree = "<group>";
+		};
+		26E348E81FD10AA300800DC0 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				26E348E91FD10AA300800DC0 /* Masonry */,
+				26E349031FD10AA300800DC0 /* NSDate+TimeAgo */,
+				26E349061FD10AA300800DC0 /* WCSLabel */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		26E348E91FD10AA300800DC0 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				26E348EA1FD10AA300800DC0 /* MASCompositeConstraint.h */,
+				26E348EB1FD10AA300800DC0 /* MASCompositeConstraint.m */,
+				26E348EC1FD10AA300800DC0 /* MASConstraint+Private.h */,
+				26E348ED1FD10AA300800DC0 /* MASConstraint.h */,
+				26E348EE1FD10AA300800DC0 /* MASConstraint.m */,
+				26E348EF1FD10AA300800DC0 /* MASConstraintMaker.h */,
+				26E348F01FD10AA300800DC0 /* MASConstraintMaker.m */,
+				26E348F11FD10AA300800DC0 /* MASLayoutConstraint.h */,
+				26E348F21FD10AA300800DC0 /* MASLayoutConstraint.m */,
+				26E348F31FD10AA300800DC0 /* Masonry.h */,
+				26E348F41FD10AA300800DC0 /* MASUtilities.h */,
+				26E348F51FD10AA300800DC0 /* MASViewAttribute.h */,
+				26E348F61FD10AA300800DC0 /* MASViewAttribute.m */,
+				26E348F71FD10AA300800DC0 /* MASViewConstraint.h */,
+				26E348F81FD10AA300800DC0 /* MASViewConstraint.m */,
+				26E348F91FD10AA300800DC0 /* NSArray+MASAdditions.h */,
+				26E348FA1FD10AA300800DC0 /* NSArray+MASAdditions.m */,
+				26E348FB1FD10AA300800DC0 /* NSArray+MASShorthandAdditions.h */,
+				26E348FC1FD10AA300800DC0 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				26E348FD1FD10AA300800DC0 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				26E348FE1FD10AA300800DC0 /* View+MASAdditions.h */,
+				26E348FF1FD10AA300800DC0 /* View+MASAdditions.m */,
+				26E349001FD10AA300800DC0 /* View+MASShorthandAdditions.h */,
+				26E349011FD10AA300800DC0 /* ViewController+MASAdditions.h */,
+				26E349021FD10AA300800DC0 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		26E349031FD10AA300800DC0 /* NSDate+TimeAgo */ = {
+			isa = PBXGroup;
+			children = (
+				26E349041FD10AA300800DC0 /* NSDate+TimeAgo.h */,
+				26E349051FD10AA300800DC0 /* NSDate+TimeAgo.m */,
+			);
+			path = "NSDate+TimeAgo";
+			sourceTree = "<group>";
+		};
+		26E349061FD10AA300800DC0 /* WCSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				26E349071FD10AA300800DC0 /* WCSLabel.h */,
+				26E349081FD10AA300800DC0 /* WCSLabel.m */,
+			);
+			path = WCSLabel;
+			sourceTree = "<group>";
+		};
 		407CA06B74CA37615DFB7B7E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +298,8 @@
 		538F19771FCD964400BDB2DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				26E348E71FD10AA300800DC0 /* WCSTimeline */,
+				26E348E51FD104EB00800DC0 /* techcombank.png */,
 				5324932F1FD01C7800E341A1 /* MenuHeaderView.h */,
 				532493301FD01C7800E341A1 /* MenuHeaderView.m */,
 				532493241FD0036B00E341A1 /* ServiceCell.h */,
@@ -216,7 +355,7 @@
 				TargetAttributes = {
 					532720F01FCA694300A7D494 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -248,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E348E61FD104EB00800DC0 /* techcombank.png in Resources */,
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
 				532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
@@ -341,15 +481,32 @@
 				532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */,
 				5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */,
 				532721041FCA694300A7D494 /* main.m in Sources */,
+				26E349171FD10AA300800DC0 /* MASViewAttribute.m in Sources */,
+				26E349161FD10AA300800DC0 /* MASLayoutConstraint.m in Sources */,
+				26E3491A1FD10AA300800DC0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				26E349151FD10AA300800DC0 /* MASConstraintMaker.m in Sources */,
+				26E3491D1FD10AA300800DC0 /* NSDate+TimeAgo.m in Sources */,
 				532720F61FCA694300A7D494 /* AppDelegate.m in Sources */,
 				532493271FD0036C00E341A1 /* ServiceCell.m in Sources */,
+				26E3491C1FD10AA300800DC0 /* ViewController+MASAdditions.m in Sources */,
 				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
+				26E349221FD10AA300800DC0 /* WCSTimelineModel.m in Sources */,
 				532B21421FCEC6DF00210506 /* LocationModel.m in Sources */,
 				532493311FD01C7800E341A1 /* MenuHeaderView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
 				532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */,
+				26E349131FD10AA300800DC0 /* MASCompositeConstraint.m in Sources */,
+				26E349191FD10AA300800DC0 /* NSArray+MASAdditions.m in Sources */,
+				26E3491F1FD10AA300800DC0 /* PickerView.m in Sources */,
+				26E349201FD10AA300800DC0 /* RzTextField.m in Sources */,
+				26E349211FD10AA300800DC0 /* WCSTimelineCell.m in Sources */,
 				53BF54C91FCED34700EBFBD9 /* RecentLocationsView.m in Sources */,
 				532B213E1FCEBB4700210506 /* ServiceProvidersController.m in Sources */,
+				26E3491B1FD10AA300800DC0 /* View+MASAdditions.m in Sources */,
+				26E3491E1FD10AA300800DC0 /* WCSLabel.m in Sources */,
+				26E349231FD10AA300800DC0 /* YRTextField.m in Sources */,
+				26E349181FD10AA300800DC0 /* MASViewConstraint.m in Sources */,
+				26E349141FD10AA300800DC0 /* MASConstraint.m in Sources */,
 				5324932E1FD00FE000E341A1 /* ServiceModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,14 +644,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nguyen Tuan Ngoc (6E4YPX6ZHR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V32J3679XT;
 				INFOPLIST_FILE = Booking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapdirection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "747c08a1-7b09-47c8-a0c6-28e783fc0ae5";
-				PROVISIONING_PROFILE_SPECIFIER = "CG Map Provisioning Profiles";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -506,8 +663,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nguyen Tuan Ngoc (6E4YPX6ZHR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V32J3679XT;
 				INFOPLIST_FILE = Booking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapdirection;
