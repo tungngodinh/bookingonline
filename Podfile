@@ -9,6 +9,7 @@ target 'Booking' do
   inhibit_all_warnings!
   use_frameworks!
   
+  pod 'AFNetworking'
   pod 'SVProgressHUD'
   pod 'IQKeyboardManager'
   pod 'XLForm'

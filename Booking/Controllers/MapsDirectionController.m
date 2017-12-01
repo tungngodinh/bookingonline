@@ -11,6 +11,7 @@
 @import STPopup;
 @import FontAwesomeKit;
 @import NSString_Color;
+@import AFNetworking;
 
 #import <CoreLocation/CoreLocation.h>
 #import "MapsDirectionController.h"
@@ -90,6 +91,7 @@
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.mapView;
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -124,6 +126,12 @@
                                                                 longitude:location.position.coordinate.longitude
                                                                      zoom:15];
         [weakSelf.mapView setCamera:camera];
+        [weakSelf getDirect:location.position block:^(GMSMutablePath *path) {
+            GMSPolyline *line = [GMSPolyline polylineWithPath:path];
+            line.map = weakSelf.mapView;
+            line.strokeColor = [UIColor redColor];
+            line.strokeWidth = 6.0f;
+        }];
     };
     [self.mapView addSubview:view];
 }
@@ -153,6 +161,32 @@
                            [LocationModel locationWith: @"ATM Techcombank" snippet: @"101 Láng Hạ, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]]];
     }
     return _locationsData;
+}
+
+- (void)getDirect:(CLLocation *)destination block:(void (^)(GMSMutablePath *))completeBlock {
+    NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@,%@&destination=%@,%@&key=AIzaSyB97VVt35nwQeA3GN7k_Hd6oxzL9QxLnmg", @(_myLocation.coordinate.latitude), @(_myLocation.coordinate.longitude), @(destination.coordinate.latitude), @(destination.coordinate.longitude)];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+        id steps = [[responseObject[@"routes"] firstObject][@"legs"] firstObject][@"steps"];
+        GMSMutablePath *path = [GMSMutablePath path];
+        for (id step in steps) {
+            id start = step[@"start_location"];
+            CLLocationDegrees lat = [start[@"lat"] doubleValue];
+            CLLocationDegrees lng = [start[@"lng"] doubleValue];
+            CLLocationCoordinate2D p = CLLocationCoordinate2DMake(lat, lng);
+            [path addCoordinate:p];
+            id end = step[@"end_location"];
+            lat = [end[@"lat"] doubleValue];
+            lng = [end[@"lng"] doubleValue];
+            p = CLLocationCoordinate2DMake(lat, lng);
+            [path addCoordinate:p];
+        }
+        completeBlock(path);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 /*
