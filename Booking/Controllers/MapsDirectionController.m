@@ -39,6 +39,7 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     self.title = @"Bản đồ các đơn vị thành viên";
+    [self loadMapView];
 }
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
@@ -46,11 +47,7 @@
 
     UIAlertController *allert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to Get Your Location" preferredStyle:UIAlertControllerStyleAlert];
     __weak typeof(self) weakSelf = self;
-    _myLocation = [weakSelf.locationsData firstObject].position;
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
-                                                            longitude:_myLocation.coordinate.longitude
-                                                                 zoom:40];
-    [self.mapView setCamera:camera];
+
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     }];
@@ -58,26 +55,13 @@
     [self presentViewController:allert animated:YES completion:nil];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation: %@", newLocation);
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     _myLocation = newLocation;
-    if (!getLocation) {
-        [self loadMapView];
-        getLocation = TRUE ;
-    }
-    if ([newLocation distanceFromLocation:oldLocation] > 500) {
-        [self showRecentLocations];
-    }
+    [self showRecentLocations];
 }
 
 - (void)loadMapView {
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:_myLocation.coordinate.latitude
-                                                            longitude:_myLocation.coordinate.longitude
-                                                                 zoom:12];
-    self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+
     self.mapView.myLocationEnabled = YES;
     self.view = self.mapView;
     self.mapView.delegate = self;
@@ -93,6 +77,7 @@
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.mapView;
     }
+    
     [self showRecentLocations];
 }
 
@@ -115,6 +100,10 @@
 }
 
 - (void)showRecentLocations {
+    if (!_myLocation) {
+        return;
+    }
+    
     CGFloat width = self.view.frame.size.width * 0.8;
     NSInteger viewtag = 1111;
     RecentLocationsView *view = [[RecentLocationsView alloc] initWithFrame:CGRectMake(0, 0, width, 300)];
@@ -199,6 +188,17 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
+}
+
+- (GMSMapView *)mapView {
+    if (!_mapView) {
+        CLLocation *location = _myLocation ? _myLocation : self.locationsData[0].position;
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:location.coordinate.latitude
+                                                                longitude:location.coordinate.longitude
+                                                                     zoom:12];
+        _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    }
+    return _mapView;
 }
 
 /*
