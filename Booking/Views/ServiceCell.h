@@ -21,5 +21,6 @@ static NSString *kServiceCellIdentifier = @"ServiceCell";
 @property (weak, nonatomic) IBOutlet UIImageView *likelImage;
 @property (weak, nonatomic) IBOutlet UIImageView *distanceImage;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+@property (nonatomic, weak) IBOutlet UIView *containerView;
 
 @end

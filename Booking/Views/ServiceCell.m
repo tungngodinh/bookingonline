@@ -37,6 +37,11 @@
     self.logoImage.layer.borderWidth = 1 /[[UIScreen mainScreen] scale];
     self.logoImage.layer.borderColor = [@"#76D6FF" representedColor].CGColor;
     self.logoImage.layer.masksToBounds = YES;
+    
+    self.containerView.layer.cornerRadius = 5;
+    self.containerView.layer.borderWidth = 1/[[UIScreen mainScreen] scale];
+    self.containerView.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
+    self.containerView.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

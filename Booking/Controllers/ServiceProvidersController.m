@@ -26,12 +26,12 @@
     [self.tableView registerNib:[UINib nibWithNibName:kServiceCellIdentifier bundle:nil] forCellReuseIdentifier:kServiceCellIdentifier];
     self.title = @"Service Providers";
     
-    _dataSource = @[[ServiceModel serviceWithName: @"Techcombank Liễu Giai" address: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
-                    [ServiceModel serviceWithName: @"Techcombank 91 Nguyễn Chí Thanh" address: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
-                    [ServiceModel serviceWithName: @"Techcombank 52 Nguyễn Chí Thanh" address: @"52, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
-                    [ServiceModel serviceWithName: @"Techcombank 21 Chùa Láng" address: @"21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
-                    [ServiceModel serviceWithName: @"Techcombank 21 Huỳnh Thúc Kháng" address: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
-                    [ServiceModel serviceWithName: @"Techcombank 101 Láng Hạ" address: @"101 Láng Hạ, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1]];
+    _dataSource = @[[ServiceModel serviceWithName: @"Techcombank Liễu Giai" address: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội" peopleCount:2 likeCount:3 distance:1],
+                    [ServiceModel serviceWithName: @"Techcombank 91 Nguyễn Chí Thanh" address: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội" peopleCount:2 likeCount:3 distance:1],
+                    [ServiceModel serviceWithName: @"Techcombank 52 Nguyễn Chí Thanh" address: @"52, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội" peopleCount:2 likeCount:3 distance:1],
+                    [ServiceModel serviceWithName: @"Techcombank 21 Chùa Láng" address: @"21 Chùa Láng, Láng Thượng, Hà Nội" peopleCount:2 likeCount:3 distance:1],
+                    [ServiceModel serviceWithName: @"Techcombank 21 Huỳnh Thúc Kháng" address: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội" peopleCount:2 likeCount:3 distance:1],
+                    [ServiceModel serviceWithName: @"Techcombank 101 Láng Hạ" address: @"101 Láng Hạ, Hà Nội" peopleCount:2 likeCount:3 distance:1]];
     [self.tableView reloadData];
 }
 
