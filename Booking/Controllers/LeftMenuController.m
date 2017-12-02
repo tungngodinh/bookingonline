@@ -18,6 +18,7 @@
 @interface LeftMenuController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, UINavigationController *> *controllers;
 
 @end
 
@@ -32,6 +33,7 @@
     view.backgroundColor = [UIColor redColor];
     [view setUserName:@"Hệ thống đặt vé online" email:@"dunglt@miraway.vn"];
     self.tableView.tableHeaderView = view;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,13 +115,23 @@
         default:
             break;
     }
-    
-    UINavigationController *nav = storyboardid.length > 0 ? [self.storyboard instantiateViewControllerWithIdentifier:storyboardid] : self.storyboard.instantiateInitialViewController;
+    UINavigationController *nav = [self.controllers objectForKey:storyboardid];
+    if (!nav) {
+    nav = storyboardid.length > 0 ? [self.storyboard instantiateViewControllerWithIdentifier:storyboardid] : self.storyboard.instantiateInitialViewController;
+        [self.controllers setObject:nav forKey:storyboardid];
+    }
     FAKIonIcons *icon = [FAKIonIcons naviconIconWithSize:30];
     
     [nav.topViewController addLeftBarButtonWithImage:[icon imageWithSize:CGSizeMake(30, 30)]];
     [self.slideMenuController setMainViewController:nav];
     [self.slideMenuController closeLeft];
+}
+
+- (NSMutableDictionary<NSString *, UINavigationController *> *)controllers {
+    if (!_controllers) {
+        _controllers = [[NSMutableDictionary alloc] initWithObjectsAndKeys:self.storyboard.instantiateInitialViewController, @"", nil];
+    }
+    return _controllers;
 }
 
 /*
