@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ServiceProvidersController.m"
-            timestampString = "533794147.430483"
+            timestampString = "533821381.525896"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533794147.430547"
+            timestampString = "533821381.526075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533794147.430921"
+            timestampString = "533821381.52617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227">
+            startingLineNumber = "229"
+            endingLineNumber = "229">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533794147.431243"
+            timestampString = "533821381.52622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227">
+            startingLineNumber = "229"
+            endingLineNumber = "229">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -70,11 +70,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533794147.431593"
+            timestampString = "533821381.52629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227">
+            startingLineNumber = "229"
+            endingLineNumber = "229">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533794147.431998"
+            timestampString = "533821381.526371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227">
+            startingLineNumber = "229"
+            endingLineNumber = "229">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,7 +98,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ServiceProvidersController.m"
-            timestampString = "533794147.432279"
+            timestampString = "533821381.526449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"

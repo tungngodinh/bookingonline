@@ -43,6 +43,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HG-zC-Ysh" customClass="HCSStarRatingView">
                                 <rect key="frame" x="58" y="171" width="260" height="40"/>
+                                <color key="tintColor" red="0.96569901700000005" green="0.088931236179999998" blue="0.093451722030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fWo-Yh-6yD"/>
                                 </constraints>
@@ -70,6 +71,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrF-EZ-gNe" customClass="HCSStarRatingView">
                                 <rect key="frame" x="58" y="268" width="260" height="40"/>
+                                <color key="tintColor" red="0.96569901700000005" green="0.088931236179999998" blue="0.093451722030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                         <integer key="value" value="5"/>
@@ -123,6 +125,7 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro1-rP-sGa" customClass="HCSStarRatingView">
                                 <rect key="frame" x="58" y="364" width="260" height="40"/>
+                                <color key="tintColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
                                         <integer key="value" value="5"/>

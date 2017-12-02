@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Booking Online</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,8 +20,21 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Program requires GPS to track your booking</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Program requires GPS to track your booking</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Program requires GPS to track your booking</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Program requires GPS to track your booking</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -41,18 +56,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Program requires GPS to track your booking</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Program requires GPS to track your booking</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Program requires GPS to track your booking</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Program requires GPS to track your booking</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>googlechromes</string>
-        <string>comgooglemaps</string>
-    </array>
 </dict>
 </plist>

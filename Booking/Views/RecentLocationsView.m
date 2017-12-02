@@ -55,7 +55,7 @@
         make.height.mas_equalTo(20);
     }];
     _titleLabel.font = [UIFont systemFontOfSize:15];
-    _titleLabel.text = @"Recen location";
+    _titleLabel.text = @"Recent location";
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(_locationImage.mas_centerY);
         make.leading.equalTo(_locationImage.mas_trailing).offset(8);
