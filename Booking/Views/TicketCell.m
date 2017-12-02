@@ -14,6 +14,10 @@
     [super awakeFromNib];
     // Initialization code
     
+    self.containerView.layer.cornerRadius = 5;
+    self.containerView.layer.borderWidth = 1/[[UIScreen mainScreen] scale];
+    self.containerView.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
+    self.containerView.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

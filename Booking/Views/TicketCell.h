@@ -17,5 +17,6 @@ static NSString * kTiketCellIdentifier = @"TicketCell";
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *statusLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeAgoLabel;
+@property (nonatomic, weak) IBOutlet UIView *containerView;
 
 @end
