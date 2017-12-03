@@ -146,13 +146,10 @@
 }
 
 - (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
-    // Người dùng cần chọn 1 dịch vụ trước khi chọn khung giờ
-        ChooseServiceVC *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ChooseServiceVC"];
-        //controller.ticketId = 1;
-        [self.navigationController showViewController:controller sender:nil];
-//    ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
-//    controller.ticketId = 1;
-//    [self.navigationController showViewController:controller sender:nil];
+
+    ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
+    controller.ticketId = 1;
+    [self.navigationController showViewController:controller sender:nil];
     
 }
 
