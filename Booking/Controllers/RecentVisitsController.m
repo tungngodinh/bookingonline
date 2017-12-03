@@ -9,6 +9,7 @@
 #import "RecentVisitsController.h"
 #import "ServiceCell.h"
 #import "ServiceModel.h"
+#import "WebViewController.h"
 
 @interface RecentVisitsController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -51,6 +52,12 @@
     cell.likeLabel.text = [NSString stringWithFormat:@"%ld", model.likeCount];
     cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.0f km", model.distance];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WebViewController *controller = [WebViewController new];
+    controller.link = @"https://www.techcombank.com.vn/";
+    [self showViewController:controller sender:nil];
 }
 
 /*

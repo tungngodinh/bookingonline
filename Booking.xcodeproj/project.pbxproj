@@ -41,6 +41,7 @@
 		532B21421FCEC6DF00210506 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21411FCEC6DF00210506 /* LocationModel.m */; };
 		53769E211FCA6D59002D1EA7 /* MapsDirectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E201FCA6D59002D1EA7 /* MapsDirectionController.m */; };
 		53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53769E231FCA6D97002D1EA7 /* LeftMenuController.m */; };
+		5380D9C31FD3EA1A00AB1B0F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5380D9C21FD3EA1A00AB1B0F /* WebViewController.m */; };
 		538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 538F19791FCD967200BDB2DA /* MakerInfoView.m */; };
 		53BF54C91FCED34700EBFBD9 /* RecentLocationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BF54C81FCED34700EBFBD9 /* RecentLocationsView.m */; };
 		53C7769F1FD139310011AF1B /* MyTicketsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C7769E1FD139310011AF1B /* MyTicketsController.m */; };
@@ -123,6 +124,8 @@
 		53769E201FCA6D59002D1EA7 /* MapsDirectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsDirectionController.m; sourceTree = "<group>"; };
 		53769E221FCA6D97002D1EA7 /* LeftMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuController.h; sourceTree = "<group>"; };
 		53769E231FCA6D97002D1EA7 /* LeftMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftMenuController.m; sourceTree = "<group>"; };
+		5380D9C11FD3EA1A00AB1B0F /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5380D9C21FD3EA1A00AB1B0F /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		538F19781FCD967200BDB2DA /* MakerInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakerInfoView.h; sourceTree = "<group>"; };
 		538F19791FCD967200BDB2DA /* MakerInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakerInfoView.m; sourceTree = "<group>"; };
 		53BF54C71FCED34700EBFBD9 /* RecentLocationsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentLocationsView.h; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				53C7769E1FD139310011AF1B /* MyTicketsController.m */,
 				26E79A7A1FD3D7B400EDFB02 /* ChooseServiceVC.h */,
 				26E79A7B1FD3D7B400EDFB02 /* ChooseServiceVC.m */,
+				5380D9C11FD3EA1A00AB1B0F /* WebViewController.h */,
+				5380D9C21FD3EA1A00AB1B0F /* WebViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				26E3499C1FD1251D00800DC0 /* WCSTimelineModel.m in Sources */,
 				26E349991FD1251D00800DC0 /* PickerView.m in Sources */,
 				26E349961FD1251D00800DC0 /* ViewController+MASAdditions.m in Sources */,
+				5380D9C31FD3EA1A00AB1B0F /* WebViewController.m in Sources */,
 				53BF54C91FCED34700EBFBD9 /* RecentLocationsView.m in Sources */,
 				532B213E1FCEBB4700210506 /* ServiceProvidersController.m in Sources */,
 				26E3498E1FD1251D00800DC0 /* MASConstraint.m in Sources */,
