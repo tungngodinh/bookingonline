@@ -21,5 +21,6 @@ target 'Booking' do
   pod 'FontAwesomeKit', :git => 'https://github.com/PrideChung/FontAwesomeKit.git'
   pod 'Masonry'
   pod 'NSString+Color'
+  pod 'DateTools'
   
 end

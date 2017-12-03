@@ -342,12 +342,31 @@
                     <view key="view" contentMode="scaleToFill" id="nmL-z2-tMi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-9j-0uw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jua-0z-LQ8" id="rFd-le-MGU"/>
+                                    <outlet property="delegate" destination="jua-0z-LQ8" id="u4k-1C-AnT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QfJ-9j-0uw" secondAttribute="trailing" id="2rY-Lf-8IY"/>
+                            <constraint firstItem="QfJ-9j-0uw" firstAttribute="top" secondItem="nmL-z2-tMi" secondAttribute="top" id="938-yl-KMI"/>
+                            <constraint firstAttribute="bottom" secondItem="QfJ-9j-0uw" secondAttribute="bottom" id="eSU-Ra-npl"/>
+                            <constraint firstItem="QfJ-9j-0uw" firstAttribute="leading" secondItem="nmL-z2-tMi" secondAttribute="leading" id="gNs-Bm-QFL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="QfJ-9j-0uw" id="NUB-15-4WP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTI-Hu-vmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2070" y="340"/>
+            <point key="canvasLocation" x="1980" y="713"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J3a-49-ewQ">
