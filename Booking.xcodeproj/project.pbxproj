@@ -25,6 +25,9 @@
 		26E3499C1FD1251D00800DC0 /* WCSTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3498A1FD1251D00800DC0 /* WCSTimelineModel.m */; };
 		26E3499D1FD1251D00800DC0 /* YRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3498C1FD1251D00800DC0 /* YRTextField.m */; };
 		26E79A7C1FD3D7B400EDFB02 /* ChooseServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E79A7B1FD3D7B400EDFB02 /* ChooseServiceVC.m */; };
+		531FF2111FD42B1200686E65 /* ChooseBranchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2101FD42B1200686E65 /* ChooseBranchController.m */; };
+		531FF2151FD42B3A00686E65 /* BranchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2131FD42B3A00686E65 /* BranchCell.m */; };
+		531FF2161FD42B3A00686E65 /* BranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531FF2141FD42B3A00686E65 /* BranchCell.xib */; };
 		532493271FD0036C00E341A1 /* ServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532493251FD0036C00E341A1 /* ServiceCell.m */; };
 		532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532493261FD0036C00E341A1 /* ServiceCell.xib */; };
 		5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5324932A1FD00BA500E341A1 /* RecentVisitsController.m */; };
@@ -97,6 +100,11 @@
 		26E79A7B1FD3D7B400EDFB02 /* ChooseServiceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseServiceVC.m; sourceTree = "<group>"; };
 		332FBCB109D5477225E12F07 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		3366CDB511AE969B1F94E088 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
+		531FF20F1FD42B1200686E65 /* ChooseBranchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseBranchController.h; sourceTree = "<group>"; };
+		531FF2101FD42B1200686E65 /* ChooseBranchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseBranchController.m; sourceTree = "<group>"; };
+		531FF2121FD42B3A00686E65 /* BranchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BranchCell.h; sourceTree = "<group>"; };
+		531FF2131FD42B3A00686E65 /* BranchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BranchCell.m; sourceTree = "<group>"; };
+		531FF2141FD42B3A00686E65 /* BranchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchCell.xib; sourceTree = "<group>"; };
 		532493241FD0036B00E341A1 /* ServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCell.h; sourceTree = "<group>"; };
 		532493251FD0036C00E341A1 /* ServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCell.m; sourceTree = "<group>"; };
 		532493261FD0036C00E341A1 /* ServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
@@ -314,6 +322,8 @@
 				26E79A7B1FD3D7B400EDFB02 /* ChooseServiceVC.m */,
 				5380D9C11FD3EA1A00AB1B0F /* WebViewController.h */,
 				5380D9C21FD3EA1A00AB1B0F /* WebViewController.m */,
+				531FF20F1FD42B1200686E65 /* ChooseBranchController.h */,
+				531FF2101FD42B1200686E65 /* ChooseBranchController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +346,9 @@
 				5380D9C41FD3EDD200AB1B0F /* ScheduleTimeCell.h */,
 				5380D9C51FD3EDD200AB1B0F /* ScheduleTimeCell.m */,
 				5380D9C61FD3EDD200AB1B0F /* ScheduleTimeCell.xib */,
+				531FF2121FD42B3A00686E65 /* BranchCell.h */,
+				531FF2131FD42B3A00686E65 /* BranchCell.m */,
+				531FF2141FD42B3A00686E65 /* BranchCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -417,6 +430,7 @@
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
 				532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */,
 				53C776A91FD141320011AF1B /* TicketCell.xib in Resources */,
+				531FF2161FD42B3A00686E65 /* BranchCell.xib in Resources */,
 				5380D9C81FD3EDD200AB1B0F /* ScheduleTimeCell.xib in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
 				532720FC1FCA694300A7D494 /* Main.storyboard in Resources */,
@@ -532,9 +546,11 @@
 				26E349911FD1251D00800DC0 /* MASViewAttribute.m in Sources */,
 				26E349901FD1251D00800DC0 /* MASLayoutConstraint.m in Sources */,
 				26E3498D1FD1251D00800DC0 /* MASCompositeConstraint.m in Sources */,
+				531FF2111FD42B1200686E65 /* ChooseBranchController.m in Sources */,
 				532493311FD01C7800E341A1 /* MenuHeaderView.m in Sources */,
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
 				53C776A81FD141320011AF1B /* TicketCell.m in Sources */,
+				531FF2151FD42B3A00686E65 /* BranchCell.m in Sources */,
 				26E349941FD1251D00800DC0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				26E3498F1FD1251D00800DC0 /* MASConstraintMaker.m in Sources */,
 				26E3499C1FD1251D00800DC0 /* WCSTimelineModel.m in Sources */,

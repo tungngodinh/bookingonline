@@ -6,6 +6,8 @@
 //  Copyright © 2017 Cau Ca. All rights reserved.
 //
 
+@import STPopup;
+
 #import "MyFeedBackVC.h"
 
 @interface MyFeedBackVC ()
@@ -19,6 +21,11 @@
     _variable_check = 0 ;
     
     self.title = @"Feed back";
+    [self viewDidLayoutSubviews];
+    CGSize size = [self.view systemLayoutSizeFittingSize:self.contentSizeInPopup withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
+    
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, size.width, size.height);
+    self.contentSizeInPopup = size;
 }
 
 - (void)didReceiveMemoryWarning {
