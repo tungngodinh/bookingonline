@@ -13,12 +13,13 @@
 #import "ScheduceTimeController.h"
 #import "ChooseServiceVC.h"
 #import "ScheduleTimeCell.h"
-
+#import "TicketDetailController.h"
 
 @interface ScheduleTimeModel: NSObject
 
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, assign) NSInteger serviceType;
+
 
 + (ScheduleTimeModel *)scheduleTimeWithDate:(NSDate *)date;
 
@@ -42,7 +43,7 @@
 @property (nonatomic, strong) NSMutableArray<ScheduleTimeModel *> *dataSource;
 @property (nonatomic, strong) NSDateFormatter *dayFormater;
 @property (nonatomic, strong) NSDateFormatter *hoursFormater;
-
+@property (nonatomic, strong) ScheduleTimeModel *picked ;
 
 @end
 
@@ -70,6 +71,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ScheduleTimeModel *model = self.dataSource[indexPath.row];
+    self.picked = model ;
     if (![self dateIsAvaiable:model.date]) {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
         return;
@@ -154,10 +156,71 @@
     }
     return _hoursFormater;
 }
-
+- (NSString *)getReverseCode : (NSString*)fullname idPGD : (NSString*)idPDG idService :(NSString*)idService phoneNumber:(NSString*) phoneNumber email :(NSString*)email idCard :(NSString*)idCard hour :(NSString*)hour {
+    NSDate *now = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"YYYY-MM-dd";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    NSString *startDate =[dateFormatter stringFromDate:now] ;
+    
+    NSDictionary *dict = @{
+                           @"full_name" : fullname,
+                           @"branch_id"  : idPDG,
+                           @"service_id" : idService,
+                           @"phone_number" : phoneNumber,
+                           @"email" : email,
+                           @"customer_code" : idCard,
+                           @"date" : startDate ,
+                           @"time":hour
+                           };
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+        return @"Mã phục vụ lỗi . Vui lòng đặt lịch lại" ;
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        /// NSLog(jsonString);
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://123.31.12.147:3000/api/online/booking/create"]];
+        
+        // Specify that it will be a POST request
+        request.HTTPMethod = @"POST";
+        
+        NSString *stringData =  jsonString ;
+        NSData *requestBodyData = [stringData dataUsingEncoding:NSUTF8StringEncoding];
+        request.HTTPBody = requestBodyData;
+        // Create url connection and fire request
+        //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        NSData *response = [NSURLConnection sendSynchronousRequest:request
+                                                 returningResponse:nil error:nil];
+        
+        NSLog(@"Response: %@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+        NSString *jsonReturn = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding] ;
+        NSData *webData = [jsonReturn dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error;
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:webData options:0 error:&error];
+        NSDictionary *dataSer = [jsonDict valueForKey:@"data"] ;
+        NSString *reserve_code = [dataSer valueForKey:@"reserve_code"];
+        [SVProgressHUD dismiss] ;
+       // _id_booking = [dataSer valueForKey:@"id"];
+        //   NSLog(@"Log resert : %@" , reserve_code);
+        return reserve_code ;
+    }
+}
 - (void)didChoseService:(NSInteger)seriveType timeIndex:(NSInteger)index {
     self.dataSource[index].serviceType = seriveType;
     [self.tableView reloadData];
+    [SVProgressHUD showWithStatus:@"Đang lấy vé . Xin chờ trong giây lát"];
+    [SVProgressHUD dismissWithCompletion:^{
+        NSString *reverseCode = [self getReverseCode:@"Luong The Dung" idPGD:@"" idService:@"" phoneNumber:@"0936108955" email:@"dunglt@miraway.vn" idCard:@"100973612" hour:@"11:30"];
+        NSLog(@"Log reverseCOde ") ;
+        TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
+       // controller.ticketId = 1;
+        [self.navigationController showViewController:controller sender:nil];
+    }] ;
 }
 
 /*
