@@ -19,6 +19,7 @@
 #import "ScheduceTimeController.h"
 #import "LocationModel.h"
 #import "RecentLocationsView.h"
+#import "ChooseServiceVC.h"
 
 @interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate>{
     CLLocationManager *locationManager;
@@ -145,9 +146,13 @@
 }
 
 - (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
-    ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
-    controller.ticketId = 1;
-    [self.navigationController showViewController:controller sender:nil];
+    // Người dùng cần chọn 1 dịch vụ trước khi chọn khung giờ
+        ChooseServiceVC *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ChooseServiceVC"];
+        //controller.ticketId = 1;
+        [self.navigationController showViewController:controller sender:nil];
+//    ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
+//    controller.ticketId = 1;
+//    [self.navigationController showViewController:controller sender:nil];
     
 }
 
