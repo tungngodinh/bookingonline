@@ -9,6 +9,7 @@
 #import "ServiceProvidersController.h"
 #import "ServiceModel.h"
 #import "ServiceCell.h"
+#import "WebViewController.h"
 
 @interface ServiceProvidersController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -53,6 +54,12 @@
     cell.likeLabel.text = [NSString stringWithFormat:@"%ld", model.likeCount];
     cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.00f km", model.distance];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WebViewController *controller = [WebViewController new];
+    controller.link = @"https://www.techcombank.com.vn/";
+    [self showViewController:controller sender:nil];
 }
 
 /*
