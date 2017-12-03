@@ -12,6 +12,7 @@
 #import "TicketCell.h"
 #import "TicketModel.h"
 #import "NSDate+TimeAgo.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface MyTicketsController ()<UITableViewDataSource, UITabBarDelegate>
 
@@ -25,6 +26,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //Test get List ticket tu PGDID
+    [self getListTimePicked:@"a349"] ;
+    [self getListTimePicked:@"a091"] ;
+    [self getListTimePicked:@"s052"] ;
+    [self getListTimePicked:@"s021"] ;
+    [self getListTimePicked:@"s020"] ;
+    [self getListTimePicked:@"s062"] ;
+    [self getListTimePicked:@"s101"] ;
+    // End get full list ve pgd ;
+    
+    // Xoá ticket thì phải kèm mã idBooking . 
+    
+    
     // Do any additional setup after loading the view.
     
     self.title = @"My tickets";
@@ -44,7 +58,67 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataSource.count;
 }
-
+-(void) getListTimePicked : (NSString *)pdgID {
+    NSDate *now = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"YYYY-MM-dd";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    NSString *startDate =[dateFormatter stringFromDate:now] ;
+    int daysToAdd = 1;
+    NSDate *tomorrowDate = [now dateByAddingTimeInterval:60*60*24*daysToAdd];
+    NSString *endDate = [dateFormatter stringFromDate:tomorrowDate];
+    NSString *urlAsString = [NSString stringWithFormat:@"http://123.31.12.147:3000/api/online/booking/search?branch_id=%@&start_date=%@&end_date=%@",pdgID,startDate,endDate] ;
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error) {
+            [SVProgressHUD dismiss];
+        } else {
+            NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            NSDictionary *dataRespond = [responseDict valueForKey:@"data"] ;
+            NSLog(@"log data return  : %@", [dataRespond description]) ;
+            }
+    }];
+}
+- (void)deleteTicket : (NSString *)idBooking {
+    NSDictionary *dict = @{
+                           @"id" : idBooking
+                           };
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    /// NSLog(jsonString);
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://123.31.12.147:3000/api/online/booking/cancel"]];
+    
+    // Specify that it will be a POST request
+    request.HTTPMethod = @"POST";
+    
+    NSString *stringData =  jsonString ;
+    NSData *requestBodyData = [stringData dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPBody = requestBodyData;
+    // Create url connection and fire request
+    //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request
+                                             returningResponse:nil error:nil];
+    NSLog(@"Response: %@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    NSString *jsonReturn = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding] ;
+    NSData *webData = [jsonReturn dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:webData options:0 error:&error];
+    if ([[jsonDict valueForKey:@"status"] isEqualToString:@"error"]){
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thông báo" message:@"Mã bản ghi không phù hợp" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        [alert show];
+//        [_alertView removeFromSuperview];
+    }
+    else{
+//        [_alertView removeFromSuperview];
+//        _flag = 1;
+//        _alertView = [[UIAlertView alloc] initWithTitle:@"Thông báo" message:@"Xoá lịch hẹn thành công" delegate:self cancelButtonTitle:@"Đặt vé lại" otherButtonTitles: nil];
+//        [_alertView show];
+        //   [_alertView removeFromSuperview];
+    }
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:kTiketCellIdentifier forIndexPath:indexPath];
     TicketModel *mode = _dataSource[indexPath.row];
