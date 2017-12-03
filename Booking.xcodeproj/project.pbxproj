@@ -28,6 +28,7 @@
 		531FF2111FD42B1200686E65 /* ChooseBranchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2101FD42B1200686E65 /* ChooseBranchController.m */; };
 		531FF2151FD42B3A00686E65 /* BranchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2131FD42B3A00686E65 /* BranchCell.m */; };
 		531FF2161FD42B3A00686E65 /* BranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531FF2141FD42B3A00686E65 /* BranchCell.xib */; };
+		531FF2191FD4484100686E65 /* TicketDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2181FD4484100686E65 /* TicketDetailController.m */; };
 		532493271FD0036C00E341A1 /* ServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 532493251FD0036C00E341A1 /* ServiceCell.m */; };
 		532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 532493261FD0036C00E341A1 /* ServiceCell.xib */; };
 		5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5324932A1FD00BA500E341A1 /* RecentVisitsController.m */; };
@@ -105,6 +106,8 @@
 		531FF2121FD42B3A00686E65 /* BranchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BranchCell.h; sourceTree = "<group>"; };
 		531FF2131FD42B3A00686E65 /* BranchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BranchCell.m; sourceTree = "<group>"; };
 		531FF2141FD42B3A00686E65 /* BranchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchCell.xib; sourceTree = "<group>"; };
+		531FF2171FD4484100686E65 /* TicketDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketDetailController.h; sourceTree = "<group>"; };
+		531FF2181FD4484100686E65 /* TicketDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketDetailController.m; sourceTree = "<group>"; };
 		532493241FD0036B00E341A1 /* ServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCell.h; sourceTree = "<group>"; };
 		532493251FD0036C00E341A1 /* ServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCell.m; sourceTree = "<group>"; };
 		532493261FD0036C00E341A1 /* ServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 				5380D9C21FD3EA1A00AB1B0F /* WebViewController.m */,
 				531FF20F1FD42B1200686E65 /* ChooseBranchController.h */,
 				531FF2101FD42B1200686E65 /* ChooseBranchController.m */,
+				531FF2171FD4484100686E65 /* TicketDetailController.h */,
+				531FF2181FD4484100686E65 /* TicketDetailController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				53C7769F1FD139310011AF1B /* MyTicketsController.m in Sources */,
 				26E349931FD1251D00800DC0 /* NSArray+MASAdditions.m in Sources */,
 				26E3499A1FD1251D00800DC0 /* RzTextField.m in Sources */,
+				531FF2191FD4484100686E65 /* TicketDetailController.m in Sources */,
 				26E349951FD1251D00800DC0 /* View+MASAdditions.m in Sources */,
 				26E79A7C1FD3D7B400EDFB02 /* ChooseServiceVC.m in Sources */,
 				26E3499B1FD1251D00800DC0 /* WCSTimelineCell.m in Sources */,

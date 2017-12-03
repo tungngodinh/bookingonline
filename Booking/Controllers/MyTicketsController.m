@@ -7,14 +7,15 @@
 //
 
 @import NSString_Color;
+@import SVProgressHUD;
 
 #import "MyTicketsController.h"
 #import "TicketCell.h"
 #import "TicketModel.h"
 #import "NSDate+TimeAgo.h"
-#import <SVProgressHUD/SVProgressHUD.h>
+#import "TicketDetailController.h"
 
-@interface MyTicketsController ()<UITableViewDataSource, UITabBarDelegate>
+@interface MyTicketsController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray<TicketModel *> *dataSource;
@@ -188,6 +189,12 @@
         return @[delete, cancel];
     }
     return @[delete];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
+    controller.ticket = self.dataSource[indexPath.row];
+    [self showViewController:controller sender:nil];
 }
 
 - (NSDateFormatter *)dateFormater {
