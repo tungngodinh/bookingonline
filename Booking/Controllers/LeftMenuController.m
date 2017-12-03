@@ -77,7 +77,7 @@
         }
         case 4: {
             cell.textLabel.text = @"FeedBack";
-            icon = [FAKIonIcons iosMicIconWithSize:20];
+            icon = [FAKIonIcons androidHappyIconWithSize:20];
             break;
         }
         default:

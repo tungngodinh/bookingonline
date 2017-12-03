@@ -36,7 +36,6 @@
 		532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532720FF1FCA694300A7D494 /* LaunchScreen.storyboard */; };
 		532721041FCA694300A7D494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 532721031FCA694300A7D494 /* main.m */; };
 		532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21341FCEB3D500210506 /* MyFeedBackVC.m */; };
-		532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21361FCEB3D500210506 /* MyticketVC.m */; };
 		532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21371FCEB3D500210506 /* ScheduceTimeController.m */; };
 		532B213E1FCEBB4700210506 /* ServiceProvidersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B213D1FCEBB4700210506 /* ServiceProvidersController.m */; };
 		532B21421FCEC6DF00210506 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B21411FCEC6DF00210506 /* LocationModel.m */; };
@@ -114,8 +113,6 @@
 		532721031FCA694300A7D494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		532B21331FCEB3D400210506 /* MyFeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFeedBackVC.h; sourceTree = "<group>"; };
 		532B21341FCEB3D500210506 /* MyFeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFeedBackVC.m; sourceTree = "<group>"; };
-		532B21351FCEB3D500210506 /* MyticketVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyticketVC.h; sourceTree = "<group>"; };
-		532B21361FCEB3D500210506 /* MyticketVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyticketVC.m; sourceTree = "<group>"; };
 		532B21371FCEB3D500210506 /* ScheduceTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduceTimeController.m; sourceTree = "<group>"; };
 		532B21381FCEB3D500210506 /* ScheduceTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduceTimeController.h; sourceTree = "<group>"; };
 		532B213C1FCEBB4700210506 /* ServiceProvidersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceProvidersController.h; sourceTree = "<group>"; };
@@ -293,8 +290,6 @@
 			children = (
 				532B21331FCEB3D400210506 /* MyFeedBackVC.h */,
 				532B21341FCEB3D500210506 /* MyFeedBackVC.m */,
-				532B21351FCEB3D500210506 /* MyticketVC.h */,
-				532B21361FCEB3D500210506 /* MyticketVC.m */,
 				532B21381FCEB3D500210506 /* ScheduceTimeController.h */,
 				532B21371FCEB3D500210506 /* ScheduceTimeController.m */,
 				53769E1F1FCA6D59002D1EA7 /* MapsDirectionController.h */,
@@ -524,7 +519,6 @@
 				53769E241FCA6D97002D1EA7 /* LeftMenuController.m in Sources */,
 				53C776A81FD141320011AF1B /* TicketCell.m in Sources */,
 				26E349941FD1251D00800DC0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				532B213A1FCEB3D500210506 /* MyticketVC.m in Sources */,
 				26E3498F1FD1251D00800DC0 /* MASConstraintMaker.m in Sources */,
 				26E3499C1FD1251D00800DC0 /* WCSTimelineModel.m in Sources */,
 				26E349991FD1251D00800DC0 /* PickerView.m in Sources */,

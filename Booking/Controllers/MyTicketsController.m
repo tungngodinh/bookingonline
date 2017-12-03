@@ -31,7 +31,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:kTiketCellIdentifier bundle:nil] forCellReuseIdentifier:kTiketCellIdentifier];
     _dataSource = [[NSMutableArray alloc] initWithCapacity:20];
     for (NSInteger i = 1; i < 20; i++) {
-        [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%3 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
+        [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
     }
     [self.tableView reloadData];
 }
@@ -51,26 +51,54 @@
     cell.documentCode.text = mode.code;
     switch (mode.status) {
         case 0: {
-            cell.statusLabel.text = @"Waiting";
+            cell.statusLabel.text = @"Chờ xử lý";
             cell.statusLabel.textColor = [UIColor redColor];
             break;
         }
         case 1: {
-            cell.statusLabel.text = @"Inprogess";
+            cell.statusLabel.text = @"Đang làm việc";
             cell.statusLabel.textColor = [@"#4BA157" representedColor];
             break;
         }
         case 2: {
-            cell.statusLabel.text = @"Cancel";
+            cell.statusLabel.text = @"Hủy";
             cell.statusLabel.textColor = [UIColor lightGrayColor];
             break;
         }
-        default:
+        default: {
+            cell.statusLabel.text = @"Hoàn thành";
+            cell.statusLabel.textColor = [UIColor lightGrayColor];
             break;
+        }
     }
     cell.timeLabel.text = [self.dateFormater stringFromDate:mode.date];
     cell.timeAgoLabel.text = [mode.date formattedAsTimeAgo];
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    TicketModel *model = _dataSource[indexPath.row];
+    return model.status == 2 || model.status == 0;
+}
+
+-  (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *delete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Xóa" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+        [_dataSource removeObjectAtIndex:indexPath.row];
+        [tableView endUpdates];
+    }];
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    delete.backgroundEffect = effect;
+    // Chờ xử lý
+    if (_dataSource[indexPath.row].status == 0) {
+        UITableViewRowAction *cancel = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Hủy" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            _dataSource[indexPath.row].status = 2;
+            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }];
+        return @[delete, cancel];
+    }
+    return @[delete];
 }
 
 - (NSDateFormatter *)dateFormater {
