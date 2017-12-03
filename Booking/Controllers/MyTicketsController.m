@@ -34,6 +34,7 @@
     [self getListTimePicked:@"s020"] ;
     [self getListTimePicked:@"s062"] ;
     [self getListTimePicked:@"s101"] ;
+    _dataSource = [[NSMutableArray alloc]init];
     // End get full list ve pgd ;
     
     // Xoá ticket thì phải kèm mã idBooking . 
@@ -43,11 +44,11 @@
     
     self.title = @"My tickets";
     [self.tableView registerNib:[UINib nibWithNibName:kTiketCellIdentifier bundle:nil] forCellReuseIdentifier:kTiketCellIdentifier];
-    _dataSource = [[NSMutableArray alloc] initWithCapacity:20];
-    for (NSInteger i = 1; i < 20; i++) {
-        [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
-    }
-    [self.tableView reloadData];
+//    _dataSource = [[NSMutableArray alloc] initWithCapacity:20];
+//    for (NSInteger i = 1; i < 20; i++) {
+//        [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
+//    }
+//  /  [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,9 +75,23 @@
             [SVProgressHUD dismiss];
         } else {
             NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-            NSDictionary *dataRespond = [responseDict valueForKey:@"data"] ;
-            NSLog(@"log data return  : %@", [dataRespond description]) ;
+            NSMutableArray *dataRespond = [responseDict valueForKey:@"data"] ;
+            if ([dataRespond count] > 0)
+            {
+                for (NSInteger i = 0 ; i < [dataRespond count]; i ++)
+                {
+                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking:@"test"]];
+//                    [_dataSource addObject:[TicketModel tickeWithCode:dataRespond[0][@"reserve_code"] status:0 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.tableView reloadData];
+                    });
+                }
+              
+//
+                  NSLog(@"log data return  : %@", [dataRespond description]) ;
             }
+          
+        }
     }];
 }
 - (void)deleteTicket : (NSString *)idBooking {

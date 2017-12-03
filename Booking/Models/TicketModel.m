@@ -10,12 +10,13 @@
 
 @implementation TicketModel
 
-+ (TicketModel *)tickeWithCode:(NSString *)code status:(NSInteger)status branch:(NSString *)branch time:(NSDate *)date {
++ (TicketModel *)tickeWithCode:(NSString *)code status:(NSInteger)status branch:(NSString *)branch time:(NSDate *)date idBooking : (NSString*)idBooking{
     TicketModel *model = [[TicketModel alloc] init];
     model.code = code;
     model.status = status;
     model.branch = branch;
     model.date = date;
+    model.idBooking = idBooking;
     return model;
 }
 

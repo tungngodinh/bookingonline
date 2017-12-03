@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533979723.297647"
+            timestampString = "533983292.079909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533979723.297741"
+            timestampString = "533983292.08003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "289"
@@ -56,7 +56,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533979723.297801"
+            timestampString = "533983292.080109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "289"
@@ -70,7 +70,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533979723.297848"
+            timestampString = "533983292.080177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "289"
@@ -84,11 +84,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Booking/Controllers/ScheduceTimeController.m"
-            timestampString = "533979723.297914"
+            timestampString = "533983292.08025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "289"
             endingLineNumber = "289">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Booking/Controllers/MyTicketsController.m"
+            timestampString = "533983292.080313"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-getListTimePicked:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Booking/Controllers/MyTicketsController.m"
+            timestampString = "533983292.080384"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-getListTimePicked:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[MyTicketsController getListTimePicked:]_block_invoke"
+                  moduleName = "Booking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/LuongTheDung/bookingonline%202/Booking/Controllers/MyTicketsController.m"
+                  timestampString = "533983292.143582"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "913">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[MyTicketsController getListTimePicked:]_block_invoke_2"
+                  moduleName = "Booking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/LuongTheDung/bookingonline%202/Booking/Controllers/MyTicketsController.m"
+                  timestampString = "533983292.146538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
