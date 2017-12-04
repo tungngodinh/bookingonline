@@ -605,7 +605,7 @@
             </objects>
             <point key="canvasLocation" x="-354" y="2192"/>
         </scene>
-        <!--My Tickets Controller-->
+        <!--Empty Data Set Source-->
         <scene sceneID="YRV-jU-83S">
             <objects>
                 <viewController storyboardIdentifier="MyTicketsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1mj-aB-lIy" customClass="MyTicketsController" sceneMemberID="viewController">
@@ -623,6 +623,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="1mj-aB-lIy" id="kkz-m3-OmW"/>
                                     <outlet property="delegate" destination="1mj-aB-lIy" id="AYZ-tv-a9M"/>
+                                    <outlet property="emptyDataSetSource" destination="1mj-aB-lIy" id="N5R-LE-G5g"/>
                                 </connections>
                             </tableView>
                         </subviews>

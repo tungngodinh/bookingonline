@@ -90,6 +90,15 @@
         }
     }
     self.statusImage.image = [icon imageWithSize:self.statusImage.frame.size];
+    
+    icon = [FAKIonIcons iosArrowBackIconWithSize:25];
+    [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[icon imageWithSize:CGSizeMake(40, 25)] style:UIBarButtonItemStylePlain target:self action:@selector(onBackButtonTapped)];
+    self.navigationItem.leftBarButtonItem = backButton;
+}
+
+- (void)onBackButtonTapped {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)onPrintButtontTapped {

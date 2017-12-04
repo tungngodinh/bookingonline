@@ -8,6 +8,8 @@
 
 @import NSString_Color;
 @import SVProgressHUD;
+@import DZNEmptyDataSet;
+@import FontAwesomeKit;
 
 #import "MyTicketsController.h"
 #import "TicketCell.h"
@@ -15,7 +17,7 @@
 #import "NSDate+TimeAgo.h"
 #import "TicketDetailController.h"
 
-@interface MyTicketsController ()<UITableViewDataSource, UITableViewDelegate>
+@interface MyTicketsController ()<UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray<TicketModel *> *dataSource;
@@ -203,6 +205,16 @@
         _dateFormater.dateFormat = @"dd/MM/yyyy HH:mm";
     }
     return _dateFormater;
+}
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
+    FAKIonIcons *icon = [FAKIonIcons iosComposeOutlineIconWithSize:80];
+    [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor]}];
+    return [icon imageWithSize:CGSizeMake(80, 80)];
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:@"Bạn chưa có phiếu đặt nào" attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize: 17]}];
 }
 
 /*
