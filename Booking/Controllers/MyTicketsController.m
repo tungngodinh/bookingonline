@@ -83,14 +83,12 @@
             {
                 for (NSInteger i = 0 ; i < [dataRespond count]; i ++)
                 {
-                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking:@"test"]];
+                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking: dataRespond[i][@"id"]]];
 //                    [_dataSource addObject:[TicketModel tickeWithCode:dataRespond[0][@"reserve_code"] status:0 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.tableView reloadData];
                     });
                 }
-              
-//
                   NSLog(@"log data return  : %@", [dataRespond description]) ;
             }
           
@@ -153,7 +151,7 @@
             break;
         }
         case 2: {
-            cell.statusLabel.text = @"Hủy";
+            cell.statusLabel.text = @"Hủy vé";
             cell.statusLabel.textColor = [UIColor lightGrayColor];
             break;
         }
@@ -177,6 +175,15 @@
     UITableViewRowAction *delete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Xóa" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         [tableView beginUpdates];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+        [SVProgressHUD showWithStatus:@"Đang thực hiện xoá vé . Xin chờ trong giây lát"] ;
+        [SVProgressHUD dismissWithDelay:4.0f];
+        [SVProgressHUD dismissWithCompletion:^{
+            TicketModel *ticketModel = [_dataSource objectAtIndex:indexPath.row] ;
+            [self deleteTicket:ticketModel.idBooking];
+            [SVProgressHUD showWithStatus:@"Đã xoá vé thành công ."] ;
+            [SVProgressHUD dismissWithDelay:4.0f];
+        }];
+        
         [_dataSource removeObjectAtIndex:indexPath.row];
         [tableView endUpdates];
     }];
