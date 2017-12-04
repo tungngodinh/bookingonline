@@ -21,11 +21,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD show];
+    if (!self.link) {
+        self.link = @"http://miraway.vn";
+    }
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.link]]];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [SVProgressHUD dismiss];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [SVProgressHUD dismiss];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [SVProgressHUD dismiss];
 }
 

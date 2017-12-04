@@ -44,7 +44,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,6 +80,16 @@
         case 4: {
             cell.textLabel.text = @"FeedBack";
             icon = [FAKIonIcons androidHappyIconWithSize:20];
+            break;
+        }
+        case 5: {
+            cell.textLabel.text = @"Help";
+            icon = [FAKIonIcons iosHelpOutlineIconWithSize:20];
+            break;
+        }
+        case 6: {
+            cell.textLabel.text = @"About US";
+            icon = [FAKIonIcons iosInformationOutlineIconWithSize:20];
             break;
         }
         default:
@@ -118,6 +128,11 @@
             popup.style = STPopupStyleFormSheet;
             [popup presentInViewController:self.slideMenuController.mainViewController];
             return;
+        }
+        case 5:
+        case 6: {
+            storyboardid = @"NavWebViewController";
+            break;
         }
         default:
             break;
