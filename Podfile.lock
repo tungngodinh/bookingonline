@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - DateTools (2.0.0)
+  - DZNEmptyDataSet (1.8.1)
   - FontAwesomeKit (2.2.1):
     - FontAwesomeKit/Core (= 2.2.1)
     - FontAwesomeKit/FontAwesome (= 2.2.1)
@@ -55,6 +56,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - DateTools
+  - DZNEmptyDataSet
   - FontAwesomeKit (from `https://github.com/PrideChung/FontAwesomeKit.git`)
   - GoogleMaps
   - GooglePlaces
@@ -79,6 +81,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
@@ -91,6 +94,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
   XLForm: 04110197c12187dd28a6c7295d3d8b95f4fdb4de
 
-PODFILE CHECKSUM: 0bb7c4097c4a7a05a97a570bd5d0c1ffe8a04cde
+PODFILE CHECKSUM: 81d1fdd7f547f1d620e8741344e7010f0560712e
 
 COCOAPODS: 1.3.1
