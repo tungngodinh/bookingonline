@@ -213,7 +213,7 @@
     NSString *typeID = [self serviceTypeString:seriveType];
     [SVProgressHUD showWithStatus:@"Đang lấy vé . Xin chờ trong giây lát"];
     [SVProgressHUD dismissWithCompletion:^{
-        NSString *reverseCode = [self getReverseCode:@"Luong The Dung" idPGD:_pgdID idService:typeID phoneNumber:@"0936108955" email:@"dunglt@miraway.vn" idCard:@"100973612" hour:@"11:30"];
+        NSString *reverseCode = [self getReverseCode:@"Luong The Dung" idPGD:_pgdID idService:typeID phoneNumber:@"0936108955" email:@"dunglt@miraway.vn" idCard:@"100973612" hour:[self.hoursFormater stringFromDate:_picked.date] ];
         NSLog(@"Log reverseCOde: %@ ",reverseCode) ;
         TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
         controller.ticketnumberString = reverseCode ;

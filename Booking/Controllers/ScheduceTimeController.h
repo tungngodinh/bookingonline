@@ -12,5 +12,6 @@
 
 @property (nonatomic, assign) NSInteger ticketId;
 @property ( nonatomic , assign) NSString *pgdID ;
+@property (nonatomic, assign) NSString *hour ;
 
 @end

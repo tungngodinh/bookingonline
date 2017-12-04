@@ -53,10 +53,17 @@
     [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     UIBarButtonItem *print = [[UIBarButtonItem alloc] initWithImage:[icon imageWithSize:CGSizeMake(40, 25)] style:UIBarButtonItemStylePlain target:self action:@selector(onPrintButtontTapped)];
     self.navigationItem.rightBarButtonItem = print;
-    //NSLog(@"Ticketnumber is :%@", self.ticket.ticketNumber);
-    self.ticketNumberLabel.text = _ticketnumberString;
-    self.waitTimeLabel.text = @"~3 minute waiting";
-    self.peopleCountLabel.text = @"~1000 waiting";
+    if (_ticketnumberString == nil){
+        self.ticketNumberLabel.text = _ticket.code ;
+    }
+    else
+    {
+        self.ticketNumberLabel.text = _ticketnumberString;
+    }
+    
+    
+    self.waitTimeLabel.text = @"Thời gian chờ trung bình ~ 30 phút";
+    self.peopleCountLabel.text = @"~ 3 người đang chờ phục vụ";
     self.branchLabel.text = self.ticket.branch;
     
     switch (self.ticket.status) {
@@ -91,7 +98,6 @@
         }
     }
     self.statusImage.image = [icon imageWithSize:self.statusImage.frame.size];
-    
     icon = [FAKIonIcons iosArrowBackIconWithSize:25];
     [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[icon imageWithSize:CGSizeMake(40, 25)] style:UIBarButtonItemStylePlain target:self action:@selector(onBackButtonTapped)];

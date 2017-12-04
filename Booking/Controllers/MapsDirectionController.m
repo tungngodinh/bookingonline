@@ -110,7 +110,7 @@
     NSInteger viewtag = 1111;
     RecentLocationsView *view = [[RecentLocationsView alloc] initWithFrame:CGRectMake(0, 0, width, 300)];
     LocationModel *location = [self estimateRecentLocations];
-    [view setSnippet:location.snippet phone:@"19001900" distance:[_myLocation distanceFromLocation:location.position] / 1000 estimateWidth:width];
+    [view setSnippet:location.snippet phone:@"1800 588 822" distance:[_myLocation distanceFromLocation:location.position] / 1000 estimateWidth:width];
     CGFloat x = (self.view.frame.size.width - width) / 2;
     CGFloat y = self.view.frame.size.height - view.frame.size.height - 5;
     view.frame = CGRectMake(x, y, view.frame.size.width, view.frame.size.height);
@@ -153,13 +153,13 @@
     NSString *idPGD = model.idPGD ;
     controller.ticketId = 1;
     controller.pgdID = idPGD ;
+    //controller.hour = model
     [self.navigationController showViewController:controller sender:nil];
     
 }
 
 - (NSArray<LocationModel *> *)locationsData {
-    //LocationModel *model = [LocationModel locationWith:<#(NSString *)#> snippet:<#(NSString *)#> position:<#(CLLocation *)#> idPGD:<#(NSString *)#>]
-    
+  
     if (!_locationsData) {
         _locationsData = @[[LocationModel locationWith: @"ATM Techcombank" snippet: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc] initWithLatitude:21.037218 longitude:105.815297] idPGD:@"a349"],
                            [LocationModel locationWith: @"ATM Techcombank" snippet: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc] initWithLatitude:21.020003 longitude:105.808728] idPGD:@"a091"],

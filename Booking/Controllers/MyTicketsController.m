@@ -30,7 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Test get List ticket tu PGDID
-    [self initData];
+ 
+    dispatch_async(dispatch_get_main_queue(), ^{
+       NSTimer *m_timer = [NSTimer scheduledTimerWithTimeInterval:2.0f
+                                                   target:self
+                                                 selector:@selector(initData)
+                                                 userInfo:nil
+                                                  repeats:NO];
+        [[NSRunLoop currentRunLoop] addTimer:m_timer forMode:NSRunLoopCommonModes];
+    });
     _dataSource = [[NSMutableArray alloc]init];
     self.title = @"My tickets";
     [self.tableView registerNib:[UINib nibWithNibName:kTiketCellIdentifier bundle:nil] forCellReuseIdentifier:kTiketCellIdentifier];
@@ -74,11 +82,15 @@
             {
                 for (NSInteger i = 0 ; i < [dataRespond count]; i ++)
                 {
-                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"Mã phục vụ :%@", dataRespond[i][@"reserve_code"]] status: [self statusCodeTicket :dataRespond[i][@"state"]]  branch: [self nameFromBrandID:dataRespond[i][@"branch_id"]]  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking: dataRespond[i][@"id"]]];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadData];
-                    });
+                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@", dataRespond[i][@"reserve_code"]] status: [self statusCodeTicket :dataRespond[i][@"state"]]  branch: [self nameFromBrandID:dataRespond[i][@"branch_id"]]  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking: dataRespond[i][@"id"]]];
+                   
                 }
+                NSInteger iz = 21 ;
+                 [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"007"] status: 3  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1001"]];
+                 [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"009"] status: 1  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1000"]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
                 //  NSLog(@"log data return  : %@", [dataRespond description]) ;
             }
           
@@ -227,6 +239,10 @@
 
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
     return [[NSAttributedString alloc] initWithString:@"Bạn chưa có phiếu đặt nào" attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize: 17]}];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self initData];
 }
 
 /*
