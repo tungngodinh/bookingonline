@@ -217,6 +217,8 @@
         NSLog(@"Log reverseCOde: %@ ",reverseCode) ;
         TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
         controller.ticketnumberString = reverseCode ;
+        controller.serviceChoose =  typeID ;
+        
         [self.navigationController showViewController:controller sender:nil];
     }] ;
 }

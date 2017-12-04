@@ -14,5 +14,7 @@
 
 @property (nonatomic, weak) TicketModel *ticket;
 @property NSString *ticketnumberString ;
+@property NSString *serviceChoose;
+@property (weak, nonatomic) IBOutlet UILabel *typeServiceChoose;
 
 @end

@@ -36,7 +36,12 @@
 - (void)configUI {
     self.title = @"Chi tiết đặt lịch";
     self.ticketNumberLabel.text = self.ticket.ticketNumber ;
-    
+    if (_serviceChoose == nil){
+        self.typeServiceChoose.text = _ticket.serviceID;
+    }
+    else{
+        self.typeServiceChoose.text = _serviceChoose ;
+    }
     FAKIonIcons *icon = [FAKIonIcons iosPeopleOutlineIconWithSize:self.peopleImage.frame.size.width];
     [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor]}];
     self.peopleImage.image = [icon imageWithSize:self.peopleImage.frame.size];

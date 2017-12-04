@@ -16,7 +16,8 @@
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *idBooking;
 @property (nonatomic, assign) NSString *ticketNumber;
+@property ( nonatomic, strong)NSString *serviceID ;
 
-+ (TicketModel *)tickeWithCode:(NSString *)code status:(NSInteger)status branch:(NSString *)branch time:(NSDate *)date idBooking : (NSString*)idBooking;
++ (TicketModel *)tickeWithCode:(NSString *)code status:(NSInteger)status branch:(NSString *)branch time:(NSDate *)date idBooking : (NSString*)idBooking serviceID :(NSString*) serviceID;
 
 @end

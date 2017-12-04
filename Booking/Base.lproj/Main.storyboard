@@ -315,18 +315,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dịch vụ đã chọn :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI0-DP-FDF">
+                                <rect key="frame" x="20" y="161" width="133" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1kD-EU-t0q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Mở ATM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6Z-6X-Lw6">
+                                <rect key="frame" x="170" y="161" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zI0-DP-FDF" firstAttribute="top" secondItem="4iW-Mh-0oN" secondAttribute="bottom" constant="11" id="0h3-ds-BGB"/>
                             <constraint firstAttribute="trailing" secondItem="WoB-DC-YeF" secondAttribute="trailing" constant="25" id="1eA-XU-0LD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h6Z-6X-Lw6" secondAttribute="trailing" id="2sb-Ge-Vca"/>
                             <constraint firstAttribute="trailing" secondItem="KCH-7g-7JV" secondAttribute="trailing" constant="10" id="7Sq-SF-DOx"/>
                             <constraint firstItem="imM-h5-FNS" firstAttribute="top" secondItem="4iW-Mh-0oN" secondAttribute="bottom" constant="40" id="BBb-V5-JYJ"/>
+                            <constraint firstItem="h6Z-6X-Lw6" firstAttribute="top" secondItem="4iW-Mh-0oN" secondAttribute="bottom" constant="11" id="CEB-ky-NqF"/>
+                            <constraint firstItem="zI0-DP-FDF" firstAttribute="leading" secondItem="BDF-Qw-TJu" secondAttribute="leadingMargin" constant="4" id="CI3-J9-yIv"/>
                             <constraint firstItem="jZV-2C-02P" firstAttribute="top" secondItem="aXD-mf-mWh" secondAttribute="bottom" constant="15" id="DFP-1f-4dK"/>
                             <constraint firstItem="4iW-Mh-0oN" firstAttribute="width" secondItem="WoB-DC-YeF" secondAttribute="width" id="DTj-Q6-R6a"/>
                             <constraint firstItem="jZV-2C-02P" firstAttribute="height" secondItem="pRf-vT-7IJ" secondAttribute="height" id="EWh-bg-0sC"/>
                             <constraint firstItem="4iW-Mh-0oN" firstAttribute="height" secondItem="WoB-DC-YeF" secondAttribute="height" id="FlX-Lq-An8"/>
                             <constraint firstItem="boV-GL-PQC" firstAttribute="leading" secondItem="fjA-Et-jZ3" secondAttribute="trailing" constant="10" id="H5v-Lt-BzS"/>
                             <constraint firstItem="t4h-uF-2sI" firstAttribute="top" secondItem="Zni-Fl-Jqw" secondAttribute="bottom" constant="15" id="HG7-eS-L2O"/>
+                            <constraint firstItem="h6Z-6X-Lw6" firstAttribute="leading" secondItem="zI0-DP-FDF" secondAttribute="trailing" constant="17" id="HRS-0q-jXe"/>
                             <constraint firstItem="Jvg-u1-u8B" firstAttribute="top" secondItem="t4h-uF-2sI" secondAttribute="bottom" constant="30" id="Hy2-sb-Xa0"/>
                             <constraint firstItem="WoB-DC-YeF" firstAttribute="top" secondItem="BDF-Qw-TJu" secondAttribute="top" constant="30" id="IeK-RD-6Gq"/>
                             <constraint firstItem="359-w5-VbW" firstAttribute="centerY" secondItem="pRf-vT-7IJ" secondAttribute="centerY" id="IzX-Jb-3Ar"/>
@@ -372,6 +392,7 @@
                         <outlet property="statusImage" destination="Jvg-u1-u8B" id="gjq-Z6-fwJ"/>
                         <outlet property="statusLabel" destination="Ue0-vs-ef7" id="kED-qg-qLU"/>
                         <outlet property="ticketNumberLabel" destination="WAm-CM-pir" id="xlH-wV-NNI"/>
+                        <outlet property="typeServiceChoose" destination="h6Z-6X-Lw6" id="PC9-Yo-spF"/>
                         <outlet property="waitTimeImage" destination="pRf-vT-7IJ" id="hic-Va-wT7"/>
                         <outlet property="waitTimeLabel" destination="359-w5-VbW" id="Dy0-H0-4hi"/>
                     </connections>
