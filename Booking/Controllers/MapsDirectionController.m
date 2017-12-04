@@ -69,6 +69,7 @@
     
     FAKIonIcons *icon = [FAKIonIcons iosLocationIconWithSize:40];
     [icon setAttributes:@{NSForegroundColorAttributeName : [@"#4BA157" representedColor]}];
+    int i = 0 ;
     for (LocationModel* lc in self.locationsData) {
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
@@ -77,6 +78,8 @@
         marker.snippet = lc.snippet;
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.mapView;
+        marker.map.tag = i ;
+        i++;
     }
     
     [self showRecentLocations];
@@ -146,7 +149,10 @@
 - (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
 
     ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
+    LocationModel *model = [_locationsData objectAtIndex:marker.map.tag] ;
+    NSString *idPGD = model.idPGD ;
     controller.ticketId = 1;
+    controller.pgdID = idPGD ;
     [self.navigationController showViewController:controller sender:nil];
     
 }

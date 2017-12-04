@@ -230,7 +230,7 @@
         NSString *reverseCode = [self getReverseCode:@"Luong The Dung" idPGD:_pgdID idService:typeID phoneNumber:@"0936108955" email:@"dunglt@miraway.vn" idCard:@"100973612" hour:@"11:30"];
         NSLog(@"Log reverseCOde: %@ ",reverseCode) ;
         TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
-       // controller.ticketId = 1;
+        controller.ticketnumberString = reverseCode ;
         [self.navigationController showViewController:controller sender:nil];
     }] ;
 }

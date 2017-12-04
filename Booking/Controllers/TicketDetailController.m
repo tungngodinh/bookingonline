@@ -34,7 +34,8 @@
 }
 
 - (void)configUI {
-    self.title = @"Chi tiết phiếu";
+    self.title = @"Chi tiết đặt lịch";
+    self.ticketNumberLabel.text = self.ticket.ticketNumber ;
     
     FAKIonIcons *icon = [FAKIonIcons iosPeopleOutlineIconWithSize:self.peopleImage.frame.size.width];
     [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor]}];
@@ -52,8 +53,8 @@
     [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     UIBarButtonItem *print = [[UIBarButtonItem alloc] initWithImage:[icon imageWithSize:CGSizeMake(40, 25)] style:UIBarButtonItemStylePlain target:self action:@selector(onPrintButtontTapped)];
     self.navigationItem.rightBarButtonItem = print;
-    
-    self.ticketNumberLabel.text = [NSString stringWithFormat:@"%d", 1000];
+    //NSLog(@"Ticketnumber is :%@", self.ticket.ticketNumber);
+    self.ticketNumberLabel.text = _ticketnumberString;
     self.waitTimeLabel.text = @"~3 minute";
     self.peopleCountLabel.text = @"~1000";
     self.branchLabel.text = self.ticket.branch;

@@ -13,5 +13,6 @@
 @interface TicketDetailController : UIViewController
 
 @property (nonatomic, weak) TicketModel *ticket;
+@property NSString *ticketnumberString ;
 
 @end
