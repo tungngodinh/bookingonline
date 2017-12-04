@@ -128,20 +128,6 @@
             return @"";
     }
 }
-- (NSString *)serviceTypeID:(NSInteger)serviceType {
-    switch (serviceType) {
-        case 0:
-            return @"type1";
-        case 1:
-            return @"type2";
-        case 2:
-            return @"type3";
-        case 3:
-            return @"type4";
-        default:
-            return @"";
-    }
-}
 - (NSMutableArray<ScheduleTimeModel *> *)dataSource {
     if (!_dataSource) {
         _dataSource = [[NSMutableArray alloc] init];
@@ -224,7 +210,7 @@
 - (void)didChoseService:(NSInteger)seriveType timeIndex:(NSInteger)index {
     self.dataSource[index].serviceType = seriveType;
     [self.tableView reloadData];
-    NSString *typeID = [self serviceTypeID:seriveType];
+    NSString *typeID = [self serviceTypeString:seriveType];
     [SVProgressHUD showWithStatus:@"Đang lấy vé . Xin chờ trong giây lát"];
     [SVProgressHUD dismissWithCompletion:^{
         NSString *reverseCode = [self getReverseCode:@"Luong The Dung" idPGD:_pgdID idService:typeID phoneNumber:@"0936108955" email:@"dunglt@miraway.vn" idCard:@"100973612" hour:@"11:30"];
