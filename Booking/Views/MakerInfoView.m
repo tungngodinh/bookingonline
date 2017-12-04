@@ -136,7 +136,7 @@
     
     _takeTiketButton.backgroundColor = [@"#4BA157" representedColor];
     [_takeTiketButton setTintColor:[UIColor whiteColor]];
-    [_takeTiketButton setTitle:@"Take ticket" forState:UIControlStateNormal];
+    [_takeTiketButton setTitle:@"Đặt lịch" forState:UIControlStateNormal];
     [_takeTiketButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.mas_leading).offset(20);
         make.trailing.equalTo(self.mas_trailing).offset(-20);
@@ -156,9 +156,9 @@
        distance:(double)distance{
     _nameLabel.text = name;
     _addressLabel.text = address;
-    _countLabel.text = [NSString stringWithFormat:@"%ld people", count];
-    _timeLabel.text = [NSString stringWithFormat:@"~ %ld minute wait", minute];
-    _distanceLabel.text = [NSString stringWithFormat:@"About ~ %0.00f km", distance];
+    _countLabel.text = [NSString stringWithFormat:@"%ld người chờ", count];
+    _timeLabel.text = [NSString stringWithFormat:@"~ %ld phút chờ", minute];
+    _distanceLabel.text = [NSString stringWithFormat:@"Cách khoảng ~ %0.00f km", distance];
     CGSize size = [self systemLayoutSizeFittingSize:CGSizeMake(220, 220) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
     CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, size.width, size.height);
     self.frame = frame;

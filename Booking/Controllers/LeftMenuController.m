@@ -58,37 +58,37 @@
     FAKIonIcons *icon;
     switch (indexPath.row) {
         case 0: {
-            cell.textLabel.text = @"Service Providers";
+            cell.textLabel.text = @"Hệ thống CN/PGD";
             icon = [FAKIonIcons iosPeopleOutlineIconWithSize:20];
             break;
         }
         case 1: {
-            cell.textLabel.text = @"Maps Direction";
+            cell.textLabel.text = @"Đặt lịch";
             icon = [FAKIonIcons iosNavigateOutlineIconWithSize:20];
             break;
         }
         case 2: {
-            cell.textLabel.text = @"My Tickets";
+            cell.textLabel.text = @"Quản lý lịch đặt";
             icon = [FAKIonIcons androidFavoriteOutlineIconWithSize:20];
             break;
         }
         case 3: {
-            cell.textLabel.text = @"Recent Visits";
+            cell.textLabel.text = @"Lịch sử giao dịch";
             icon = [FAKIonIcons compassIconWithSize:20];
             break;
         }
         case 4: {
-            cell.textLabel.text = @"FeedBack";
+            cell.textLabel.text = @"Phản hồi";
             icon = [FAKIonIcons androidHappyIconWithSize:20];
             break;
         }
         case 5: {
-            cell.textLabel.text = @"Help";
+            cell.textLabel.text = @"Giúp đỡ";
             icon = [FAKIonIcons iosHelpOutlineIconWithSize:20];
             break;
         }
         case 6: {
-            cell.textLabel.text = @"About US";
+            cell.textLabel.text = @"Về chúng tôi";
             icon = [FAKIonIcons iosInformationOutlineIconWithSize:20];
             break;
         }

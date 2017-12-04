@@ -30,7 +30,12 @@
     self.checkImage.image = [icon imageWithSize:self.checkImage.frame.size];
     self.serviceTypeLabel.text = @"";
 }
-
+- (void)setColorPicked
+{
+    FAKIonIcons *icon = [FAKIonIcons androidCheckmarkCircleIconWithSize:self.checkImage.frame.size.width];
+    [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor]}];
+    self.checkImage.image = [icon imageWithSize:self.checkImage.frame.size];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

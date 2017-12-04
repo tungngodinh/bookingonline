@@ -25,7 +25,7 @@
 
     // Do any additional setup after loading the view.
     [self.tableView registerNib:[UINib nibWithNibName:kServiceCellIdentifier bundle:nil] forCellReuseIdentifier:kServiceCellIdentifier];
-    self.title = @"Service Providers";
+    self.title = @"Hệ thống CN/PGD";
     
     _dataSource = @[[ServiceModel serviceWithName: @"Techcombank Liễu Giai" address: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội" peopleCount:2 likeCount:3 distance:1],
                     [ServiceModel serviceWithName: @"Techcombank 91 Nguyễn Chí Thanh" address: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội" peopleCount:2 likeCount:3 distance:1],

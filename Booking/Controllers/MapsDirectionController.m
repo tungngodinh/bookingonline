@@ -12,6 +12,7 @@
 @import FontAwesomeKit;
 @import NSString_Color;
 @import AFNetworking;
+@import SVProgressHUD;
 
 #import <CoreLocation/CoreLocation.h>
 #import "MapsDirectionController.h"
@@ -29,17 +30,39 @@
 @property (nonatomic, strong) NSArray<LocationModel *> *locationsData;
 @property (nonatomic, strong) GMSMapView *mapView;
 @property CLLocation *myLocation;
+@property NSMutableArray *datapgd1 ;
+@property NSMutableArray *datapgd2 ;
+@property NSMutableArray *datapgd3 ;
+@property NSMutableArray *datapgd4 ;
+@property NSMutableArray *datapgd5 ;
+@property NSMutableArray *datapgd6 ;
+@property NSMutableArray *datapgd7 ;
+
 @end
 
 @implementation MapsDirectionController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     _datapgd1 = [[NSMutableArray alloc]init];
+     _datapgd2 = [[NSMutableArray alloc]init];
+     _datapgd3 = [[NSMutableArray alloc]init];
+     _datapgd4 = [[NSMutableArray alloc]init];
+     _datapgd5 = [[NSMutableArray alloc]init];
+     _datapgd6 = [[NSMutableArray alloc]init];
+     _datapgd7 = [[NSMutableArray alloc]init];
+    _datapgd1 = [self getListTimePicked:@"a349"];
+    _datapgd2 = [self getListTimePicked:@"a091"] ;
+    _datapgd3 = [self getListTimePicked:@"s052"] ;
+    _datapgd4 = [self getListTimePicked:@"s021"] ;
+    _datapgd5 = [self getListTimePicked:@"s020"] ;
+    _datapgd6 = [self getListTimePicked:@"s062"] ;
+    _datapgd7 = [self getListTimePicked:@"s101"] ;
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
-    self.title = @"Bản đồ các đơn vị thành viên";
+    self.title = @"Hệ thống CN/PGD";
     [self loadMapView];
 }
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -60,28 +83,70 @@
     _myLocation = newLocation;
     [self showRecentLocations];
 }
+-(NSMutableArray*) getListTimePicked : (NSString *)pdgID{
+    NSDate *now = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"YYYY-MM-dd";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    NSString *startDate =[dateFormatter stringFromDate:now] ;
+    int daysToAdd = 1;
+    NSDate *tomorrowDate = [now dateByAddingTimeInterval:60*60*24*daysToAdd];
+    NSString *endDate = [dateFormatter stringFromDate:tomorrowDate];
+    NSString *urlAsString = [NSString stringWithFormat:@"http://123.31.12.147:3000/api/online/booking/search?branch_id=%@&start_date=%@&end_date=%@",pdgID,startDate,endDate] ;
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"GET";
+    NSString *jsonString = [[NSString alloc] initWithData:nil encoding:NSUTF8StringEncoding];
+    NSString *stringData =  jsonString ;
+    NSData *requestBodyData = [stringData dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPBody = requestBodyData;
+    // Create url connection and fire request
+    //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request
+                                             returningResponse:nil error:nil];
+    
+    NSLog(@"Response: %@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    NSString *jsonReturn = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding] ;
+    NSData *webData = [jsonReturn dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:webData options:0 error:&error];
+    NSMutableArray *dataSer = [jsonDict valueForKey:@"data"] ;
+    return dataSer ;
 
+}
 - (void)loadMapView {
-
     self.mapView.myLocationEnabled = YES;
     self.view = self.mapView;
     self.mapView.delegate = self;
-    
     FAKIonIcons *icon = [FAKIonIcons iosLocationIconWithSize:40];
-    [icon setAttributes:@{NSForegroundColorAttributeName : [@"#4BA157" representedColor]}];
-    int i = 0 ;
-    for (LocationModel* lc in self.locationsData) {
+  
+    
+    for (int i = 0 ; i < [self.locationsData count] ; i ++)
+    {
         GMSMarker *marker = [[GMSMarker alloc] init];
-        marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
+        LocationModel *lc = [self.locationsData objectAtIndex:i];
         marker.position = [lc.position coordinate];
         marker.title = lc.title;
         marker.snippet = lc.snippet;
+         marker.map.tag = i ;
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.mapView;
-        marker.map.tag = i ;
-        i++;
+        switch (i%3) {
+            case 0:
+                [icon setAttributes:@{NSForegroundColorAttributeName : [@"#4BA157" representedColor]}];
+                marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
+                break;
+            case 1:
+                [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor redColor]}];
+                marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
+                break;
+            default:
+                [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor yellowColor]}];
+                marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
+                break;
+        }
+       
     }
-    
     [self showRecentLocations];
 }
 
@@ -150,6 +215,7 @@
 
     ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
     LocationModel *model = [_locationsData objectAtIndex:marker.map.tag] ;
+    NSLog(@"log :%ld" , marker.map.tag);
     NSString *idPGD = model.idPGD ;
     controller.ticketId = 1;
     controller.pgdID = idPGD ;
