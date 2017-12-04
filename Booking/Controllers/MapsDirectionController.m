@@ -99,12 +99,10 @@
     }
     return location;
 }
-
 - (void)showRecentLocations {
     if (!_myLocation) {
         return;
     }
-    
     CGFloat width = self.view.frame.size.width * 0.8;
     NSInteger viewtag = 1111;
     RecentLocationsView *view = [[RecentLocationsView alloc] initWithFrame:CGRectMake(0, 0, width, 300)];
@@ -163,11 +161,9 @@
                            [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554] idPGD:@"s021" ],
                            [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]idPGD:@"s020"],
                            [LocationModel locationWith: @"ATM Techcombank" snippet: @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]idPGD:@"s062"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"101 Láng Hạ, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]idPGD:@"s101"]];
-    }
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"101 Láng Hạ, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]idPGD:@"s101"]];}
     return _locationsData;
 }
-
 - (void)getDirect:(CLLocation *)destination block:(void (^)(GMSMutablePath *))completeBlock {
     NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@,%@&destination=%@,%@&key=AIzaSyB97VVt35nwQeA3GN7k_Hd6oxzL9QxLnmg", @(_myLocation.coordinate.latitude), @(_myLocation.coordinate.longitude), @(destination.coordinate.latitude), @(destination.coordinate.longitude)];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] init];
