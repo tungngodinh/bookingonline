@@ -30,6 +30,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Test get List ticket tu PGDID
+    [self initData];
+    _dataSource = [[NSMutableArray alloc]init];
+    self.title = @"My tickets";
+    [self.tableView registerNib:[UINib nibWithNibName:kTiketCellIdentifier bundle:nil] forCellReuseIdentifier:kTiketCellIdentifier];
+}
+- (void) initData
+{
     [self getListTimePicked:@"a349"] ;
     [self getListTimePicked:@"a091"] ;
     [self getListTimePicked:@"s052"] ;
@@ -37,23 +44,7 @@
     [self getListTimePicked:@"s020"] ;
     [self getListTimePicked:@"s062"] ;
     [self getListTimePicked:@"s101"] ;
-    _dataSource = [[NSMutableArray alloc]init];
-    // End get full list ve pgd ;
-    
-    // Xoá ticket thì phải kèm mã idBooking . 
-    
-    
-    // Do any additional setup after loading the view.
-    
-    self.title = @"My tickets";
-    [self.tableView registerNib:[UINib nibWithNibName:kTiketCellIdentifier bundle:nil] forCellReuseIdentifier:kTiketCellIdentifier];
-//    _dataSource = [[NSMutableArray alloc] initWithCapacity:20];
-//    for (NSInteger i = 1; i < 20; i++) {
-//        [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
-//    }
-//  /  [self.tableView reloadData];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -83,18 +74,24 @@
             {
                 for (NSInteger i = 0 ; i < [dataRespond count]; i ++)
                 {
-                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"BKO000%ld", i] status:i%4 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking: dataRespond[i][@"id"]]];
-//                    [_dataSource addObject:[TicketModel tickeWithCode:dataRespond[0][@"reserve_code"] status:0 branch:@"90, Đường Có Tên, Phố Có Tên, Hà nội" time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i]]]];
+                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"Mã phục vụ :%@", dataRespond[i][@"reserve_code"]] status: [self statusCodeTicket :dataRespond[i][@"state"]]  branch: [self nameFromBrandID:dataRespond[i][@"branch_id"]]  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking: dataRespond[i][@"id"]]];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.tableView reloadData];
                     });
                 }
-                  NSLog(@"log data return  : %@", [dataRespond description]) ;
+                //  NSLog(@"log data return  : %@", [dataRespond description]) ;
             }
           
         }
     }];
 }
+- (NSInteger) statusCodeTicket : (NSString*) str_statuscode
+{
+    if ([str_statuscode isEqualToString:@"created"]) return 0 ;
+    else if ([str_statuscode isEqualToString:@"cancelled"]) return 2;
+    else return 1 ;
+}
+
 - (void)deleteTicket : (NSString *)idBooking {
     NSDictionary *dict = @{
                            @"id" : idBooking
@@ -123,17 +120,24 @@
     
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:webData options:0 error:&error];
     if ([[jsonDict valueForKey:@"status"] isEqualToString:@"error"]){
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thông báo" message:@"Mã bản ghi không phù hợp" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-//        [alert show];
-//        [_alertView removeFromSuperview];
+        
     }
     else{
-//        [_alertView removeFromSuperview];
-//        _flag = 1;
-//        _alertView = [[UIAlertView alloc] initWithTitle:@"Thông báo" message:@"Xoá lịch hẹn thành công" delegate:self cancelButtonTitle:@"Đặt vé lại" otherButtonTitles: nil];
-//        [_alertView show];
-        //   [_alertView removeFromSuperview];
     }
+}
+- (NSString *)nameFromBrandID : (NSString*) branchID
+{
+    if ([branchID isEqualToString:@"a349"]) return @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam";
+    if ([branchID isEqualToString:@"a091"]) return @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam";
+    if ([branchID isEqualToString:@"s052"]) return @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội, Việt Nam";
+    if ([branchID isEqualToString:@"s021"]) return @"21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam";
+    if ([branchID isEqualToString:@"s020"]) return @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam";
+    if ([branchID isEqualToString:@"s062"]) return @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam";
+    if ([branchID isEqualToString:@"s101"]) return @"101 Láng Hạ, Hà Nội, Việt Nam";
+    else return @"ATM Techcom Bank" ;
+    
+    
+    
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:kTiketCellIdentifier forIndexPath:indexPath];
@@ -161,6 +165,7 @@
             break;
         }
     }
+    cell.branchLabel.text = mode.branch;
     cell.timeLabel.text = [self.dateFormater stringFromDate:mode.date];
     cell.timeAgoLabel.text = [mode.date formattedAsTimeAgo];
     return cell;

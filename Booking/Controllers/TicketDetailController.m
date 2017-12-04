@@ -55,8 +55,8 @@
     self.navigationItem.rightBarButtonItem = print;
     //NSLog(@"Ticketnumber is :%@", self.ticket.ticketNumber);
     self.ticketNumberLabel.text = _ticketnumberString;
-    self.waitTimeLabel.text = @"~3 minute";
-    self.peopleCountLabel.text = @"~1000";
+    self.waitTimeLabel.text = @"~3 minute waiting";
+    self.peopleCountLabel.text = @"~1000 waiting";
     self.branchLabel.text = self.ticket.branch;
     
     switch (self.ticket.status) {
