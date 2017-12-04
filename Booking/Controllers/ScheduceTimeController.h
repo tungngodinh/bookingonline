@@ -11,5 +11,6 @@
 @interface ScheduceTimeController : UIViewController
 
 @property (nonatomic, assign) NSInteger ticketId;
+@property ( nonatomic , assign) NSString *pgdID ;
 
 @end

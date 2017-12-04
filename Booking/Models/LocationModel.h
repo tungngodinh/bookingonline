@@ -14,7 +14,8 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *snippet;
 @property (nonatomic, strong) CLLocation *position;
+@property (nonatomic,strong) NSString *idPGD ;
 
-+ (instancetype)locationWith:(NSString *)title snippet:(NSString *)snippet position:(CLLocation *)position;
++ (instancetype)locationWith:(NSString *)title snippet:(NSString *)snippet position:(CLLocation *)position idPGD:(NSString*)idPGD;
 
 @end

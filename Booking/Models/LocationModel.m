@@ -9,11 +9,12 @@
 #import "LocationModel.h"
 
 @implementation LocationModel
-+ (instancetype)locationWith:(NSString *)title snippet:(NSString *)snippet position:(CLLocation *)position {
++ (instancetype)locationWith:(NSString *)title snippet:(NSString *)snippet position:(CLLocation *)position idPGD:(NSString*)idPGD; {
     LocationModel *location = [[LocationModel alloc] init];
     location.title = title;
     location.snippet = snippet;
     location.position = position;
+    location.idPGD = idPGD ;
     return location;
 }
 
