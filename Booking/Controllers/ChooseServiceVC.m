@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Chọn dịch vụ" ;
     // Do any additional setup after loading the view.
     self.tableView.tableFooterView = [UIView new];
 }
