@@ -106,10 +106,33 @@
     NSString *time = [NSString stringWithFormat:@" %@ đến %@", [self.hoursFormater stringFromDate:model.date], [self.hoursFormater stringFromDate:[model.date dateByAddingMinutes:30]]];
     [timeblock appendAttributedString:[[NSAttributedString alloc] initWithString:time attributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}]];
     cell.timeBlockLabel.attributedText = timeblock;
+//    for (int i = 0 ; i < [_dataPicked count]; i ++)
+//    {
+//        NSMutableDictionary *data = _dataPicked[i];
+//        if ([self checkPicked:[self.hoursFormater stringFromDate:model.date] :data])
+//        {
+//            [timeblock appendAttributedString:[[NSAttributedString alloc] initWithString:time attributes:@{NSForegroundColorAttributeName : [UIColor redColor]}]];
+//            cell.timeBlockLabel.attributedText = timeblock;
+//        }
+//    }
+    
+
     cell.serviceTypeLabel.text = [self serviceTypeString:model.serviceType];
     return cell;
 }
-
+- (BOOL ) checkPicked : (NSString*)timeInput : (NSMutableDictionary*) data_picked
+{
+    for (int i = 0 ; i < [_dataPicked count]; i ++)
+    {
+        NSMutableDictionary *data = _dataPicked[i];
+        NSString *timeDate = data[@"time"];
+        if ([timeInput isEqualToString:timeDate])
+        {
+            return true ;
+        }
+    }
+    return false ;
+}
 - (BOOL)dateIsAvaiable:(NSDate *)date {
     return [[date dateByAddingMinutes:30] minutesFrom:[NSDate date]] > 0;
 }
