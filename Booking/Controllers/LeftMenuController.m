@@ -69,7 +69,7 @@
         }
         case 2: {
             cell.textLabel.text = @"Quản lý lịch đặt";
-            icon = [FAKIonIcons androidFavoriteOutlineIconWithSize:20];
+            icon = [FAKIonIcons iosComposeOutlineIconWithSize:20];
             break;
         }
         case 3: {
