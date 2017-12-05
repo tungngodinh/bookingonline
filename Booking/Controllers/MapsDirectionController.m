@@ -37,6 +37,7 @@
 @property NSMutableArray *datapgd5 ;
 @property NSMutableArray *datapgd6 ;
 @property NSMutableArray *datapgd7 ;
+@property NSMutableDictionary *dataPgd ;
 
 @end
 
@@ -44,13 +45,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     _datapgd1 = [[NSMutableArray alloc]init];
-     _datapgd2 = [[NSMutableArray alloc]init];
-     _datapgd3 = [[NSMutableArray alloc]init];
-     _datapgd4 = [[NSMutableArray alloc]init];
-     _datapgd5 = [[NSMutableArray alloc]init];
-     _datapgd6 = [[NSMutableArray alloc]init];
-     _datapgd7 = [[NSMutableArray alloc]init];
+    
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+    self.title = @"Hệ thống CN/PGD";
+    
+}
+- (NSMutableArray*) data4pgd : (NSInteger ) i
+{
+       NSMutableArray *arrayData = [[NSMutableArray alloc]init];
+    switch (i) {
+         
+        case 0:
+            arrayData =_datapgd1 ;
+            break;
+        case 1:
+            arrayData =_datapgd2 ;
+            break;
+        case 2:
+            arrayData =_datapgd3 ;
+            break;
+        case 3:
+            arrayData =_datapgd4 ;
+            break;
+        case 4:
+            arrayData =_datapgd5 ;
+            break;
+        case 5:
+            arrayData =_datapgd6 ;
+            break;
+        case 6:
+            arrayData =_datapgd7 ;
+            break;
+            
+        default:
+            break;
+    }
+    return arrayData ;
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    _datapgd1 = [[NSMutableArray alloc]init];
+    _datapgd2 = [[NSMutableArray alloc]init];
+    _datapgd3 = [[NSMutableArray alloc]init];
+    _datapgd4 = [[NSMutableArray alloc]init];
+    _datapgd5 = [[NSMutableArray alloc]init];
+    _datapgd6 = [[NSMutableArray alloc]init];
+    _datapgd7 = [[NSMutableArray alloc]init];
     _datapgd1 = [self getListTimePicked:@"a349"];
     _datapgd2 = [self getListTimePicked:@"a091"] ;
     _datapgd3 = [self getListTimePicked:@"s052"] ;
@@ -58,13 +102,39 @@
     _datapgd5 = [self getListTimePicked:@"s020"] ;
     _datapgd6 = [self getListTimePicked:@"s062"] ;
     _datapgd7 = [self getListTimePicked:@"s101"] ;
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager startUpdatingLocation];
-    self.title = @"Hệ thống CN/PGD";
     [self loadMapView];
 }
+//- (NSMutableArray*)dataPgd : (NSInteger) counter
+//{
+//    NSMutableArray *data = [[NSMutableArray alloc]init];
+//    switch (counter) {
+//        case 0:
+//            data = _datapgd1 ;
+//            break;
+//        case 1:
+//            data = _datapgd2 ;
+//            break;
+//        case 2:
+//            data = _datapgd3 ;
+//            break;
+//        case 3:
+//            data = _datapgd4 ;
+//            break;
+//        case 4:
+//            data = _datapgd5 ;
+//            break;
+//        case 5:
+//            data = _datapgd6 ;
+//            break;
+//        case 6:
+//            data = _datapgd7 ;
+//            break;
+//
+//        default:
+//            break;
+//    }
+//    return data ;
+//}
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError: %@", error);
@@ -72,7 +142,7 @@
     UIAlertController *allert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to Get Your Location" preferredStyle:UIAlertControllerStyleAlert];
     __weak typeof(self) weakSelf = self;
 
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     }];
     [allert addAction:cancel];
@@ -96,7 +166,7 @@
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";
-    NSString *jsonString = [[NSString alloc] initWithData:nil encoding:NSUTF8StringEncoding];
+    NSString *jsonString = [[NSString alloc] initWithData:[NSData dataWithData:NULL] encoding:NSUTF8StringEncoding];
     NSString *stringData =  jsonString ;
     NSData *requestBodyData = [stringData dataUsingEncoding:NSUTF8StringEncoding];
     request.HTTPBody = requestBodyData;
@@ -104,7 +174,6 @@
     //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     NSData *response = [NSURLConnection sendSynchronousRequest:request
                                              returningResponse:nil error:nil];
-    
     NSLog(@"Response: %@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
     NSString *jsonReturn = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding] ;
     NSData *webData = [jsonReturn dataUsingEncoding:NSUTF8StringEncoding];
@@ -119,8 +188,6 @@
     self.view = self.mapView;
     self.mapView.delegate = self;
     FAKIonIcons *icon = [FAKIonIcons iosLocationIconWithSize:40];
-  
-    
     for (int i = 0 ; i < [self.locationsData count] ; i ++)
     {
         GMSMarker *marker = [[GMSMarker alloc] init];
@@ -128,24 +195,29 @@
         marker.position = [lc.position coordinate];
         marker.title = lc.title;
         marker.snippet = lc.snippet;
-         marker.map.tag = i ;
+        
+        NSMutableArray *data4PDG = [self data4pgd:i];
+        NSInteger numberPicket = [data4PDG count] ;
+        NSLog(@"Number of ticket pickerd :%ld" , numberPicket);
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.mapView;
-        switch (i%3) {
-            case 0:
-                [icon setAttributes:@{NSForegroundColorAttributeName : [@"#4BA157" representedColor]}];
-                marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
-                break;
-            case 1:
-                [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor redColor]}];
-                marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
-                break;
-            default:
-                [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor yellowColor]}];
-                marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
-                break;
+        if (numberPicket < 2)
+        {
+            [icon setAttributes:@{NSForegroundColorAttributeName : [@"#4BA157" representedColor]}];
+            marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
+        }else if (numberPicket < 12)
+        {
+            [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor yellowColor]}];
+            marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
         }
-       
+        else
+        {
+            [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor redColor]}];
+            marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
+        }
+        marker.map.tag = i ;
+        
+
     }
     [self showRecentLocations];
 }
@@ -189,7 +261,6 @@
                 [rview removeFromSuperview];
             }
         }
-        
         [weakSelf.mapView animateToLocation:CLLocationCoordinate2DMake(location.position.coordinate.latitude, location.position.coordinate.longitude)];
         
         [weakSelf.mapView animateToZoom:15];
@@ -210,15 +281,15 @@
     [view setName:marker.title address:marker.snippet peopleCount:2 timeWait:10 distance:distance / 1000];
     return view;
 }
-
 - (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
 
     ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
-    LocationModel *model = [_locationsData objectAtIndex:marker.map.tag] ;
+    LocationModel *model = [_locationsData objectAtIndex:marker.map.tag ] ;
     NSLog(@"log :%ld" , marker.map.tag);
     NSString *idPGD = model.idPGD ;
-    controller.ticketId = 1;
+    NSLog(@"pgd piecked :%@", model.idPGD) ;
     controller.pgdID = idPGD ;
+    controller.dataPicked = [self data4pgd:marker.map.tag] ;
     //controller.hour = model
     [self.navigationController showViewController:controller sender:nil];
     

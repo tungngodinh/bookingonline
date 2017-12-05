@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //Test get List ticket tu PGDID
+
  
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //       NSTimer *m_timer = [NSTimer scheduledTimerWithTimeInterval:2.0f
@@ -89,7 +89,6 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadData];
                 });
-                //  NSLog(@"log data return  : %@", [dataRespond description]) ;
             }
           
         }
