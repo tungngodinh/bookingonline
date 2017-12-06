@@ -281,13 +281,13 @@
 - (NSArray<LocationModel *> *)locationsData {
   
     if (!_locationsData) {
-        _locationsData = @[[LocationModel locationWith: @"ATM Techcombank" snippet: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội" position: [[CLLocation alloc] initWithLatitude:21.037218 longitude:105.815297] idPGD:@"a349"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội" position: [[CLLocation alloc] initWithLatitude:21.020003 longitude:105.808728] idPGD:@"a091"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554] idPGD:@"s052"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Chùa Láng, Láng Thượng, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554] idPGD:@"s021" ],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]idPGD:@"s020"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]idPGD:@"s062"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"101 Láng Hạ, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]idPGD:@"s101"]];}
+        _locationsData = @[[LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội" position: [[CLLocation alloc] initWithLatitude:21.037218 longitude:105.815297] idPGD:@"a349"],
+                           [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội" position: [[CLLocation alloc] initWithLatitude:21.020003 longitude:105.808728] idPGD:@"a091"],
+                           [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554] idPGD:@"s052"],
+                           [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"21 Chùa Láng, Láng Thượng, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554] idPGD:@"s021" ],
+                           [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]idPGD:@"s020"],
+                           [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]idPGD:@"s062"],
+                           [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"101 Láng Hạ, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]idPGD:@"s101"]];}
     return _locationsData;
 }
 - (void)getDirect:(CLLocation *)destination block:(void (^)(GMSMutablePath *))completeBlock {

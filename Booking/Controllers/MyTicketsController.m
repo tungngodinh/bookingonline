@@ -144,7 +144,7 @@
     if ([branchID isEqualToString:@"s020"]) return @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam";
     if ([branchID isEqualToString:@"s062"]) return @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam";
     if ([branchID isEqualToString:@"s101"]) return @"101 Láng Hạ, Hà Nội, Việt Nam";
-    else return @"ATM Techcom Bank" ;
+    else return @"Chi nhánh Techcom Bank" ;
     
     
     

@@ -91,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrF-EZ-gNe" customClass="HCSStarRatingView">
-                                <rect key="frame" x="95" y="225.5" width="187.5" height="30.5"/>
+                                <rect key="frame" x="95" y="225.5" width="187.5" height="31"/>
                                 <color key="tintColor" red="0.96569901700000005" green="0.088931236179999998" blue="0.093451722030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
@@ -110,13 +110,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Độ phức tạp của hệ thống" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ9-D4-LC7">
-                                <rect key="frame" x="104.5" y="276" width="168" height="17"/>
+                                <rect key="frame" x="104.5" y="276.5" width="168" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro1-rP-sGa" customClass="HCSStarRatingView">
-                                <rect key="frame" x="95" y="303" width="187.5" height="31.5"/>
+                                <rect key="frame" x="95" y="303.5" width="187.5" height="31.5"/>
                                 <color key="tintColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
@@ -135,13 +135,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bình luận khác" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COE-fU-MrU">
-                                <rect key="frame" x="20" y="351.5" width="111.5" height="21"/>
+                                <rect key="frame" x="20" y="352" width="111.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w95-rB-oTI">
-                                <rect key="frame" x="20" y="380.5" width="335" height="117.5"/>
+                                <rect key="frame" x="20" y="381" width="335" height="117"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -595,7 +595,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sAi-xg-HO7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="49" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
@@ -603,13 +603,23 @@
                                     <outlet property="delegate" destination="Dyq-52-QIE" id="X20-Ee-bgJ"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Các phòng giao dịch xung quanh bạn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GM-0M-4jb">
+                                <rect key="frame" x="26" y="20" width="323" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96569901700000005" green="0.088931236179999998" blue="0.093451722030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sAi-xg-HO7" firstAttribute="top" secondItem="2JP-n1-6e4" secondAttribute="bottom" id="Gep-AD-uHV"/>
+                            <constraint firstItem="sAi-xg-HO7" firstAttribute="top" secondItem="2JP-n1-6e4" secondAttribute="bottom" constant="49" id="Gep-AD-uHV"/>
                             <constraint firstItem="UFK-lK-jyn" firstAttribute="top" secondItem="sAi-xg-HO7" secondAttribute="bottom" id="OeN-jG-DiW"/>
+                            <constraint firstItem="1GM-0M-4jb" firstAttribute="top" secondItem="2JP-n1-6e4" secondAttribute="bottom" constant="20" id="ayH-CP-DsK"/>
                             <constraint firstItem="sAi-xg-HO7" firstAttribute="leading" secondItem="1jE-cn-nqb" secondAttribute="leading" id="ees-jN-n5T"/>
+                            <constraint firstItem="1GM-0M-4jb" firstAttribute="leading" secondItem="1jE-cn-nqb" secondAttribute="leadingMargin" constant="10" id="ejj-1o-PqG"/>
+                            <constraint firstItem="sAi-xg-HO7" firstAttribute="top" secondItem="1GM-0M-4jb" secondAttribute="bottom" constant="14" id="m16-Gy-Kmb"/>
                             <constraint firstAttribute="trailing" secondItem="sAi-xg-HO7" secondAttribute="trailing" id="oya-2c-TBz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1GM-0M-4jb" secondAttribute="trailing" constant="10" id="wzB-3m-TZm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="A1g-C6-U6w"/>
@@ -619,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YW2-X0-hgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="32"/>
+            <point key="canvasLocation" x="461.60000000000002" y="31.934032983508249"/>
         </scene>
         <!--Choose ServiceVC-->
         <scene sceneID="J5M-Mm-TaZ">
