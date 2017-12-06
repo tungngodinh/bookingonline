@@ -16,6 +16,7 @@
 #import "TicketModel.h"
 #import "NSDate+TimeAgo.h"
 #import "TicketDetailController.h"
+#import "ScheduceTimeController.h"
 
 @interface MyTicketsController ()<UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource>
 
@@ -205,9 +206,13 @@
     delete.backgroundEffect = effect;
     // Chờ xử lý
     if (_dataSource[indexPath.row].status == 0) {
-        UITableViewRowAction *cancel = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Hủy" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-            _dataSource[indexPath.row].status = 2;
-            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        UITableViewRowAction *cancel = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Đặt lại vé" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
+              TicketModel *ticketModel = [_dataSource objectAtIndex:indexPath.row] ;
+            controller.pgdID = ticketModel.branch ;
+            controller.typeOfTicket = 1 ;
+            
+            [self.navigationController showViewController:controller sender:nil];
         }];
         return @[delete, cancel];
     }

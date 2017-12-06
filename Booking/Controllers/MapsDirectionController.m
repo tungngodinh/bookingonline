@@ -105,37 +105,7 @@
     [self loadMapView];
     [SVProgressHUD dismiss];
 }
-//- (NSMutableArray*)dataPgd : (NSInteger) counter
-//{
-//    NSMutableArray *data = [[NSMutableArray alloc]init];
-//    switch (counter) {
-//        case 0:
-//            data = _datapgd1 ;
-//            break;
-//        case 1:
-//            data = _datapgd2 ;
-//            break;
-//        case 2:
-//            data = _datapgd3 ;
-//            break;
-//        case 3:
-//            data = _datapgd4 ;
-//            break;
-//        case 4:
-//            data = _datapgd5 ;
-//            break;
-//        case 5:
-//            data = _datapgd6 ;
-//            break;
-//        case 6:
-//            data = _datapgd7 ;
-//            break;
-//
-//        default:
-//            break;
-//    }
-//    return data ;
-//}
+
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError: %@", error);
