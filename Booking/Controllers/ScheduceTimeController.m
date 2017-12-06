@@ -178,6 +178,49 @@
     }
     return _hoursFormater;
 }
+- (NSString *)updateTicket : (NSString*)idBooking pdg :(NSString*)idPGD service:(NSString*)serviceID date : (NSString*)date hour: (NSString*)hour {
+    NSDictionary *dict = @{
+                           @"full_name" : @"Luong The Dung",
+                           @"branch_id"  : idPGD,
+                           @"service_id" : serviceID,
+                           @"phone_number" : @"0936108955",
+                           @"email" : @"dunglt@miraway.vn",
+                           @"customer_code" : @"100973612",
+                           @"date" : date ,
+                           @"time":hour ,
+                           @"id": idBooking
+                           };
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    
+ 
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        /// NSLog(jsonString);
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://123.31.12.147:3000/api/online/booking/update"]];
+        
+        // Specify that it will be a POST request
+        request.HTTPMethod = @"POST";
+        
+        NSString *stringData =  jsonString ;
+        NSData *requestBodyData = [stringData dataUsingEncoding:NSUTF8StringEncoding];
+        request.HTTPBody = requestBodyData;
+        // Create url connection and fire request
+        //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        NSData *response = [NSURLConnection sendSynchronousRequest:request
+                                                 returningResponse:nil error:nil];
+        
+        NSLog(@"Response: %@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+        NSString *jsonReturn = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding] ;
+        NSData *webData = [jsonReturn dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:webData options:0 error:&error];
+        NSDictionary *dataSer = [jsonDict valueForKey:@"data"] ;
+        NSString *reserve_code = [dataSer valueForKey:@"reserve_code"];
+        [SVProgressHUD dismiss] ;
+        
+        return reserve_code ;
+}
 - (NSString *)getReverseCode : (NSString*)fullname idPGD : (NSString*)idPDG idService :(NSString*)idService phoneNumber:(NSString*) phoneNumber email :(NSString*)email idCard :(NSString*)idCard hour :(NSString*)hour {
     NSDate *now = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
