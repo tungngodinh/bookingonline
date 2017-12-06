@@ -12,6 +12,8 @@
 
 @interface MyFeedBackVC ()
 @property int variable_check ;
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+
 @end
 
 @implementation MyFeedBackVC

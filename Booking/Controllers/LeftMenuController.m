@@ -121,13 +121,8 @@
             break;
         }
         case 4: {
-            [self.slideMenuController closeLeft];
-            ChooseBranchController *controller = [ChooseBranchController new];
-            controller.contentSizeInPopup = CGSizeMake(self.slideMenuController.mainContainerView.bounds.size.width * 0.8, 200);
-            STPopupController *popup = [[STPopupController alloc] initWithRootViewController:controller];
-            popup.style = STPopupStyleFormSheet;
-            [popup presentInViewController:self.slideMenuController.mainViewController];
-            return;
+            storyboardid = @"NavMyFeedBackVC";
+            break;
         }
         case 5:
         case 6: {
