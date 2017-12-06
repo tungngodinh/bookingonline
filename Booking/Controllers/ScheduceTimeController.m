@@ -277,16 +277,36 @@
     self.dataSource[index].serviceType = seriveType;
     [self.tableView reloadData];
     NSString *typeID = [self serviceTypeString:seriveType];
-    [SVProgressHUD showWithStatus:@"Đang lấy vé . Xin chờ trong giây lát"];
-    [SVProgressHUD dismissWithCompletion:^{
-        NSString *reverseCode = [self getReverseCode:@"Luong The Dung" idPGD:_pgdID idService:typeID phoneNumber:@"0936108955" email:@"dunglt@miraway.vn" idCard:@"100973612" hour:[self.hoursFormater stringFromDate:_picked.date] ];
-        NSLog(@"Log reverseCOde: %@ ",reverseCode) ;
-        TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
-        controller.ticketnumberString = reverseCode ;
-        controller.serviceChoose =  typeID ;
-        
-        [self.navigationController showViewController:controller sender:nil];
-    }] ;
+    if (_typeOfTicket == 0)
+    {
+        [SVProgressHUD showWithStatus:@"Đang lấy vé . Xin chờ trong giây lát"];
+        [SVProgressHUD dismissWithCompletion:^{
+            NSString *reverseCode = [self getReverseCode:@"Luong The Dung" idPGD:_pgdID idService:typeID phoneNumber:@"0936108955" email:@"dunglt@miraway.vn" idCard:@"100973612" hour:[self.hoursFormater stringFromDate:_picked.date] ];
+            NSLog(@"Log reverseCOde: %@ ",reverseCode) ;
+            TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
+            controller.ticketnumberString = reverseCode ;
+            controller.serviceChoose =  typeID ;
+            
+            [self.navigationController showViewController:controller sender:nil];
+        }] ;
+    }
+    else
+    {
+        [SVProgressHUD showWithStatus:@"Đang cập nhật vé . Xin chờ trong giây lát"];
+        [SVProgressHUD dismissWithCompletion:^{
+            NSDate *now = [NSDate date];
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateFormat = @"YYYY-MM-dd";
+            [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+            NSString *startDate =[dateFormatter stringFromDate:now] ;
+            NSString *updateTicket = [self updateTicket:_idBooking pdg:_idUpdatePGD service:typeID date:startDate hour:[self.hoursFormater stringFromDate:_picked.date]];
+            TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
+            controller.ticketnumberString = updateTicket ;
+            controller.serviceChoose =  typeID ;
+            [self.navigationController showViewController:controller sender:nil];
+        }] ;
+    }
+    
 }
 
 /*

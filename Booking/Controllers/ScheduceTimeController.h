@@ -14,5 +14,7 @@
 @property ( nonatomic , assign) NSString *pgdID ;
 @property (nonatomic, assign) NSString *hour ;
 @property NSMutableArray *dataPicked;
-@property NSInteger typeOfTicket ;  // 0 is created , 1 is updated ticket 
+@property NSInteger typeOfTicket ;// 0 is created , 1 is updated ticket
+@property NSString *idUpdatePGD; // param used for update ticket status ;
+@property NSString *idBooking ;
 @end

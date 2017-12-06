@@ -211,6 +211,8 @@
               TicketModel *ticketModel = [_dataSource objectAtIndex:indexPath.row] ;
             controller.pgdID = ticketModel.branch ;
             controller.typeOfTicket = 1 ;
+            controller.idUpdatePGD = ticketModel.branch ;
+            controller.idBooking = ticketModel.idBooking;
             
             [self.navigationController showViewController:controller sender:nil];
         }];
