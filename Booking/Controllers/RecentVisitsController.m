@@ -60,13 +60,8 @@
     controller.link = @"https://www.techcombank.com.vn/";
     [self showViewController:controller sender:nil];
 }
--(void)viewWillAppear:(BOOL)animated
-{
-
-
-
+-(void)viewWillAppear:(BOOL)animated {
     [SVProgressHUD dismiss];
-
 }
 /*
 #pragma mark - Navigation

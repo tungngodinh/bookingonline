@@ -467,6 +467,82 @@
             </objects>
             <point key="canvasLocation" x="462" y="-735"/>
         </scene>
+        <!--Search Location Controller-->
+        <scene sceneID="pmx-Zc-Wav">
+            <objects>
+                <viewController storyboardIdentifier="SearchLocationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QdY-hK-BKb" customClass="SearchLocationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5jZ-QE-GcZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="r2d-oH-Cb2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T2o-bE-yYM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-dg-ZA3">
+                                <rect key="frame" x="8" y="30" width="359" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCr-Jv-1dP">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xCr-Jv-1dP" secondAttribute="height" multiplier="1:1" id="cop-OH-NQ0"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onBackButtonTapped:" destination="QdY-hK-BKb" eventType="touchUpInside" id="XzU-zs-edi"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4S-wZ-khC">
+                                        <rect key="frame" x="41" y="0.0" width="318" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="QdY-hK-BKb" id="cLZ-RN-1z5"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="x4S-wZ-khC" firstAttribute="leading" secondItem="xCr-Jv-1dP" secondAttribute="trailing" constant="5" id="42G-9M-1q3"/>
+                                    <constraint firstAttribute="bottom" secondItem="x4S-wZ-khC" secondAttribute="bottom" id="9A5-5J-56g"/>
+                                    <constraint firstAttribute="width" secondItem="2Hn-dg-ZA3" secondAttribute="height" multiplier="10:1" id="Dkw-Er-UtX"/>
+                                    <constraint firstItem="xCr-Jv-1dP" firstAttribute="top" secondItem="2Hn-dg-ZA3" secondAttribute="top" id="ERs-4l-93w"/>
+                                    <constraint firstAttribute="bottom" secondItem="xCr-Jv-1dP" secondAttribute="bottom" id="VGS-Er-uua"/>
+                                    <constraint firstAttribute="trailing" secondItem="x4S-wZ-khC" secondAttribute="trailing" id="cFZ-td-3cW"/>
+                                    <constraint firstItem="xCr-Jv-1dP" firstAttribute="leading" secondItem="2Hn-dg-ZA3" secondAttribute="leading" id="pD0-8d-oWz"/>
+                                    <constraint firstItem="x4S-wZ-khC" firstAttribute="top" secondItem="2Hn-dg-ZA3" secondAttribute="top" id="tlD-nY-e9e"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KJe-nd-VZa">
+                                <rect key="frame" x="8" y="76" width="359" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QdY-hK-BKb" id="r2s-7k-ldf"/>
+                                    <outlet property="delegate" destination="QdY-hK-BKb" id="teU-nE-bnK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KJe-nd-VZa" firstAttribute="trailing" secondItem="2Hn-dg-ZA3" secondAttribute="trailing" id="0Kr-oU-OMi"/>
+                            <constraint firstAttribute="trailing" secondItem="2Hn-dg-ZA3" secondAttribute="trailing" constant="8" id="4oX-xx-fHq"/>
+                            <constraint firstItem="KJe-nd-VZa" firstAttribute="top" secondItem="2Hn-dg-ZA3" secondAttribute="bottom" constant="10" id="5zZ-tU-DHi"/>
+                            <constraint firstItem="r2d-oH-Cb2" firstAttribute="top" secondItem="KJe-nd-VZa" secondAttribute="bottom" id="CaZ-VH-22C"/>
+                            <constraint firstItem="KJe-nd-VZa" firstAttribute="leading" secondItem="2Hn-dg-ZA3" secondAttribute="leading" id="sy4-td-2zG"/>
+                            <constraint firstItem="2Hn-dg-ZA3" firstAttribute="top" secondItem="T2o-bE-yYM" secondAttribute="top" constant="30" id="tzV-yo-6Lf"/>
+                            <constraint firstItem="2Hn-dg-ZA3" firstAttribute="leading" secondItem="T2o-bE-yYM" secondAttribute="leading" constant="8" id="xYq-6b-BFu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="xCr-Jv-1dP" id="Gh1-Wn-cH3"/>
+                        <outlet property="tableView" destination="KJe-nd-VZa" id="lfn-Vo-iSi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B53-5U-Eld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="-735"/>
+        </scene>
         <!--Scheduce Time Controller-->
         <scene sceneID="Z7L-Bq-EID">
             <objects>

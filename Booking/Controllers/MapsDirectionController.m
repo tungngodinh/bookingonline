@@ -21,8 +21,9 @@
 #import "LocationModel.h"
 #import "RecentLocationsView.h"
 #import "ChooseServiceVC.h"
+#import "SearchLocationController.h"
 
-@interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate>{
+@interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate, SearchLocationControllerDelegate> {
     CLLocationManager *locationManager;
 @protected BOOL getLocation;
 
@@ -53,7 +54,18 @@
     [locationManager startUpdatingLocation];
     self.title = @"Hệ thống CN/PGD";
     
+    FAKIonIcons *icon = [FAKIonIcons iosSearchIconWithSize:25];
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithImage:[icon imageWithSize:CGSizeMake(25, 25)] style:UIBarButtonItemStylePlain target:self action:@selector(onSearchButtonTapped)];
+    self.navigationItem.rightBarButtonItem = searchButton;
+    
 }
+
+- (void)onSearchButtonTapped {
+    SearchLocationController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchLocationController"];
+    controller.delegate = self;
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
+}
+
 - (NSMutableArray*) data4pgd : (NSInteger ) i
 {
        NSMutableArray *arrayData = [[NSMutableArray alloc]init];
@@ -269,13 +281,13 @@
 - (NSArray<LocationModel *> *)locationsData {
   
     if (!_locationsData) {
-        _locationsData = @[[LocationModel locationWith: @"ATM Techcombank" snippet: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc] initWithLatitude:21.037218 longitude:105.815297] idPGD:@"a349"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc] initWithLatitude:21.020003 longitude:105.808728] idPGD:@"a091"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554] idPGD:@"s052"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Chùa Láng, Láng Thượng, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554] idPGD:@"s021" ],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]idPGD:@"s020"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]idPGD:@"s062"],
-                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"101 Láng Hạ, Hà Nội, Việt Nam" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]idPGD:@"s101"]];}
+        _locationsData = @[[LocationModel locationWith: @"ATM Techcombank" snippet: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội" position: [[CLLocation alloc] initWithLatitude:21.037218 longitude:105.815297] idPGD:@"a349"],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội" position: [[CLLocation alloc] initWithLatitude:21.020003 longitude:105.808728] idPGD:@"a091"],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.024392 longitude:105.810554] idPGD:@"s052"],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Chùa Láng, Láng Thượng, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.023014 longitude:105.810554] idPGD:@"s021" ],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.017801 longitude:105.812087]idPGD:@"s020"],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]idPGD:@"s062"],
+                           [LocationModel locationWith: @"ATM Techcombank" snippet: @"101 Láng Hạ, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]idPGD:@"s101"]];}
     return _locationsData;
 }
 - (void)getDirect:(CLLocation *)destination block:(void (^)(GMSMutablePath *))completeBlock {
@@ -313,6 +325,18 @@
         _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     }
     return _mapView;
+}
+
+- (void)didSelectService:(ServiceModel *)service {
+    NSInteger index = [self.locationsData indexOfObjectPassingTest:^BOOL(LocationModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        return [obj.snippet containsString:service.address];
+    }];
+    if (index != NSNotFound) {
+        LocationModel *location = self.locationsData[index];
+        [self.mapView animateToLocation:CLLocationCoordinate2DMake(location.position.coordinate.latitude, location.position.coordinate.longitude)];
+        
+        [self.mapView animateToZoom:20];
+    }
 }
 
 /*
