@@ -62,11 +62,11 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-<<<<<<< HEAD
-    SVProgressHUD dismiss];
-=======
+
+
+
     [SVProgressHUD dismiss];
->>>>>>> theem vafi cai Svprogress dismiss
+
 }
 /*
 #pragma mark - Navigation
