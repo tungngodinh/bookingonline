@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.title = @"Chọn chi nhánh" ;
     [self.tableView reloadData];
 
 }
