@@ -37,10 +37,40 @@
     return 7;
 }
 
+- (NSString*) stringFromlocationMap : (NSInteger )i
+{
+    NSString *str = @"";
+    switch (i) {
+        case 0:
+            str = @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội";
+            break;
+        case 1:
+            str = @"91 Nguyễn Chí Thanh, Phường Láng Hạ,Quận Đống Đa, Láng Hạ, Ba Đình";
+            break;
+        case 2:
+            str = @"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội";
+            break;
+        case 3:
+            str = @"21 Chùa Láng, Láng Thượng, Hà Nội";
+            break;
+        case 4:
+            str = @"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình";
+            break;
+        case 5:
+            str = @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội";
+            break;
+        case 6:
+            str = @"101 Láng Hạ, Hà Nội, Việt Nam";
+            break;
+        default:
+            break;
+    }
+    return str ;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BranchCell *cell = [tableView dequeueReusableCellWithIdentifier:kBranchCellIdentifier forIndexPath:indexPath];
-    cell.titleLabel.text = [NSString stringWithFormat:@"Chi nhánh số %ld", indexPath.row];
-    
+    cell.titleLabel.text = [NSString stringWithFormat:@"Chi nhánh %@", [self stringFromlocationMap:indexPath.row ]];
+    // đoạn này data cho lên nhìn hãm vãi hàng :D 
     return cell;
 }
 
