@@ -240,6 +240,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self initData];
+    [SVProgressHUD dismiss];
 }
 
 /*

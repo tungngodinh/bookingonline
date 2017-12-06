@@ -10,6 +10,7 @@
 #import "ServiceCell.h"
 #import "ServiceModel.h"
 #import "WebViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface RecentVisitsController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -59,7 +60,10 @@
     controller.link = @"https://www.techcombank.com.vn/";
     [self showViewController:controller sender:nil];
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    SVProgressHUD dismiss];
+}
 /*
 #pragma mark - Navigation
 

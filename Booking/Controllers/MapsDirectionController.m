@@ -103,6 +103,7 @@
     _datapgd6 = [self getListTimePicked:@"s062"] ;
     _datapgd7 = [self getListTimePicked:@"s101"] ;
     [self loadMapView];
+    [SVProgressHUD dismiss];
 }
 //- (NSMutableArray*)dataPgd : (NSInteger) counter
 //{

@@ -27,16 +27,13 @@
     [self.tableView reloadData];
 
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 7;
 }
-
 - (NSString*) stringFromlocationMap : (NSInteger )i
 {
     NSString *str = @"";
