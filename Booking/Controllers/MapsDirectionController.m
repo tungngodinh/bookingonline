@@ -333,9 +333,13 @@
     }];
     if (index != NSNotFound) {
         LocationModel *location = self.locationsData[index];
-        [self.mapView animateToLocation:CLLocationCoordinate2DMake(location.position.coordinate.latitude, location.position.coordinate.longitude)];
         
-        [self.mapView animateToZoom:20];
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.mapView animateToLocation:CLLocationCoordinate2DMake(location.position.coordinate.latitude, location.position.coordinate.longitude)];
+        } completion:^(BOOL finished) {
+            [self.mapView animateToZoom:18];
+        }];
+        
     }
 }
 
