@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.tableView registerNib:[UINib nibWithNibName:kServiceCellIdentifier bundle:nil] forCellReuseIdentifier:kServiceCellIdentifier];
-    self.title = @"Recent Visits";
+    self.title = @"Giao dịch gần đây";
     _dataSource = @[[ServiceModel serviceWithName: @"Techcombank Liễu Giai" address: @"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
                     [ServiceModel serviceWithName: @"Techcombank 91 Nguyễn Chí Thanh" address: @"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
                     [ServiceModel serviceWithName: @"Techcombank 52 Nguyễn Chí Thanh" address: @"52, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội, Việt Nam" peopleCount:2 likeCount:3 distance:1],
@@ -51,7 +51,7 @@
     cell.addressLabel.text = model.address;
     cell.peopleLabel.text = [NSString stringWithFormat:@"%ld", model.peopleCount];
     cell.likeLabel.text = [NSString stringWithFormat:@"%ld", model.likeCount];
-    cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.0f km", model.distance];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.2f km", model.distance];
     return cell;
 }
 

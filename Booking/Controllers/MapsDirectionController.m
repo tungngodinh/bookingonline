@@ -198,9 +198,11 @@
             [icon setAttributes:@{NSForegroundColorAttributeName : [UIColor redColor]}];
             marker.icon = [icon imageWithSize:CGSizeMake(40, 40)];
         }
+        UILabel *labelTag = [[UILabel alloc] init];
+        labelTag.tag = i ;
+        NSLog(@"Log i :%d" , i);
+       // [marker.map addSubview:labelTag];
         marker.map.tag = i ;
-        
-
     }
     [self showRecentLocations];
 }
@@ -269,15 +271,15 @@
     ScheduceTimeController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduceTimeController"];
     LocationModel *model = [_locationsData objectAtIndex:marker.map.tag ] ;
     NSLog(@"log :%ld" , marker.map.tag);
-    NSString *idPGD = model.idPGD ;
+    NSString *idPGD = [self idStringPGD:marker.snippet];
     NSLog(@"pgd piecked :%@", model.idPGD) ;
+    NSInteger indexPgd = [self getds:idPGD];
     controller.pgdID = idPGD ;
-    controller.dataPicked = [self data4pgd:marker.map.tag] ;
+    controller.dataPicked = [self data4pgd:indexPgd] ;
     //controller.hour = model
     [self.navigationController showViewController:controller sender:nil];
     
 }
-
 - (NSArray<LocationModel *> *)locationsData {
   
     if (!_locationsData) {
@@ -289,6 +291,30 @@
                            [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.008594 longitude:105.812087]idPGD:@"s062"],
                            [LocationModel locationWith: @"Chi nhánh Techcombank" snippet: @"101 Láng Hạ, Hà Nội" position: [[CLLocation alloc]initWithLatitude:21.014116 longitude:105.813553]idPGD:@"s101"]];}
     return _locationsData;
+}
+- (NSInteger) getds : (NSString*) str_input
+{
+    if ([str_input isEqualToString:@"a349"]) return 0 ;
+    if ([str_input isEqualToString:@"a091"]) return 1 ;
+    if ([str_input isEqualToString:@"s052"]) return 2 ;
+    if ([str_input isEqualToString:@"s021"]) return 3 ;
+    if ([str_input isEqualToString:@"s020"]) return 4 ;
+    if ([str_input isEqualToString:@"s062"]) return 5 ;
+    if ([str_input isEqualToString:@"s101"]) return 6 ;
+    else return 10 ;
+}
+- (NSString*)idStringPGD : (NSString*)intputString
+{
+    if ([intputString isEqualToString:@"349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội"]) return @"a349";
+    if ([intputString isEqualToString:@"91, Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Láng Hạ, Ba Đình, Hà Nội"]) return @"a091";
+      if ([intputString isEqualToString:@"52 Nguyễn Chí Thanh, Láng Thượng, Hà Nội"]) return @"s052";
+      if ([intputString isEqualToString:@"21 Chùa Láng, Láng Thượng, Hà Nội"]) return @"s021";
+      if ([intputString isEqualToString:@"21 Huỳnh Thúc Kháng, Khu tập thể Nam Thành Công, Láng Hạ, Ba Đình, Hà Nội"]) return @"s020";
+      if ([intputString isEqualToString:@"62 Nguyễn Thị Định, Trung Hoà, Cầu Giấy, Hà Nội"]) return @"s062";
+      if ([intputString isEqualToString:@"101 Láng Hạ, Hà Nội"]) return @"s101";
+      else return @"" ;
+    
+    
 }
 - (void)getDirect:(CLLocation *)destination block:(void (^)(GMSMutablePath *))completeBlock {
     NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/directions/json?origin=%@,%@&destination=%@,%@&key=AIzaSyB97VVt35nwQeA3GN7k_Hd6oxzL9QxLnmg", @(_myLocation.coordinate.latitude), @(_myLocation.coordinate.longitude), @(destination.coordinate.latitude), @(destination.coordinate.longitude)];

@@ -158,7 +158,7 @@
     _addressLabel.text = address;
     _countLabel.text = [NSString stringWithFormat:@"%ld người chờ", count];
     _timeLabel.text = [NSString stringWithFormat:@"~ %ld phút chờ", minute];
-    _distanceLabel.text = [NSString stringWithFormat:@"Cách khoảng ~ %0.00f km", distance];
+    _distanceLabel.text = [NSString stringWithFormat:@"Cách khoảng ~ %.2f km", distance];
     CGSize size = [self systemLayoutSizeFittingSize:CGSizeMake(220, 220) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
     CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, size.width, size.height);
     self.frame = frame;

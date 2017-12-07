@@ -57,16 +57,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thái độ phục vụ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09x-1X-xfO">
-                                <rect key="frame" x="136" y="120" width="103.5" height="17"/>
+                                <rect key="frame" x="136" y="200" width="103.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HG-zC-Ysh" customClass="HCSStarRatingView">
-                                <rect key="frame" x="94.5" y="147" width="187.5" height="31.5"/>
+                                <rect key="frame" x="94.5" y="227" width="187.5" height="31.5"/>
                                 <color key="tintColor" red="0.96569901700000005" green="0.088931236179999998" blue="0.093451722030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="8HG-zC-Ysh" secondAttribute="height" multiplier="6:1" id="pm4-cF-1XQ"/>
+                                    <constraint firstAttribute="width" secondItem="8HG-zC-Ysh" secondAttribute="height" multiplier="6:1" constant="-1.5" id="pm4-cF-1XQ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
@@ -84,14 +84,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sự hài lòng" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSN-B3-Lfj">
-                                <rect key="frame" x="152.5" y="198.5" width="72.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chất lượng dịch vụ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSN-B3-Lfj">
+                                <rect key="frame" x="128" y="278.5" width="122" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrF-EZ-gNe" customClass="HCSStarRatingView">
-                                <rect key="frame" x="95" y="225.5" width="187.5" height="31"/>
+                                <rect key="frame" x="95" y="305.5" width="187.5" height="30.5"/>
                                 <color key="tintColor" red="0.96569901700000005" green="0.088931236179999998" blue="0.093451722030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
@@ -109,14 +109,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Độ phức tạp của hệ thống" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ9-D4-LC7">
-                                <rect key="frame" x="104.5" y="276.5" width="168" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời gian chờ trung bình" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ9-D4-LC7">
+                                <rect key="frame" x="109.5" y="356" width="158" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro1-rP-sGa" customClass="HCSStarRatingView">
-                                <rect key="frame" x="95" y="303.5" width="187.5" height="31.5"/>
+                                <rect key="frame" x="95" y="383" width="187.5" height="31.5"/>
                                 <color key="tintColor" red="0.92549019610000005" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
@@ -135,13 +135,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bình luận khác" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COE-fU-MrU">
-                                <rect key="frame" x="20" y="352" width="111.5" height="21"/>
+                                <rect key="frame" x="20" y="431.5" width="111.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w95-rB-oTI">
-                                <rect key="frame" x="20" y="381" width="335" height="117"/>
+                                <rect key="frame" x="20" y="460.5" width="335" height="107.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -150,7 +150,7 @@
                                 <rect key="frame" x="40" y="598" width="295" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Y8d-Co-Lw5" secondAttribute="height" multiplier="6:1" id="rKm-a5-G4f"/>
+                                    <constraint firstAttribute="width" secondItem="Y8d-Co-Lw5" secondAttribute="height" multiplier="6:1" constant="1" id="rKm-a5-G4f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Gửi">
@@ -160,6 +160,21 @@
                                     <action selector="btnAgree:" destination="WYS-Zc-rke" eventType="touchUpInside" id="RGd-2T-RsW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="349 Đội Cấn, Liễu Giai, Ba Đình, Hà Nội" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7B-lh-bow">
+                                <rect key="frame" x="36" y="126" width="303" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="YC8-6G-HEP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chi nhánh gần nhất" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lx-OE-5qv">
+                                <rect key="frame" x="66" y="108" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -168,12 +183,13 @@
                             <constraint firstItem="gQ9-D4-LC7" firstAttribute="centerX" secondItem="TrF-EZ-gNe" secondAttribute="centerX" id="5Pb-mB-EBA"/>
                             <constraint firstItem="8HG-zC-Ysh" firstAttribute="top" secondItem="09x-1X-xfO" secondAttribute="bottom" constant="10" id="6Cg-qg-udI"/>
                             <constraint firstItem="TrF-EZ-gNe" firstAttribute="top" secondItem="gSN-B3-Lfj" secondAttribute="bottom" constant="10" id="7bF-FF-dsH"/>
-                            <constraint firstItem="Y8d-Co-Lw5" firstAttribute="top" secondItem="w95-rB-oTI" secondAttribute="bottom" constant="100" id="DxV-qE-m3L"/>
+                            <constraint firstItem="Y8d-Co-Lw5" firstAttribute="top" secondItem="w95-rB-oTI" secondAttribute="bottom" constant="30" id="DxV-qE-m3L"/>
                             <constraint firstAttribute="bottom" secondItem="Y8d-Co-Lw5" secondAttribute="bottom" constant="20" id="FZO-qS-XS7"/>
                             <constraint firstItem="TrF-EZ-gNe" firstAttribute="centerX" secondItem="gSN-B3-Lfj" secondAttribute="centerX" id="HXm-8r-I9l"/>
                             <constraint firstItem="gSN-B3-Lfj" firstAttribute="centerX" secondItem="8HG-zC-Ysh" secondAttribute="centerX" id="IBd-Mm-Ygf"/>
-                            <constraint firstItem="TrF-EZ-gNe" firstAttribute="height" secondItem="8HG-zC-Ysh" secondAttribute="height" id="JKY-QE-kzD"/>
+                            <constraint firstItem="TrF-EZ-gNe" firstAttribute="height" secondItem="8HG-zC-Ysh" secondAttribute="height" constant="-1" id="JKY-QE-kzD"/>
                             <constraint firstItem="gSN-B3-Lfj" firstAttribute="top" secondItem="8HG-zC-Ysh" secondAttribute="bottom" constant="20" id="JTy-P5-dCq"/>
+                            <constraint firstItem="f7B-lh-bow" firstAttribute="leading" secondItem="nLz-5w-IjQ" secondAttribute="leadingMargin" constant="20" id="JU2-fu-qjf"/>
                             <constraint firstAttribute="trailing" secondItem="Y8d-Co-Lw5" secondAttribute="trailing" constant="40" id="KAa-OB-bFo"/>
                             <constraint firstItem="ro1-rP-sGa" firstAttribute="centerX" secondItem="gQ9-D4-LC7" secondAttribute="centerX" id="Ma6-Mt-DlO"/>
                             <constraint firstItem="8HG-zC-Ysh" firstAttribute="width" secondItem="nLz-5w-IjQ" secondAttribute="width" multiplier="0.5" id="NmC-zG-w84"/>
@@ -183,10 +199,15 @@
                             <constraint firstItem="ro1-rP-sGa" firstAttribute="width" secondItem="8HG-zC-Ysh" secondAttribute="width" id="S9L-uK-XsX"/>
                             <constraint firstItem="gQ9-D4-LC7" firstAttribute="top" secondItem="TrF-EZ-gNe" secondAttribute="bottom" constant="20" id="SDs-cz-HKZ"/>
                             <constraint firstItem="09x-1X-xfO" firstAttribute="centerX" secondItem="0wP-lm-4ZS" secondAttribute="centerX" id="TSu-Y0-T4Z"/>
+                            <constraint firstItem="f7B-lh-bow" firstAttribute="top" secondItem="0wP-lm-4ZS" secondAttribute="bottom" constant="26" id="U0M-YU-7oM"/>
                             <constraint firstItem="0wP-lm-4ZS" firstAttribute="top" secondItem="8m6-mW-nf5" secondAttribute="bottom" constant="20" id="XXC-SS-B4c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Lx-OE-5qv" secondAttribute="trailing" constant="50" id="XXK-Qa-JhD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f7B-lh-bow" secondAttribute="trailing" constant="20" id="atv-J1-EvJ"/>
                             <constraint firstItem="8HG-zC-Ysh" firstAttribute="centerX" secondItem="nLz-5w-IjQ" secondAttribute="centerX" id="dLE-Ga-ELO"/>
-                            <constraint firstItem="09x-1X-xfO" firstAttribute="top" secondItem="0wP-lm-4ZS" secondAttribute="bottom" constant="20" id="f6z-UZ-G7t"/>
+                            <constraint firstItem="3Lx-OE-5qv" firstAttribute="top" secondItem="0wP-lm-4ZS" secondAttribute="bottom" constant="8" id="dLf-Nt-ZZC"/>
+                            <constraint firstItem="09x-1X-xfO" firstAttribute="top" secondItem="0wP-lm-4ZS" secondAttribute="bottom" constant="100" id="f6z-UZ-G7t"/>
                             <constraint firstItem="ro1-rP-sGa" firstAttribute="top" secondItem="gQ9-D4-LC7" secondAttribute="bottom" constant="10" id="fLk-X8-yH0"/>
+                            <constraint firstItem="3Lx-OE-5qv" firstAttribute="leading" secondItem="nLz-5w-IjQ" secondAttribute="leadingMargin" constant="50" id="mOM-XL-r0V"/>
                             <constraint firstAttribute="trailing" secondItem="w95-rB-oTI" secondAttribute="trailing" constant="20" id="n0V-R5-tWm"/>
                             <constraint firstItem="w95-rB-oTI" firstAttribute="top" secondItem="COE-fU-MrU" secondAttribute="bottom" constant="8" id="nTA-p7-emy"/>
                             <constraint firstItem="ro1-rP-sGa" firstAttribute="height" secondItem="8HG-zC-Ysh" secondAttribute="height" id="nyb-Qf-0Ct"/>
@@ -231,10 +252,19 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số vé phục vụ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA8-Gi-B96">
+                                        <rect key="frame" x="60" y="-10" width="227" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kA8-Gi-B96" secondAttribute="trailing" constant="43" id="5X2-t5-AFQ"/>
+                                    <constraint firstItem="kA8-Gi-B96" firstAttribute="top" secondItem="4iW-Mh-0oN" secondAttribute="top" constant="-10" id="BVM-KY-ly2"/>
                                     <constraint firstItem="WAm-CM-pir" firstAttribute="centerY" secondItem="4iW-Mh-0oN" secondAttribute="centerY" id="GcB-50-h4m"/>
+                                    <constraint firstItem="kA8-Gi-B96" firstAttribute="leading" secondItem="4iW-Mh-0oN" secondAttribute="leading" constant="60" id="Lde-7v-SB4"/>
                                     <constraint firstItem="WAm-CM-pir" firstAttribute="centerX" secondItem="4iW-Mh-0oN" secondAttribute="centerX" id="O7B-ul-hF8"/>
                                 </constraints>
                             </view>

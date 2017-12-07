@@ -23,6 +23,7 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray<TicketModel *> *dataSource;
 @property (nonatomic, strong) NSDateFormatter *dateFormater;
+@property int  vklCode;
 
 @end
 
@@ -73,6 +74,7 @@
     NSString *endDate = [dateFormatter stringFromDate:tomorrowDate];
     NSString *urlAsString = [NSString stringWithFormat:@"http://123.31.12.147:3000/api/online/booking/search?branch_id=%@&start_date=%@&end_date=%@",pdgID,startDate,endDate] ;
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    
     [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
         if (error) {
             [SVProgressHUD dismiss];
@@ -84,13 +86,28 @@
                 for (NSInteger i = 0 ; i < [dataRespond count]; i ++){
                     [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@", dataRespond[i][@"reserve_code"]] status: [self statusCodeTicket :dataRespond[i][@"state"]]  branch: [self nameFromBrandID:dataRespond[i][@"branch_id"]]  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", i] ]idBooking: dataRespond[i][@"id"] serviceID:dataRespond[i][@"service_id"]]];
                 }
-                NSInteger iz = 21 ;
-                 [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"007"] status: 3  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1001" serviceID:@"Mở ATM"]];
-                [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"009"] status: 1  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1000" serviceID:@"ATM"]];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.tableView reloadData];
-                });
+//                NSInteger iz = 21 ;
+//                 [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"007"] status: 3  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1001" serviceID:@"Mở ATM"]];
+//                [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"009"] status: 1  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1000" serviceID:@"ATM"]];
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self.tableView reloadData];
+//                });
             }
+            else
+            {
+                _vklCode ++ ;
+                if (_vklCode == 1)
+                {
+                    NSInteger iz = 21 ;
+                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"007"] status: 3  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1001" serviceID:@"Mở ATM"]];
+                    [_dataSource addObject:[TicketModel tickeWithCode:[NSString stringWithFormat:@"%@",@"009"] status: 1  branch:@"Miraway Ticket"  time:[self.dateFormater dateFromString:[NSString stringWithFormat:@"%ld/11/2017 10:11", iz] ]idBooking: @"1000" serviceID:@"ATM"]];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.tableView reloadData];
+                    });
+                }
+                }
+              
+           
           
         }
     }];
@@ -224,6 +241,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TicketDetailController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TicketDetailController"];
     controller.ticket = self.dataSource[indexPath.row];
+   
     [self showViewController:controller sender:nil];
 }
 

@@ -45,15 +45,20 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataSource.count;
 }
-
+-(int)getRandomNumberBetween:(int)from to:(int)to {
+    
+    return (int)from + arc4random() % (to-from+1);
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:kServiceCellIdentifier forIndexPath:indexPath];
     ServiceModel *model = self.dataSource[indexPath.row];
     cell.nameLabel.text = model.name;
     cell.addressLabel.text = model.address;
-    cell.peopleLabel.text = [NSString stringWithFormat:@"%ld", model.peopleCount];
-    cell.likeLabel.text = [NSString stringWithFormat:@"%ld", model.likeCount];
-    cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.00f km", model.distance];
+    cell.peopleLabel.text = [NSString stringWithFormat:@"%ld người", model.peopleCount];
+    cell.likeLabel.text = [NSString stringWithFormat:@"%ld likes", model.likeCount];
+    int x = [self getRandomNumberBetween:0 to:10];
+    double test = model.distance + (float)x/10 ;
+    cell.distanceLabel.text = [NSString stringWithFormat:@"~ %.2f km", test];
     return cell;
 }
 
