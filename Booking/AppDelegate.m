@@ -38,7 +38,6 @@
 
 - (void)setupSlideMenu {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
     UIViewController *leftMenu = [storyboard instantiateViewControllerWithIdentifier:@"LeftMenuController"];
     UINavigationController *home = storyboard.instantiateInitialViewController;
     FAKIonIcons *icon = [FAKIonIcons naviconIconWithSize:30];

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26868DC7204D2D2800686887 /* WeGoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DC5204D2D2800686887 /* WeGoClient.m */; };
+		26868DC8204D2D2800686887 /* GGMapClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DC6204D2D2800686887 /* GGMapClient.m */; };
+		26868DCC204D2DE900686887 /* WGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DCA204D2DE900686887 /* WGLocationManager.m */; };
+		26868DCF204D30F700686887 /* BookingServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DCE204D30F700686887 /* BookingServiceVC.m */; };
 		26E3498D1FD1251D00800DC0 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E349651FD1251D00800DC0 /* MASCompositeConstraint.m */; };
 		26E3498E1FD1251D00800DC0 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E349681FD1251D00800DC0 /* MASConstraint.m */; };
 		26E3498F1FD1251D00800DC0 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3496A1FD1251D00800DC0 /* MASConstraintMaker.m */; };
@@ -59,6 +63,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26868DC3204D2D2700686887 /* GGMapClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMapClient.h; sourceTree = "<group>"; };
+		26868DC4204D2D2800686887 /* WeGoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeGoClient.h; sourceTree = "<group>"; };
+		26868DC5204D2D2800686887 /* WeGoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeGoClient.m; sourceTree = "<group>"; };
+		26868DC6204D2D2800686887 /* GGMapClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGMapClient.m; sourceTree = "<group>"; };
+		26868DCA204D2DE900686887 /* WGLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGLocationManager.m; sourceTree = "<group>"; };
+		26868DCB204D2DE900686887 /* WGLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGLocationManager.h; sourceTree = "<group>"; };
+		26868DCD204D30F600686887 /* BookingServiceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookingServiceVC.h; sourceTree = "<group>"; };
+		26868DCE204D30F700686887 /* BookingServiceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookingServiceVC.m; sourceTree = "<group>"; };
 		26E349641FD1251D00800DC0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		26E349651FD1251D00800DC0 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		26E349661FD1251D00800DC0 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -171,6 +183,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26868DC1204D2CBB00686887 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				26868DC9204D2DE900686887 /* WGLocationManager */,
+				26868DC3204D2D2700686887 /* GGMapClient.h */,
+				26868DC6204D2D2800686887 /* GGMapClient.m */,
+				26868DC4204D2D2800686887 /* WeGoClient.h */,
+				26868DC5204D2D2800686887 /* WeGoClient.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		26868DC9204D2DE900686887 /* WGLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				26868DCA204D2DE900686887 /* WGLocationManager.m */,
+				26868DCB204D2DE900686887 /* WGLocationManager.h */,
+			);
+			path = WGLocationManager;
+			sourceTree = "<group>";
+		};
 		26E349611FD1251D00800DC0 /* WCSTimeline */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +312,7 @@
 		532720F31FCA694300A7D494 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				26868DC1204D2CBB00686887 /* Service */,
 				26E349611FD1251D00800DC0 /* WCSTimeline */,
 				532B213F1FCEC6AD00210506 /* Models */,
 				538F19771FCD964400BDB2DA /* Views */,
@@ -334,6 +368,8 @@
 				531FF2181FD4484100686E65 /* TicketDetailController.m */,
 				53B00D851FD7D8CD00044E1B /* SearchLocationController.h */,
 				53B00D861FD7D8CD00044E1B /* SearchLocationController.m */,
+				26868DCD204D30F600686887 /* BookingServiceVC.h */,
+				26868DCE204D30F700686887 /* BookingServiceVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -480,7 +516,8 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -534,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26868DCC204D2DE900686887 /* WGLocationManager.m in Sources */,
 				26E3499D1FD1251D00800DC0 /* YRTextField.m in Sources */,
 				53769E211FCA6D59002D1EA7 /* MapsDirectionController.m in Sources */,
 				532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */,
@@ -552,12 +590,15 @@
 				532721041FCA694300A7D494 /* main.m in Sources */,
 				26E349971FD1251D00800DC0 /* NSDate+TimeAgo.m in Sources */,
 				5380D9C71FD3EDD200AB1B0F /* ScheduleTimeCell.m in Sources */,
+				26868DC8204D2D2800686887 /* GGMapClient.m in Sources */,
 				532720F61FCA694300A7D494 /* AppDelegate.m in Sources */,
 				532493271FD0036C00E341A1 /* ServiceCell.m in Sources */,
 				538F197A1FCD967200BDB2DA /* MakerInfoView.m in Sources */,
 				532B21421FCEC6DF00210506 /* LocationModel.m in Sources */,
 				26E349911FD1251D00800DC0 /* MASViewAttribute.m in Sources */,
+				26868DCF204D30F700686887 /* BookingServiceVC.m in Sources */,
 				26E349901FD1251D00800DC0 /* MASLayoutConstraint.m in Sources */,
+				26868DC7204D2D2800686887 /* WeGoClient.m in Sources */,
 				26E3498D1FD1251D00800DC0 /* MASCompositeConstraint.m in Sources */,
 				531FF2111FD42B1200686E65 /* ChooseBranchController.m in Sources */,
 				532493311FD01C7800E341A1 /* MenuHeaderView.m in Sources */,
