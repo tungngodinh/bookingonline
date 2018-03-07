@@ -23,13 +23,14 @@
 #import "ChooseServiceVC.h"
 #import "SearchLocationController.h"
 
-@interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate, SearchLocationControllerDelegate> {
+@interface MapsDirectionController ()<GMSMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate, SearchLocationControllerDelegate, UITableViewDelegate , UITableViewDataSource> {
     CLLocationManager *locationManager;
 @protected BOOL getLocation;
-
+    __weak IBOutlet UITableView *listOfficer;
+    
 }
 @property (nonatomic, strong) NSArray<LocationModel *> *locationsData;
-@property (nonatomic, strong) GMSMapView *mapView;
+
 @property CLLocation *myLocation;
 @property NSMutableArray *datapgd1 ;
 @property NSMutableArray *datapgd2 ;
@@ -39,6 +40,7 @@
 @property NSMutableArray *datapgd6 ;
 @property NSMutableArray *datapgd7 ;
 @property NSMutableDictionary *dataPgd ;
+@property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 
 @end
 
@@ -59,7 +61,15 @@
     self.navigationItem.rightBarButtonItem = searchButton;
     
 }
-
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 4 ;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    return  cell ; 
+}
 - (void)onSearchButtonTapped {
     SearchLocationController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchLocationController"];
     controller.delegate = self;
@@ -134,6 +144,9 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     _myLocation = newLocation;
+    [_mapView animateToLocation:CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude)];
+    
+    [_mapView animateToZoom:15];
     [self showRecentLocations];
 }
 -(NSMutableArray*) getListTimePicked : (NSString *)pdgID{
@@ -168,7 +181,7 @@
 }
 - (void)loadMapView {
     self.mapView.myLocationEnabled = YES;
-    self.view = self.mapView;
+   
     self.mapView.delegate = self;
     FAKIonIcons *icon = [FAKIonIcons iosLocationIconWithSize:40];
     for (int i = 0 ; i < [self.locationsData count] ; i ++)

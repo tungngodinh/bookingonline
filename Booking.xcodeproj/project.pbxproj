@@ -7,6 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265B2913204FEA87006CBEC6 /* CETM-BookingApp-2-71.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E1204FEA81006CBEC6 /* CETM-BookingApp-2-71.png */; };
+		265B2914204FEA87006CBEC6 /* CETM-BookingApp-2-39.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E2204FEA81006CBEC6 /* CETM-BookingApp-2-39.png */; };
+		265B2915204FEA87006CBEC6 /* CETM-BookingApp-2-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E3204FEA82006CBEC6 /* CETM-BookingApp-2-27.png */; };
+		265B2916204FEA87006CBEC6 /* CETM-BookingApp-2-41.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E4204FEA82006CBEC6 /* CETM-BookingApp-2-41.png */; };
+		265B2917204FEA87006CBEC6 /* CETM-BookingApp-2-28.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E5204FEA82006CBEC6 /* CETM-BookingApp-2-28.png */; };
+		265B2918204FEA87006CBEC6 /* CETM-BookingApp-2-37.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E6204FEA82006CBEC6 /* CETM-BookingApp-2-37.png */; };
+		265B2919204FEA87006CBEC6 /* CETM-BookingApp-2-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E7204FEA82006CBEC6 /* CETM-BookingApp-2-57.png */; };
+		265B291A204FEA87006CBEC6 /* CETM-BookingApp-2-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E8204FEA82006CBEC6 /* CETM-BookingApp-2-66.png */; };
+		265B291B204FEA87006CBEC6 /* CETM-BookingApp-2-59.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E9204FEA82006CBEC6 /* CETM-BookingApp-2-59.png */; };
+		265B291C204FEA87006CBEC6 /* CETM-BookingApp-2-49.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EA204FEA83006CBEC6 /* CETM-BookingApp-2-49.png */; };
+		265B291D204FEA87006CBEC6 /* CETM-BookingApp-2-65.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EB204FEA83006CBEC6 /* CETM-BookingApp-2-65.png */; };
+		265B291E204FEA87006CBEC6 /* CETM-BookingApp-2-54.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EC204FEA83006CBEC6 /* CETM-BookingApp-2-54.png */; };
+		265B291F204FEA87006CBEC6 /* CETM-BookingApp-2-34.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28ED204FEA83006CBEC6 /* CETM-BookingApp-2-34.png */; };
+		265B2920204FEA87006CBEC6 /* CETM-BookingApp-2-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EE204FEA83006CBEC6 /* CETM-BookingApp-2-33.png */; };
+		265B2921204FEA87006CBEC6 /* CETM-BookingApp-2-68.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EF204FEA83006CBEC6 /* CETM-BookingApp-2-68.png */; };
+		265B2922204FEA87006CBEC6 /* CETM-BookingApp-2-69.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F0204FEA83006CBEC6 /* CETM-BookingApp-2-69.png */; };
+		265B2923204FEA87006CBEC6 /* CETM-BookingApp-2-43.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F1204FEA83006CBEC6 /* CETM-BookingApp-2-43.png */; };
+		265B2924204FEA87006CBEC6 /* CETM-BookingApp-2-51.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F2204FEA83006CBEC6 /* CETM-BookingApp-2-51.png */; };
+		265B2925204FEA87006CBEC6 /* CETM-BookingApp-2-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F3204FEA83006CBEC6 /* CETM-BookingApp-2-70.png */; };
+		265B2926204FEA87006CBEC6 /* CETM-BookingApp-2-46.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F4204FEA84006CBEC6 /* CETM-BookingApp-2-46.png */; };
+		265B2927204FEA87006CBEC6 /* CETM-BookingApp-2-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F5204FEA84006CBEC6 /* CETM-BookingApp-2-58.png */; };
+		265B2928204FEA87006CBEC6 /* CETM-BookingApp-2-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F6204FEA84006CBEC6 /* CETM-BookingApp-2-60.png */; };
+		265B2929204FEA87006CBEC6 /* CETM-BookingApp-2-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F7204FEA84006CBEC6 /* CETM-BookingApp-2-25.png */; };
+		265B292A204FEA87006CBEC6 /* CETM-BookingApp-2-61.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F8204FEA85006CBEC6 /* CETM-BookingApp-2-61.png */; };
+		265B292B204FEA87006CBEC6 /* CETM-BookingApp-2-36.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F9204FEA85006CBEC6 /* CETM-BookingApp-2-36.png */; };
+		265B292C204FEA87006CBEC6 /* CETM-BookingApp-2-47.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FA204FEA85006CBEC6 /* CETM-BookingApp-2-47.png */; };
+		265B292D204FEA87006CBEC6 /* CETM-BookingApp-2-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FB204FEA85006CBEC6 /* CETM-BookingApp-2-26.png */; };
+		265B292E204FEA87006CBEC6 /* CETM-BookingApp-2-53.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FC204FEA85006CBEC6 /* CETM-BookingApp-2-53.png */; };
+		265B292F204FEA87006CBEC6 /* CETM-BookingApp-2-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FD204FEA85006CBEC6 /* CETM-BookingApp-2-48.png */; };
+		265B2930204FEA87006CBEC6 /* CETM-BookingApp-2-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FE204FEA85006CBEC6 /* CETM-BookingApp-2-30.png */; };
+		265B2931204FEA87006CBEC6 /* CETM-BookingApp-2-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FF204FEA85006CBEC6 /* CETM-BookingApp-2-40.png */; };
+		265B2932204FEA87006CBEC6 /* CETM-BookingApp-2-52.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2900204FEA85006CBEC6 /* CETM-BookingApp-2-52.png */; };
+		265B2933204FEA87006CBEC6 /* CETM-BookingApp-2-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2901204FEA86006CBEC6 /* CETM-BookingApp-2-72.png */; };
+		265B2934204FEA87006CBEC6 /* CETM-BookingApp-2-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2902204FEA86006CBEC6 /* CETM-BookingApp-2-29.png */; };
+		265B2935204FEA87006CBEC6 /* CETM-BookingApp-2-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2903204FEA86006CBEC6 /* CETM-BookingApp-2-32.png */; };
+		265B2936204FEA87006CBEC6 /* CETM-BookingApp-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2904204FEA86006CBEC6 /* CETM-BookingApp-2-24.png */; };
+		265B2937204FEA87006CBEC6 /* CETM-BookingApp-2-44.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2905204FEA86006CBEC6 /* CETM-BookingApp-2-44.png */; };
+		265B2938204FEA87006CBEC6 /* CETM-BookingApp-2-55.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2906204FEA86006CBEC6 /* CETM-BookingApp-2-55.png */; };
+		265B2939204FEA87006CBEC6 /* CETM-BookingApp-2-62.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2907204FEA86006CBEC6 /* CETM-BookingApp-2-62.png */; };
+		265B293A204FEA87006CBEC6 /* CETM-BookingApp-2-56.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2908204FEA86006CBEC6 /* CETM-BookingApp-2-56.png */; };
+		265B293B204FEA87006CBEC6 /* CETM-BookingApp-2-38.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2909204FEA86006CBEC6 /* CETM-BookingApp-2-38.png */; };
+		265B293C204FEA87006CBEC6 /* CETM-BookingApp-2-67.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290A204FEA86006CBEC6 /* CETM-BookingApp-2-67.png */; };
+		265B293D204FEA87006CBEC6 /* CETM-BookingApp-2-35.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290B204FEA87006CBEC6 /* CETM-BookingApp-2-35.png */; };
+		265B293E204FEA87006CBEC6 /* CETM-BookingApp-2-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290C204FEA87006CBEC6 /* CETM-BookingApp-2-64.png */; };
+		265B293F204FEA87006CBEC6 /* CETM-BookingApp-2-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290D204FEA87006CBEC6 /* CETM-BookingApp-2-31.png */; };
+		265B2940204FEA87006CBEC6 /* CETM-BookingApp-2-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290E204FEA87006CBEC6 /* CETM-BookingApp-2-50.png */; };
+		265B2941204FEA87006CBEC6 /* CETM-BookingApp-2-42.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290F204FEA87006CBEC6 /* CETM-BookingApp-2-42.png */; };
+		265B2942204FEA87006CBEC6 /* CETM-BookingApp-2-63.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2910204FEA87006CBEC6 /* CETM-BookingApp-2-63.png */; };
+		265B2943204FEA87006CBEC6 /* CETM-BookingApp-2-23.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2911204FEA87006CBEC6 /* CETM-BookingApp-2-23.png */; };
+		265B2944204FEA87006CBEC6 /* CETM-BookingApp-2-45.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2912204FEA87006CBEC6 /* CETM-BookingApp-2-45.png */; };
 		26868DC7204D2D2800686887 /* WeGoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DC5204D2D2800686887 /* WeGoClient.m */; };
 		26868DC8204D2D2800686887 /* GGMapClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DC6204D2D2800686887 /* GGMapClient.m */; };
 		26868DCC204D2DE900686887 /* WGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DCA204D2DE900686887 /* WGLocationManager.m */; };
@@ -63,6 +113,56 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265B28E1204FEA81006CBEC6 /* CETM-BookingApp-2-71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-71.png"; sourceTree = "<group>"; };
+		265B28E2204FEA81006CBEC6 /* CETM-BookingApp-2-39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-39.png"; sourceTree = "<group>"; };
+		265B28E3204FEA82006CBEC6 /* CETM-BookingApp-2-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-27.png"; sourceTree = "<group>"; };
+		265B28E4204FEA82006CBEC6 /* CETM-BookingApp-2-41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-41.png"; sourceTree = "<group>"; };
+		265B28E5204FEA82006CBEC6 /* CETM-BookingApp-2-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-28.png"; sourceTree = "<group>"; };
+		265B28E6204FEA82006CBEC6 /* CETM-BookingApp-2-37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-37.png"; sourceTree = "<group>"; };
+		265B28E7204FEA82006CBEC6 /* CETM-BookingApp-2-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-57.png"; sourceTree = "<group>"; };
+		265B28E8204FEA82006CBEC6 /* CETM-BookingApp-2-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-66.png"; sourceTree = "<group>"; };
+		265B28E9204FEA82006CBEC6 /* CETM-BookingApp-2-59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-59.png"; sourceTree = "<group>"; };
+		265B28EA204FEA83006CBEC6 /* CETM-BookingApp-2-49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-49.png"; sourceTree = "<group>"; };
+		265B28EB204FEA83006CBEC6 /* CETM-BookingApp-2-65.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-65.png"; sourceTree = "<group>"; };
+		265B28EC204FEA83006CBEC6 /* CETM-BookingApp-2-54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-54.png"; sourceTree = "<group>"; };
+		265B28ED204FEA83006CBEC6 /* CETM-BookingApp-2-34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-34.png"; sourceTree = "<group>"; };
+		265B28EE204FEA83006CBEC6 /* CETM-BookingApp-2-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-33.png"; sourceTree = "<group>"; };
+		265B28EF204FEA83006CBEC6 /* CETM-BookingApp-2-68.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-68.png"; sourceTree = "<group>"; };
+		265B28F0204FEA83006CBEC6 /* CETM-BookingApp-2-69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-69.png"; sourceTree = "<group>"; };
+		265B28F1204FEA83006CBEC6 /* CETM-BookingApp-2-43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-43.png"; sourceTree = "<group>"; };
+		265B28F2204FEA83006CBEC6 /* CETM-BookingApp-2-51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-51.png"; sourceTree = "<group>"; };
+		265B28F3204FEA83006CBEC6 /* CETM-BookingApp-2-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-70.png"; sourceTree = "<group>"; };
+		265B28F4204FEA84006CBEC6 /* CETM-BookingApp-2-46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-46.png"; sourceTree = "<group>"; };
+		265B28F5204FEA84006CBEC6 /* CETM-BookingApp-2-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-58.png"; sourceTree = "<group>"; };
+		265B28F6204FEA84006CBEC6 /* CETM-BookingApp-2-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-60.png"; sourceTree = "<group>"; };
+		265B28F7204FEA84006CBEC6 /* CETM-BookingApp-2-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-25.png"; sourceTree = "<group>"; };
+		265B28F8204FEA85006CBEC6 /* CETM-BookingApp-2-61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-61.png"; sourceTree = "<group>"; };
+		265B28F9204FEA85006CBEC6 /* CETM-BookingApp-2-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-36.png"; sourceTree = "<group>"; };
+		265B28FA204FEA85006CBEC6 /* CETM-BookingApp-2-47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-47.png"; sourceTree = "<group>"; };
+		265B28FB204FEA85006CBEC6 /* CETM-BookingApp-2-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-26.png"; sourceTree = "<group>"; };
+		265B28FC204FEA85006CBEC6 /* CETM-BookingApp-2-53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-53.png"; sourceTree = "<group>"; };
+		265B28FD204FEA85006CBEC6 /* CETM-BookingApp-2-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-48.png"; sourceTree = "<group>"; };
+		265B28FE204FEA85006CBEC6 /* CETM-BookingApp-2-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-30.png"; sourceTree = "<group>"; };
+		265B28FF204FEA85006CBEC6 /* CETM-BookingApp-2-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-40.png"; sourceTree = "<group>"; };
+		265B2900204FEA85006CBEC6 /* CETM-BookingApp-2-52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-52.png"; sourceTree = "<group>"; };
+		265B2901204FEA86006CBEC6 /* CETM-BookingApp-2-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-72.png"; sourceTree = "<group>"; };
+		265B2902204FEA86006CBEC6 /* CETM-BookingApp-2-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-29.png"; sourceTree = "<group>"; };
+		265B2903204FEA86006CBEC6 /* CETM-BookingApp-2-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-32.png"; sourceTree = "<group>"; };
+		265B2904204FEA86006CBEC6 /* CETM-BookingApp-2-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-24.png"; sourceTree = "<group>"; };
+		265B2905204FEA86006CBEC6 /* CETM-BookingApp-2-44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-44.png"; sourceTree = "<group>"; };
+		265B2906204FEA86006CBEC6 /* CETM-BookingApp-2-55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-55.png"; sourceTree = "<group>"; };
+		265B2907204FEA86006CBEC6 /* CETM-BookingApp-2-62.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-62.png"; sourceTree = "<group>"; };
+		265B2908204FEA86006CBEC6 /* CETM-BookingApp-2-56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-56.png"; sourceTree = "<group>"; };
+		265B2909204FEA86006CBEC6 /* CETM-BookingApp-2-38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-38.png"; sourceTree = "<group>"; };
+		265B290A204FEA86006CBEC6 /* CETM-BookingApp-2-67.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-67.png"; sourceTree = "<group>"; };
+		265B290B204FEA87006CBEC6 /* CETM-BookingApp-2-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-35.png"; sourceTree = "<group>"; };
+		265B290C204FEA87006CBEC6 /* CETM-BookingApp-2-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-64.png"; sourceTree = "<group>"; };
+		265B290D204FEA87006CBEC6 /* CETM-BookingApp-2-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-31.png"; sourceTree = "<group>"; };
+		265B290E204FEA87006CBEC6 /* CETM-BookingApp-2-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-50.png"; sourceTree = "<group>"; };
+		265B290F204FEA87006CBEC6 /* CETM-BookingApp-2-42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-42.png"; sourceTree = "<group>"; };
+		265B2910204FEA87006CBEC6 /* CETM-BookingApp-2-63.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-63.png"; sourceTree = "<group>"; };
+		265B2911204FEA87006CBEC6 /* CETM-BookingApp-2-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-23.png"; sourceTree = "<group>"; };
+		265B2912204FEA87006CBEC6 /* CETM-BookingApp-2-45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-45.png"; sourceTree = "<group>"; };
 		26868DC3204D2D2700686887 /* GGMapClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMapClient.h; sourceTree = "<group>"; };
 		26868DC4204D2D2800686887 /* WeGoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeGoClient.h; sourceTree = "<group>"; };
 		26868DC5204D2D2800686887 /* WeGoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeGoClient.m; sourceTree = "<group>"; };
@@ -183,9 +283,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		265B28E0204FEA16006CBEC6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				265B2911204FEA87006CBEC6 /* CETM-BookingApp-2-23.png */,
+				265B2904204FEA86006CBEC6 /* CETM-BookingApp-2-24.png */,
+				265B28F7204FEA84006CBEC6 /* CETM-BookingApp-2-25.png */,
+				265B28FB204FEA85006CBEC6 /* CETM-BookingApp-2-26.png */,
+				265B28E3204FEA82006CBEC6 /* CETM-BookingApp-2-27.png */,
+				265B28E5204FEA82006CBEC6 /* CETM-BookingApp-2-28.png */,
+				265B2902204FEA86006CBEC6 /* CETM-BookingApp-2-29.png */,
+				265B28FE204FEA85006CBEC6 /* CETM-BookingApp-2-30.png */,
+				265B290D204FEA87006CBEC6 /* CETM-BookingApp-2-31.png */,
+				265B2903204FEA86006CBEC6 /* CETM-BookingApp-2-32.png */,
+				265B28EE204FEA83006CBEC6 /* CETM-BookingApp-2-33.png */,
+				265B28ED204FEA83006CBEC6 /* CETM-BookingApp-2-34.png */,
+				265B290B204FEA87006CBEC6 /* CETM-BookingApp-2-35.png */,
+				265B28F9204FEA85006CBEC6 /* CETM-BookingApp-2-36.png */,
+				265B28E6204FEA82006CBEC6 /* CETM-BookingApp-2-37.png */,
+				265B2909204FEA86006CBEC6 /* CETM-BookingApp-2-38.png */,
+				265B28E2204FEA81006CBEC6 /* CETM-BookingApp-2-39.png */,
+				265B28FF204FEA85006CBEC6 /* CETM-BookingApp-2-40.png */,
+				265B28E4204FEA82006CBEC6 /* CETM-BookingApp-2-41.png */,
+				265B290F204FEA87006CBEC6 /* CETM-BookingApp-2-42.png */,
+				265B28F1204FEA83006CBEC6 /* CETM-BookingApp-2-43.png */,
+				265B2905204FEA86006CBEC6 /* CETM-BookingApp-2-44.png */,
+				265B2912204FEA87006CBEC6 /* CETM-BookingApp-2-45.png */,
+				265B28F4204FEA84006CBEC6 /* CETM-BookingApp-2-46.png */,
+				265B28FA204FEA85006CBEC6 /* CETM-BookingApp-2-47.png */,
+				265B28FD204FEA85006CBEC6 /* CETM-BookingApp-2-48.png */,
+				265B28EA204FEA83006CBEC6 /* CETM-BookingApp-2-49.png */,
+				265B290E204FEA87006CBEC6 /* CETM-BookingApp-2-50.png */,
+				265B28F2204FEA83006CBEC6 /* CETM-BookingApp-2-51.png */,
+				265B2900204FEA85006CBEC6 /* CETM-BookingApp-2-52.png */,
+				265B28FC204FEA85006CBEC6 /* CETM-BookingApp-2-53.png */,
+				265B28EC204FEA83006CBEC6 /* CETM-BookingApp-2-54.png */,
+				265B2906204FEA86006CBEC6 /* CETM-BookingApp-2-55.png */,
+				265B2908204FEA86006CBEC6 /* CETM-BookingApp-2-56.png */,
+				265B28E7204FEA82006CBEC6 /* CETM-BookingApp-2-57.png */,
+				265B28F5204FEA84006CBEC6 /* CETM-BookingApp-2-58.png */,
+				265B28E9204FEA82006CBEC6 /* CETM-BookingApp-2-59.png */,
+				265B28F6204FEA84006CBEC6 /* CETM-BookingApp-2-60.png */,
+				265B28F8204FEA85006CBEC6 /* CETM-BookingApp-2-61.png */,
+				265B2907204FEA86006CBEC6 /* CETM-BookingApp-2-62.png */,
+				265B2910204FEA87006CBEC6 /* CETM-BookingApp-2-63.png */,
+				265B290C204FEA87006CBEC6 /* CETM-BookingApp-2-64.png */,
+				265B28EB204FEA83006CBEC6 /* CETM-BookingApp-2-65.png */,
+				265B28E8204FEA82006CBEC6 /* CETM-BookingApp-2-66.png */,
+				265B290A204FEA86006CBEC6 /* CETM-BookingApp-2-67.png */,
+				265B28EF204FEA83006CBEC6 /* CETM-BookingApp-2-68.png */,
+				265B28F0204FEA83006CBEC6 /* CETM-BookingApp-2-69.png */,
+				265B28F3204FEA83006CBEC6 /* CETM-BookingApp-2-70.png */,
+				265B28E1204FEA81006CBEC6 /* CETM-BookingApp-2-71.png */,
+				265B2901204FEA86006CBEC6 /* CETM-BookingApp-2-72.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		26868DC1204D2CBB00686887 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				265B28E0204FEA16006CBEC6 /* Resource */,
 				26868DC9204D2DE900686887 /* WGLocationManager */,
 				26868DC3204D2D2700686887 /* GGMapClient.h */,
 				26868DC6204D2D2800686887 /* GGMapClient.m */,
@@ -473,13 +631,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265B292B204FEA87006CBEC6 /* CETM-BookingApp-2-36.png in Resources */,
+				265B2944204FEA87006CBEC6 /* CETM-BookingApp-2-45.png in Resources */,
+				265B2932204FEA87006CBEC6 /* CETM-BookingApp-2-52.png in Resources */,
+				265B2931204FEA87006CBEC6 /* CETM-BookingApp-2-40.png in Resources */,
+				265B2927204FEA87006CBEC6 /* CETM-BookingApp-2-58.png in Resources */,
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
+				265B2922204FEA87006CBEC6 /* CETM-BookingApp-2-69.png in Resources */,
+				265B291E204FEA87006CBEC6 /* CETM-BookingApp-2-54.png in Resources */,
+				265B291F204FEA87006CBEC6 /* CETM-BookingApp-2-34.png in Resources */,
+				265B2921204FEA87006CBEC6 /* CETM-BookingApp-2-68.png in Resources */,
+				265B2917204FEA87006CBEC6 /* CETM-BookingApp-2-28.png in Resources */,
+				265B293E204FEA87006CBEC6 /* CETM-BookingApp-2-64.png in Resources */,
+				265B2925204FEA87006CBEC6 /* CETM-BookingApp-2-70.png in Resources */,
+				265B2920204FEA87006CBEC6 /* CETM-BookingApp-2-33.png in Resources */,
+				265B292A204FEA87006CBEC6 /* CETM-BookingApp-2-61.png in Resources */,
+				265B2914204FEA87006CBEC6 /* CETM-BookingApp-2-39.png in Resources */,
+				265B2915204FEA87006CBEC6 /* CETM-BookingApp-2-27.png in Resources */,
+				265B292C204FEA87006CBEC6 /* CETM-BookingApp-2-47.png in Resources */,
 				532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */,
+				265B293D204FEA87006CBEC6 /* CETM-BookingApp-2-35.png in Resources */,
+				265B2941204FEA87006CBEC6 /* CETM-BookingApp-2-42.png in Resources */,
+				265B293F204FEA87006CBEC6 /* CETM-BookingApp-2-31.png in Resources */,
+				265B2939204FEA87006CBEC6 /* CETM-BookingApp-2-62.png in Resources */,
+				265B2942204FEA87006CBEC6 /* CETM-BookingApp-2-63.png in Resources */,
+				265B291B204FEA87006CBEC6 /* CETM-BookingApp-2-59.png in Resources */,
+				265B291C204FEA87006CBEC6 /* CETM-BookingApp-2-49.png in Resources */,
+				265B293A204FEA87006CBEC6 /* CETM-BookingApp-2-56.png in Resources */,
+				265B292D204FEA87006CBEC6 /* CETM-BookingApp-2-26.png in Resources */,
 				53C776A91FD141320011AF1B /* TicketCell.xib in Resources */,
+				265B292F204FEA87006CBEC6 /* CETM-BookingApp-2-48.png in Resources */,
+				265B2935204FEA87006CBEC6 /* CETM-BookingApp-2-32.png in Resources */,
+				265B2940204FEA87006CBEC6 /* CETM-BookingApp-2-50.png in Resources */,
+				265B2916204FEA87006CBEC6 /* CETM-BookingApp-2-41.png in Resources */,
+				265B291A204FEA87006CBEC6 /* CETM-BookingApp-2-66.png in Resources */,
+				265B291D204FEA87006CBEC6 /* CETM-BookingApp-2-65.png in Resources */,
+				265B2928204FEA87006CBEC6 /* CETM-BookingApp-2-60.png in Resources */,
+				265B2930204FEA87006CBEC6 /* CETM-BookingApp-2-30.png in Resources */,
 				531FF2161FD42B3A00686E65 /* BranchCell.xib in Resources */,
+				265B2924204FEA87006CBEC6 /* CETM-BookingApp-2-51.png in Resources */,
+				265B2926204FEA87006CBEC6 /* CETM-BookingApp-2-46.png in Resources */,
+				265B2937204FEA87006CBEC6 /* CETM-BookingApp-2-44.png in Resources */,
+				265B293B204FEA87006CBEC6 /* CETM-BookingApp-2-38.png in Resources */,
+				265B2936204FEA87006CBEC6 /* CETM-BookingApp-2-24.png in Resources */,
+				265B2929204FEA87006CBEC6 /* CETM-BookingApp-2-25.png in Resources */,
+				265B292E204FEA87006CBEC6 /* CETM-BookingApp-2-53.png in Resources */,
+				265B2933204FEA87006CBEC6 /* CETM-BookingApp-2-72.png in Resources */,
 				5380D9C81FD3EDD200AB1B0F /* ScheduleTimeCell.xib in Resources */,
+				265B2938204FEA87006CBEC6 /* CETM-BookingApp-2-55.png in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
 				532720FC1FCA694300A7D494 /* Main.storyboard in Resources */,
+				265B2919204FEA87006CBEC6 /* CETM-BookingApp-2-57.png in Resources */,
+				265B2913204FEA87006CBEC6 /* CETM-BookingApp-2-71.png in Resources */,
+				265B2923204FEA87006CBEC6 /* CETM-BookingApp-2-43.png in Resources */,
+				265B2943204FEA87006CBEC6 /* CETM-BookingApp-2-23.png in Resources */,
+				265B2934204FEA87006CBEC6 /* CETM-BookingApp-2-29.png in Resources */,
+				265B293C204FEA87006CBEC6 /* CETM-BookingApp-2-67.png in Resources */,
+				265B2918204FEA87006CBEC6 /* CETM-BookingApp-2-37.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
