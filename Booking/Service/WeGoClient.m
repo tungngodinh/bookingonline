@@ -67,6 +67,8 @@
                       progress:(void (^)(NSProgress * _Nonnull))uploadProgress
                        success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
                        failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure{
+    URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,URLString];
+    
     return [self POST:URLString parameters:parameters progress:uploadProgress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if([responseObject isKindOfClass:[NSDictionary class]]){
             success(task,responseObject);
@@ -77,9 +79,6 @@
         if ([error.localizedDescription isEqualToString:@"The Internet connection appears to be offline."]) {
             failure(task,[self errorWithCode:100 object:@{@"error": @"Không có kết nối mạng!"}]);
         }else if ([error.localizedDescription isEqualToString:@"Request failed: unauthorized (401)"]) {
-            AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-            [WeGoClient saveLoginFlag:NO];
-            [WeGoClient saveAccessToken:@""];
       
             failure(task,[self errorWithCode:100 object:@{@"error": @"Thao tác không hợp lệ, vui lòng đăng nhập lại!"}]);
         }else{
@@ -120,17 +119,13 @@
 -(void)searchBank:(NSString *)token success:(void(^)(BOOL result))success failure:(void(^)(NSError *error))failure{
     NSString *endpoint = [NSString stringWithFormat:@"/room/booking/search_banks"];
     
-    NSDictionary *param = @{
-                            @"lat":@(0),
-                            @"long":@(0)
-                            };
-    NSDictionary *param1 = @{
-                            @"lat":@(0),
-                            @"long":@(0)
-                            };
-    NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:param,param1, nil];
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] initWithDictionary:@{
+                                                                                   @"lat":@(0),
+                                                                                   @"long":@(0)
+                                                                                   }];
+
     
-    [self WGPOST:endpoint parameters:array progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self WGPOST:endpoint parameters:param progress:^(NSProgress * _Nonnull uploadProgress) {
         ;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
     
