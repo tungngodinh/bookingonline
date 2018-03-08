@@ -9,6 +9,12 @@
 #import "BookingServiceVC.h"
 
 @interface BookingServiceVC ()
+{
+    WSCalendarView *calendarView;
+    WSCalendarView *calendarViewEvent;
+    NSMutableArray *eventArray;
+}
+@property (weak, nonatomic) IBOutlet UIView *scheduleChoose;
 
 @end
 
@@ -16,7 +22,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testAPI] ;
+    calendarViewEvent = [[[NSBundle mainBundle] loadNibNamed:@"WSCalendarView" owner:self options:nil] firstObject];
+    calendarViewEvent.calendarStyle = WSCalendarStyleView;
+    calendarViewEvent.isShowEvent=true;
+    calendarViewEvent.tappedDayBackgroundColor=[UIColor blackColor];
+    calendarViewEvent.frame = CGRectMake(0, 0, self.scheduleChoose.frame.size.width, self.scheduleChoose.frame.size.height);
+    [calendarViewEvent setupAppearance];
+    calendarViewEvent.delegate=self;
+    [self.scheduleChoose addSubview:calendarViewEvent];
+    
+    
+    eventArray=[[NSMutableArray alloc] init];
+    NSDate *lastDate;
+    NSDateComponents *dateComponent=[[NSDateComponents alloc] init];
+    for (int i=0; i<10; i++) {
+        
+        if (!lastDate) {
+            lastDate=[NSDate date];
+        }
+        else{
+            [dateComponent setDay:1];
+        }
+        NSDate *datein = [[NSCalendar currentCalendar] dateByAddingComponents:dateComponent toDate:lastDate options:0];
+        lastDate=datein;
+        [eventArray addObject:datein];
+    }
+    [calendarViewEvent reloadCalendar];
+    
+    NSLog(@"%@",[eventArray description]);
     
     // Do any additional setup after loading the view.
 }

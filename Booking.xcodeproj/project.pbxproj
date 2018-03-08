@@ -79,6 +79,10 @@
 		26E3499C1FD1251D00800DC0 /* WCSTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3498A1FD1251D00800DC0 /* WCSTimelineModel.m */; };
 		26E3499D1FD1251D00800DC0 /* YRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E3498C1FD1251D00800DC0 /* YRTextField.m */; };
 		26E79A7C1FD3D7B400EDFB02 /* ChooseServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E79A7B1FD3D7B400EDFB02 /* ChooseServiceVC.m */; };
+		26ECFE702050F9D9007095AA /* WSEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ECFE6A2050F9D7007095AA /* WSEventView.m */; };
+		26ECFE712050F9DA007095AA /* WSCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ECFE6D2050F9D9007095AA /* WSCalendarView.m */; };
+		26ECFE722050F9DA007095AA /* WSCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE6E2050F9D9007095AA /* WSCalendarView.xib */; };
+		26ECFE732050F9DA007095AA /* WSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ECFE6F2050F9D9007095AA /* WSLabel.m */; };
 		531FF2111FD42B1200686E65 /* ChooseBranchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2101FD42B1200686E65 /* ChooseBranchController.m */; };
 		531FF2151FD42B3A00686E65 /* BranchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2131FD42B3A00686E65 /* BranchCell.m */; };
 		531FF2161FD42B3A00686E65 /* BranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531FF2141FD42B3A00686E65 /* BranchCell.xib */; };
@@ -212,6 +216,13 @@
 		26E3498C1FD1251D00800DC0 /* YRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRTextField.m; sourceTree = "<group>"; };
 		26E79A7A1FD3D7B400EDFB02 /* ChooseServiceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseServiceVC.h; sourceTree = "<group>"; };
 		26E79A7B1FD3D7B400EDFB02 /* ChooseServiceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseServiceVC.m; sourceTree = "<group>"; };
+		26ECFE692050F9D7007095AA /* WSCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSCalendarView.h; sourceTree = "<group>"; };
+		26ECFE6A2050F9D7007095AA /* WSEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSEventView.m; sourceTree = "<group>"; };
+		26ECFE6B2050F9D8007095AA /* WSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLabel.h; sourceTree = "<group>"; };
+		26ECFE6C2050F9D8007095AA /* WSEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSEventView.h; sourceTree = "<group>"; };
+		26ECFE6D2050F9D9007095AA /* WSCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCalendarView.m; sourceTree = "<group>"; };
+		26ECFE6E2050F9D9007095AA /* WSCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSCalendarView.xib; sourceTree = "<group>"; };
+		26ECFE6F2050F9D9007095AA /* WSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLabel.m; sourceTree = "<group>"; };
 		332FBCB109D5477225E12F07 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		3366CDB511AE969B1F94E088 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
 		531FF20F1FD42B1200686E65 /* ChooseBranchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseBranchController.h; sourceTree = "<group>"; };
@@ -440,6 +451,28 @@
 			path = WCSLabel;
 			sourceTree = "<group>";
 		};
+		26ECFE482050F7AB007095AA /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				26ECFE682050F9CB007095AA /* WSCalendar */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		26ECFE682050F9CB007095AA /* WSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				26ECFE692050F9D7007095AA /* WSCalendarView.h */,
+				26ECFE6D2050F9D9007095AA /* WSCalendarView.m */,
+				26ECFE6E2050F9D9007095AA /* WSCalendarView.xib */,
+				26ECFE6C2050F9D8007095AA /* WSEventView.h */,
+				26ECFE6A2050F9D7007095AA /* WSEventView.m */,
+				26ECFE6B2050F9D8007095AA /* WSLabel.h */,
+				26ECFE6F2050F9D9007095AA /* WSLabel.m */,
+			);
+			path = WSCalendar;
+			sourceTree = "<group>";
+		};
 		407CA06B74CA37615DFB7B7E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +503,7 @@
 		532720F31FCA694300A7D494 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				26ECFE482050F7AB007095AA /* Framework */,
 				26868DC1204D2CBB00686887 /* Service */,
 				26E349611FD1251D00800DC0 /* WCSTimeline */,
 				532B213F1FCEC6AD00210506 /* Models */,
@@ -647,6 +681,7 @@
 				265B2920204FEA87006CBEC6 /* CETM-BookingApp-2-33.png in Resources */,
 				265B292A204FEA87006CBEC6 /* CETM-BookingApp-2-61.png in Resources */,
 				265B2914204FEA87006CBEC6 /* CETM-BookingApp-2-39.png in Resources */,
+				26ECFE722050F9DA007095AA /* WSCalendarView.xib in Resources */,
 				265B2915204FEA87006CBEC6 /* CETM-BookingApp-2-27.png in Resources */,
 				265B292C204FEA87006CBEC6 /* CETM-BookingApp-2-47.png in Resources */,
 				532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */,
@@ -782,10 +817,12 @@
 				26868DCC204D2DE900686887 /* WGLocationManager.m in Sources */,
 				26E3499D1FD1251D00800DC0 /* YRTextField.m in Sources */,
 				53769E211FCA6D59002D1EA7 /* MapsDirectionController.m in Sources */,
+				26ECFE712050F9DA007095AA /* WSCalendarView.m in Sources */,
 				532B21391FCEB3D500210506 /* MyFeedBackVC.m in Sources */,
 				53C7769F1FD139310011AF1B /* MyTicketsController.m in Sources */,
 				26E349931FD1251D00800DC0 /* NSArray+MASAdditions.m in Sources */,
 				26E3499A1FD1251D00800DC0 /* RzTextField.m in Sources */,
+				26ECFE702050F9D9007095AA /* WSEventView.m in Sources */,
 				531FF2191FD4484100686E65 /* TicketDetailController.m in Sources */,
 				26E349951FD1251D00800DC0 /* View+MASAdditions.m in Sources */,
 				26E79A7C1FD3D7B400EDFB02 /* ChooseServiceVC.m in Sources */,
@@ -807,6 +844,7 @@
 				26868DCF204D30F700686887 /* BookingServiceVC.m in Sources */,
 				26E349901FD1251D00800DC0 /* MASLayoutConstraint.m in Sources */,
 				26868DC7204D2D2800686887 /* WeGoClient.m in Sources */,
+				26ECFE732050F9DA007095AA /* WSLabel.m in Sources */,
 				26E3498D1FD1251D00800DC0 /* MASCompositeConstraint.m in Sources */,
 				531FF2111FD42B1200686E65 /* ChooseBranchController.m in Sources */,
 				532493311FD01C7800E341A1 /* MenuHeaderView.m in Sources */,
@@ -963,7 +1001,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V32J3679XT;
 				INFOPLIST_FILE = Booking/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapdirection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -983,7 +1021,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V32J3679XT;
 				INFOPLIST_FILE = Booking/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapdirection;
 				PRODUCT_NAME = "$(TARGET_NAME)";

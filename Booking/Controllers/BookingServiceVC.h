@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WeGoClient.h"
 #import "GGMapClient.h"
-@interface BookingServiceVC : UIViewController
+#import "WSCalendarView.h"
+@interface BookingServiceVC : UIViewController<WSCalendarViewDelegate>
 
 @end
