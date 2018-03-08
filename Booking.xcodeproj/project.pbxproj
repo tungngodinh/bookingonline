@@ -7,56 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		265B2913204FEA87006CBEC6 /* CETM-BookingApp-2-71.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E1204FEA81006CBEC6 /* CETM-BookingApp-2-71.png */; };
-		265B2914204FEA87006CBEC6 /* CETM-BookingApp-2-39.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E2204FEA81006CBEC6 /* CETM-BookingApp-2-39.png */; };
-		265B2915204FEA87006CBEC6 /* CETM-BookingApp-2-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E3204FEA82006CBEC6 /* CETM-BookingApp-2-27.png */; };
-		265B2916204FEA87006CBEC6 /* CETM-BookingApp-2-41.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E4204FEA82006CBEC6 /* CETM-BookingApp-2-41.png */; };
-		265B2917204FEA87006CBEC6 /* CETM-BookingApp-2-28.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E5204FEA82006CBEC6 /* CETM-BookingApp-2-28.png */; };
-		265B2918204FEA87006CBEC6 /* CETM-BookingApp-2-37.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E6204FEA82006CBEC6 /* CETM-BookingApp-2-37.png */; };
-		265B2919204FEA87006CBEC6 /* CETM-BookingApp-2-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E7204FEA82006CBEC6 /* CETM-BookingApp-2-57.png */; };
-		265B291A204FEA87006CBEC6 /* CETM-BookingApp-2-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E8204FEA82006CBEC6 /* CETM-BookingApp-2-66.png */; };
-		265B291B204FEA87006CBEC6 /* CETM-BookingApp-2-59.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28E9204FEA82006CBEC6 /* CETM-BookingApp-2-59.png */; };
-		265B291C204FEA87006CBEC6 /* CETM-BookingApp-2-49.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EA204FEA83006CBEC6 /* CETM-BookingApp-2-49.png */; };
-		265B291D204FEA87006CBEC6 /* CETM-BookingApp-2-65.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EB204FEA83006CBEC6 /* CETM-BookingApp-2-65.png */; };
-		265B291E204FEA87006CBEC6 /* CETM-BookingApp-2-54.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EC204FEA83006CBEC6 /* CETM-BookingApp-2-54.png */; };
-		265B291F204FEA87006CBEC6 /* CETM-BookingApp-2-34.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28ED204FEA83006CBEC6 /* CETM-BookingApp-2-34.png */; };
-		265B2920204FEA87006CBEC6 /* CETM-BookingApp-2-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EE204FEA83006CBEC6 /* CETM-BookingApp-2-33.png */; };
-		265B2921204FEA87006CBEC6 /* CETM-BookingApp-2-68.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28EF204FEA83006CBEC6 /* CETM-BookingApp-2-68.png */; };
-		265B2922204FEA87006CBEC6 /* CETM-BookingApp-2-69.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F0204FEA83006CBEC6 /* CETM-BookingApp-2-69.png */; };
-		265B2923204FEA87006CBEC6 /* CETM-BookingApp-2-43.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F1204FEA83006CBEC6 /* CETM-BookingApp-2-43.png */; };
-		265B2924204FEA87006CBEC6 /* CETM-BookingApp-2-51.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F2204FEA83006CBEC6 /* CETM-BookingApp-2-51.png */; };
-		265B2925204FEA87006CBEC6 /* CETM-BookingApp-2-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F3204FEA83006CBEC6 /* CETM-BookingApp-2-70.png */; };
-		265B2926204FEA87006CBEC6 /* CETM-BookingApp-2-46.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F4204FEA84006CBEC6 /* CETM-BookingApp-2-46.png */; };
-		265B2927204FEA87006CBEC6 /* CETM-BookingApp-2-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F5204FEA84006CBEC6 /* CETM-BookingApp-2-58.png */; };
-		265B2928204FEA87006CBEC6 /* CETM-BookingApp-2-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F6204FEA84006CBEC6 /* CETM-BookingApp-2-60.png */; };
-		265B2929204FEA87006CBEC6 /* CETM-BookingApp-2-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F7204FEA84006CBEC6 /* CETM-BookingApp-2-25.png */; };
-		265B292A204FEA87006CBEC6 /* CETM-BookingApp-2-61.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F8204FEA85006CBEC6 /* CETM-BookingApp-2-61.png */; };
-		265B292B204FEA87006CBEC6 /* CETM-BookingApp-2-36.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28F9204FEA85006CBEC6 /* CETM-BookingApp-2-36.png */; };
-		265B292C204FEA87006CBEC6 /* CETM-BookingApp-2-47.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FA204FEA85006CBEC6 /* CETM-BookingApp-2-47.png */; };
-		265B292D204FEA87006CBEC6 /* CETM-BookingApp-2-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FB204FEA85006CBEC6 /* CETM-BookingApp-2-26.png */; };
-		265B292E204FEA87006CBEC6 /* CETM-BookingApp-2-53.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FC204FEA85006CBEC6 /* CETM-BookingApp-2-53.png */; };
-		265B292F204FEA87006CBEC6 /* CETM-BookingApp-2-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FD204FEA85006CBEC6 /* CETM-BookingApp-2-48.png */; };
-		265B2930204FEA87006CBEC6 /* CETM-BookingApp-2-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FE204FEA85006CBEC6 /* CETM-BookingApp-2-30.png */; };
-		265B2931204FEA87006CBEC6 /* CETM-BookingApp-2-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B28FF204FEA85006CBEC6 /* CETM-BookingApp-2-40.png */; };
-		265B2932204FEA87006CBEC6 /* CETM-BookingApp-2-52.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2900204FEA85006CBEC6 /* CETM-BookingApp-2-52.png */; };
-		265B2933204FEA87006CBEC6 /* CETM-BookingApp-2-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2901204FEA86006CBEC6 /* CETM-BookingApp-2-72.png */; };
-		265B2934204FEA87006CBEC6 /* CETM-BookingApp-2-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2902204FEA86006CBEC6 /* CETM-BookingApp-2-29.png */; };
-		265B2935204FEA87006CBEC6 /* CETM-BookingApp-2-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2903204FEA86006CBEC6 /* CETM-BookingApp-2-32.png */; };
-		265B2936204FEA87006CBEC6 /* CETM-BookingApp-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2904204FEA86006CBEC6 /* CETM-BookingApp-2-24.png */; };
-		265B2937204FEA87006CBEC6 /* CETM-BookingApp-2-44.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2905204FEA86006CBEC6 /* CETM-BookingApp-2-44.png */; };
-		265B2938204FEA87006CBEC6 /* CETM-BookingApp-2-55.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2906204FEA86006CBEC6 /* CETM-BookingApp-2-55.png */; };
-		265B2939204FEA87006CBEC6 /* CETM-BookingApp-2-62.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2907204FEA86006CBEC6 /* CETM-BookingApp-2-62.png */; };
-		265B293A204FEA87006CBEC6 /* CETM-BookingApp-2-56.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2908204FEA86006CBEC6 /* CETM-BookingApp-2-56.png */; };
-		265B293B204FEA87006CBEC6 /* CETM-BookingApp-2-38.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2909204FEA86006CBEC6 /* CETM-BookingApp-2-38.png */; };
-		265B293C204FEA87006CBEC6 /* CETM-BookingApp-2-67.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290A204FEA86006CBEC6 /* CETM-BookingApp-2-67.png */; };
-		265B293D204FEA87006CBEC6 /* CETM-BookingApp-2-35.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290B204FEA87006CBEC6 /* CETM-BookingApp-2-35.png */; };
-		265B293E204FEA87006CBEC6 /* CETM-BookingApp-2-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290C204FEA87006CBEC6 /* CETM-BookingApp-2-64.png */; };
-		265B293F204FEA87006CBEC6 /* CETM-BookingApp-2-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290D204FEA87006CBEC6 /* CETM-BookingApp-2-31.png */; };
-		265B2940204FEA87006CBEC6 /* CETM-BookingApp-2-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290E204FEA87006CBEC6 /* CETM-BookingApp-2-50.png */; };
-		265B2941204FEA87006CBEC6 /* CETM-BookingApp-2-42.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B290F204FEA87006CBEC6 /* CETM-BookingApp-2-42.png */; };
-		265B2942204FEA87006CBEC6 /* CETM-BookingApp-2-63.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2910204FEA87006CBEC6 /* CETM-BookingApp-2-63.png */; };
-		265B2943204FEA87006CBEC6 /* CETM-BookingApp-2-23.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2911204FEA87006CBEC6 /* CETM-BookingApp-2-23.png */; };
-		265B2944204FEA87006CBEC6 /* CETM-BookingApp-2-45.png in Resources */ = {isa = PBXBuildFile; fileRef = 265B2912204FEA87006CBEC6 /* CETM-BookingApp-2-45.png */; };
 		26868DC7204D2D2800686887 /* WeGoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DC5204D2D2800686887 /* WeGoClient.m */; };
 		26868DC8204D2D2800686887 /* GGMapClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DC6204D2D2800686887 /* GGMapClient.m */; };
 		26868DCC204D2DE900686887 /* WGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26868DCA204D2DE900686887 /* WGLocationManager.m */; };
@@ -83,6 +33,81 @@
 		26ECFE712050F9DA007095AA /* WSCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ECFE6D2050F9D9007095AA /* WSCalendarView.m */; };
 		26ECFE722050F9DA007095AA /* WSCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE6E2050F9D9007095AA /* WSCalendarView.xib */; };
 		26ECFE732050F9DA007095AA /* WSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ECFE6F2050F9D9007095AA /* WSLabel.m */; };
+		26ECFE7B20511D17007095AA /* ConfirmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ECFE7A20511D17007095AA /* ConfirmVC.m */; };
+		26ECFEC8205135DF007095AA /* Icon dinh vi nho.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE7C205135C9007095AA /* Icon dinh vi nho.png */; };
+		26ECFEC9205135DF007095AA /* Hoan thanh.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE7D205135CA007095AA /* Hoan thanh.png */; };
+		26ECFECA205135DF007095AA /* Notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE7E205135CA007095AA /* Notification.png */; };
+		26ECFECB205135DF007095AA /* Vong tron man 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE7F205135CA007095AA /* Vong tron man 1.png */; };
+		26ECFECC205135DF007095AA /* So dien thoai.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE81205135CB007095AA /* So dien thoai.png */; };
+		26ECFECD205135DF007095AA /* Mat khau.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE82205135CB007095AA /* Mat khau.png */; };
+		26ECFECE205135DF007095AA /* Icon so dien thoai.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE83205135CB007095AA /* Icon so dien thoai.png */; };
+		26ECFECF205135DF007095AA /* Icon mat khau.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE84205135CB007095AA /* Icon mat khau.png */; };
+		26ECFED0205135DF007095AA /* Login 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE85205135CB007095AA /* Login 1.png */; };
+		26ECFED1205135DF007095AA /* Login 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE86205135CB007095AA /* Login 2.png */; };
+		26ECFED2205135DF007095AA /* Login 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE87205135CB007095AA /* Login 3.png */; };
+		26ECFED3205135DF007095AA /* Nut back.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE88205135CB007095AA /* Nut back.png */; };
+		26ECFED4205135DF007095AA /* Khong duoc chon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE8A205135CB007095AA /* Khong duoc chon.png */; };
+		26ECFED5205135DF007095AA /* Chu thich da chon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE8B205135CB007095AA /* Chu thich da chon.png */; };
+		26ECFED6205135DF007095AA /* Chu thich khong duoc chon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE8C205135CB007095AA /* Chu thich khong duoc chon.png */; };
+		26ECFED7205135DF007095AA /* Dang chon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE8D205135CB007095AA /* Dang chon.png */; };
+		26ECFED8205135DF007095AA /* Da chon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE8E205135CB007095AA /* Da chon.png */; };
+		26ECFED9205135DF007095AA /* Con trong.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE8F205135CB007095AA /* Con trong.png */; };
+		26ECFEDA205135DF007095AA /* Chu thich con trong.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE90205135CB007095AA /* Chu thich con trong.png */; };
+		26ECFEDB205135DF007095AA /* Icon scroll down.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE91205135CB007095AA /* Icon scroll down.png */; };
+		26ECFEDC205135DF007095AA /* Icon loai dich vu.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE92205135CB007095AA /* Icon loai dich vu.png */; };
+		26ECFEDD205135DF007095AA /* Nut tick man 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE93205135CB007095AA /* Nut tick man 1.png */; };
+		26ECFEDE205135DF007095AA /* Khung feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE94205135CC007095AA /* Khung feedback.png */; };
+		26ECFEDF205135DF007095AA /* Icon so nguoi doi.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE95205135CC007095AA /* Icon so nguoi doi.png */; };
+		26ECFEE0205135DF007095AA /* Feedback half star.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE96205135CC007095AA /* Feedback half star.png */; };
+		26ECFEE1205135DF007095AA /* Ke trang man 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE97205135CC007095AA /* Ke trang man 5.png */; };
+		26ECFEE2205135DF007095AA /* Icon dinh vi man 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE98205135CD007095AA /* Icon dinh vi man 4.png */; };
+		26ECFEE3205135DF007095AA /* Mui ten chon dich vu.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE99205135CD007095AA /* Mui ten chon dich vu.png */; };
+		26ECFEE4205135DF007095AA /* Icon ngay.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE9A205135CD007095AA /* Icon ngay.png */; };
+		26ECFEE5205135DF007095AA /* Khung dia diem xanh.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE9B205135CD007095AA /* Khung dia diem xanh.png */; };
+		26ECFEE6205135DF007095AA /* Phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE9C205135CE007095AA /* Phone.png */; };
+		26ECFEE7205135DF007095AA /* Moc thoi gian.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE9D205135CE007095AA /* Moc thoi gian.png */; };
+		26ECFEE8205135DF007095AA /* Star feedbank.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE9E205135CE007095AA /* Star feedbank.png */; };
+		26ECFEE9205135DF007095AA /* Avatar teller.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFE9F205135CF007095AA /* Avatar teller.png */; };
+		26ECFEEA205135DF007095AA /* Icon calendar man 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA0205135CF007095AA /* Icon calendar man 3.png */; };
+		26ECFEEB205135DF007095AA /* Chu thich lua chon man 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA1205135CF007095AA /* Chu thich lua chon man 7.png */; };
+		26ECFEEC205135DF007095AA /* Khung dia diem do.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA2205135D0007095AA /* Khung dia diem do.png */; };
+		26ECFEED205135DF007095AA /* Chon thoi gian.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA3205135D0007095AA /* Chon thoi gian.png */; };
+		26ECFEEE205135DF007095AA /* Icon Feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA4205135D1007095AA /* Icon Feedback.png */; };
+		26ECFEEF205135DF007095AA /* Notification1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA5205135D1007095AA /* Notification1.png */; };
+		26ECFEF0205135DF007095AA /* Icon chon calendar man 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA6205135D1007095AA /* Icon chon calendar man 3.png */; };
+		26ECFEF1205135DF007095AA /* Recent search.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA7205135D2007095AA /* Recent search.png */; };
+		26ECFEF2205135DF007095AA /* Red circle man 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA8205135D2007095AA /* Red circle man 7.png */; };
+		26ECFEF3205135DF007095AA /* Feedback stars 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEA9205135D2007095AA /* Feedback stars 3.png */; };
+		26ECFEF4205135DF007095AA /* Loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEAA205135D3007095AA /* Loading.png */; };
+		26ECFEF5205135DF007095AA /* Icon chon man 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEAB205135D3007095AA /* Icon chon man 6.png */; };
+		26ECFEF6205135DF007095AA /* Khung chon dich vu.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEAC205135D4007095AA /* Khung chon dich vu.png */; };
+		26ECFEF7205135DF007095AA /* Nut chon side bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEAD205135D4007095AA /* Nut chon side bar.png */; };
+		26ECFEF8205135DF007095AA /* Icon HDSD.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEAE205135D4007095AA /* Icon HDSD.png */; };
+		26ECFEF9205135DF007095AA /* Khung dia diem man 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEAF205135D5007095AA /* Khung dia diem man 6.png */; };
+		26ECFEFA205135DF007095AA /* Tick ok man 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB0205135D5007095AA /* Tick ok man 2.png */; };
+		26ECFEFB205135DF007095AA /* Icon place.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB1205135D6007095AA /* Icon place.png */; };
+		26ECFEFC205135DF007095AA /* Button mau xanh nho.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB2205135D6007095AA /* Button mau xanh nho.png */; };
+		26ECFEFD205135DF007095AA /* Icon recent visit.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB3205135D7007095AA /* Icon recent visit.png */; };
+		26ECFEFE205135DF007095AA /* Button mau xanh dai.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB4205135D7007095AA /* Button mau xanh dai.png */; };
+		26ECFEFF205135DF007095AA /* Dang cho.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB5205135D7007095AA /* Dang cho.png */; };
+		26ECFF00205135DF007095AA /* Feedback stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB6205135D8007095AA /* Feedback stars.png */; };
+		26ECFF01205135DF007095AA /* Icon company.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB7205135D8007095AA /* Icon company.png */; };
+		26ECFF02205135DF007095AA /* Icon dinh vi mau trang.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB8205135D9007095AA /* Icon dinh vi mau trang.png */; };
+		26ECFF03205135DF007095AA /* Icon user.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEB9205135D9007095AA /* Icon user.png */; };
+		26ECFF04205135DF007095AA /* Icon warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEBA205135DA007095AA /* Icon warning.png */; };
+		26ECFF05205135DF007095AA /* Feedback full star.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEBB205135DA007095AA /* Feedback full star.png */; };
+		26ECFF06205135DF007095AA /* Button mau xanh phan feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEBC205135DA007095AA /* Button mau xanh phan feedback.png */; };
+		26ECFF07205135DF007095AA /* Icon thoi gian.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEBD205135DB007095AA /* Icon thoi gian.png */; };
+		26ECFF08205135DF007095AA /* Da huy.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEBE205135DB007095AA /* Da huy.png */; };
+		26ECFF09205135DF007095AA /* Icon mess text.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEBF205135DC007095AA /* Icon mess text.png */; };
+		26ECFF0A205135DF007095AA /* Icon success.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC0205135DC007095AA /* Icon success.png */; };
+		26ECFF0B205135DF007095AA /* Khung man 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC1205135DC007095AA /* Khung man 9.png */; };
+		26ECFF0C205135DF007095AA /* Notify circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC2205135DD007095AA /* Notify circle.png */; };
+		26ECFF0D205135DF007095AA /* Icon search.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC3205135DD007095AA /* Icon search.png */; };
+		26ECFF0E205135DF007095AA /* Ma ticket.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC4205135DE007095AA /* Ma ticket.png */; };
+		26ECFF0F205135DF007095AA /* Khung man 17.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC5205135DE007095AA /* Khung man 17.png */; };
+		26ECFF10205135DF007095AA /* Khung tim kiem.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC6205135DE007095AA /* Khung tim kiem.png */; };
+		26ECFF11205135DF007095AA /* Icon my Schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 26ECFEC7205135DF007095AA /* Icon my Schedule.png */; };
 		531FF2111FD42B1200686E65 /* ChooseBranchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2101FD42B1200686E65 /* ChooseBranchController.m */; };
 		531FF2151FD42B3A00686E65 /* BranchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531FF2131FD42B3A00686E65 /* BranchCell.m */; };
 		531FF2161FD42B3A00686E65 /* BranchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531FF2141FD42B3A00686E65 /* BranchCell.xib */; };
@@ -117,56 +142,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		265B28E1204FEA81006CBEC6 /* CETM-BookingApp-2-71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-71.png"; sourceTree = "<group>"; };
-		265B28E2204FEA81006CBEC6 /* CETM-BookingApp-2-39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-39.png"; sourceTree = "<group>"; };
-		265B28E3204FEA82006CBEC6 /* CETM-BookingApp-2-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-27.png"; sourceTree = "<group>"; };
-		265B28E4204FEA82006CBEC6 /* CETM-BookingApp-2-41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-41.png"; sourceTree = "<group>"; };
-		265B28E5204FEA82006CBEC6 /* CETM-BookingApp-2-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-28.png"; sourceTree = "<group>"; };
-		265B28E6204FEA82006CBEC6 /* CETM-BookingApp-2-37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-37.png"; sourceTree = "<group>"; };
-		265B28E7204FEA82006CBEC6 /* CETM-BookingApp-2-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-57.png"; sourceTree = "<group>"; };
-		265B28E8204FEA82006CBEC6 /* CETM-BookingApp-2-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-66.png"; sourceTree = "<group>"; };
-		265B28E9204FEA82006CBEC6 /* CETM-BookingApp-2-59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-59.png"; sourceTree = "<group>"; };
-		265B28EA204FEA83006CBEC6 /* CETM-BookingApp-2-49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-49.png"; sourceTree = "<group>"; };
-		265B28EB204FEA83006CBEC6 /* CETM-BookingApp-2-65.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-65.png"; sourceTree = "<group>"; };
-		265B28EC204FEA83006CBEC6 /* CETM-BookingApp-2-54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-54.png"; sourceTree = "<group>"; };
-		265B28ED204FEA83006CBEC6 /* CETM-BookingApp-2-34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-34.png"; sourceTree = "<group>"; };
-		265B28EE204FEA83006CBEC6 /* CETM-BookingApp-2-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-33.png"; sourceTree = "<group>"; };
-		265B28EF204FEA83006CBEC6 /* CETM-BookingApp-2-68.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-68.png"; sourceTree = "<group>"; };
-		265B28F0204FEA83006CBEC6 /* CETM-BookingApp-2-69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-69.png"; sourceTree = "<group>"; };
-		265B28F1204FEA83006CBEC6 /* CETM-BookingApp-2-43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-43.png"; sourceTree = "<group>"; };
-		265B28F2204FEA83006CBEC6 /* CETM-BookingApp-2-51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-51.png"; sourceTree = "<group>"; };
-		265B28F3204FEA83006CBEC6 /* CETM-BookingApp-2-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-70.png"; sourceTree = "<group>"; };
-		265B28F4204FEA84006CBEC6 /* CETM-BookingApp-2-46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-46.png"; sourceTree = "<group>"; };
-		265B28F5204FEA84006CBEC6 /* CETM-BookingApp-2-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-58.png"; sourceTree = "<group>"; };
-		265B28F6204FEA84006CBEC6 /* CETM-BookingApp-2-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-60.png"; sourceTree = "<group>"; };
-		265B28F7204FEA84006CBEC6 /* CETM-BookingApp-2-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-25.png"; sourceTree = "<group>"; };
-		265B28F8204FEA85006CBEC6 /* CETM-BookingApp-2-61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-61.png"; sourceTree = "<group>"; };
-		265B28F9204FEA85006CBEC6 /* CETM-BookingApp-2-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-36.png"; sourceTree = "<group>"; };
-		265B28FA204FEA85006CBEC6 /* CETM-BookingApp-2-47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-47.png"; sourceTree = "<group>"; };
-		265B28FB204FEA85006CBEC6 /* CETM-BookingApp-2-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-26.png"; sourceTree = "<group>"; };
-		265B28FC204FEA85006CBEC6 /* CETM-BookingApp-2-53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-53.png"; sourceTree = "<group>"; };
-		265B28FD204FEA85006CBEC6 /* CETM-BookingApp-2-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-48.png"; sourceTree = "<group>"; };
-		265B28FE204FEA85006CBEC6 /* CETM-BookingApp-2-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-30.png"; sourceTree = "<group>"; };
-		265B28FF204FEA85006CBEC6 /* CETM-BookingApp-2-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-40.png"; sourceTree = "<group>"; };
-		265B2900204FEA85006CBEC6 /* CETM-BookingApp-2-52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-52.png"; sourceTree = "<group>"; };
-		265B2901204FEA86006CBEC6 /* CETM-BookingApp-2-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-72.png"; sourceTree = "<group>"; };
-		265B2902204FEA86006CBEC6 /* CETM-BookingApp-2-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-29.png"; sourceTree = "<group>"; };
-		265B2903204FEA86006CBEC6 /* CETM-BookingApp-2-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-32.png"; sourceTree = "<group>"; };
-		265B2904204FEA86006CBEC6 /* CETM-BookingApp-2-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-24.png"; sourceTree = "<group>"; };
-		265B2905204FEA86006CBEC6 /* CETM-BookingApp-2-44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-44.png"; sourceTree = "<group>"; };
-		265B2906204FEA86006CBEC6 /* CETM-BookingApp-2-55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-55.png"; sourceTree = "<group>"; };
-		265B2907204FEA86006CBEC6 /* CETM-BookingApp-2-62.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-62.png"; sourceTree = "<group>"; };
-		265B2908204FEA86006CBEC6 /* CETM-BookingApp-2-56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-56.png"; sourceTree = "<group>"; };
-		265B2909204FEA86006CBEC6 /* CETM-BookingApp-2-38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-38.png"; sourceTree = "<group>"; };
-		265B290A204FEA86006CBEC6 /* CETM-BookingApp-2-67.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-67.png"; sourceTree = "<group>"; };
-		265B290B204FEA87006CBEC6 /* CETM-BookingApp-2-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-35.png"; sourceTree = "<group>"; };
-		265B290C204FEA87006CBEC6 /* CETM-BookingApp-2-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-64.png"; sourceTree = "<group>"; };
-		265B290D204FEA87006CBEC6 /* CETM-BookingApp-2-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-31.png"; sourceTree = "<group>"; };
-		265B290E204FEA87006CBEC6 /* CETM-BookingApp-2-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-50.png"; sourceTree = "<group>"; };
-		265B290F204FEA87006CBEC6 /* CETM-BookingApp-2-42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-42.png"; sourceTree = "<group>"; };
-		265B2910204FEA87006CBEC6 /* CETM-BookingApp-2-63.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-63.png"; sourceTree = "<group>"; };
-		265B2911204FEA87006CBEC6 /* CETM-BookingApp-2-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-23.png"; sourceTree = "<group>"; };
-		265B2912204FEA87006CBEC6 /* CETM-BookingApp-2-45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CETM-BookingApp-2-45.png"; sourceTree = "<group>"; };
 		26868DC3204D2D2700686887 /* GGMapClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGMapClient.h; sourceTree = "<group>"; };
 		26868DC4204D2D2800686887 /* WeGoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeGoClient.h; sourceTree = "<group>"; };
 		26868DC5204D2D2800686887 /* WeGoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeGoClient.m; sourceTree = "<group>"; };
@@ -223,6 +198,82 @@
 		26ECFE6D2050F9D9007095AA /* WSCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSCalendarView.m; sourceTree = "<group>"; };
 		26ECFE6E2050F9D9007095AA /* WSCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSCalendarView.xib; sourceTree = "<group>"; };
 		26ECFE6F2050F9D9007095AA /* WSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLabel.m; sourceTree = "<group>"; };
+		26ECFE7920511D17007095AA /* ConfirmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmVC.h; sourceTree = "<group>"; };
+		26ECFE7A20511D17007095AA /* ConfirmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmVC.m; sourceTree = "<group>"; };
+		26ECFE7C205135C9007095AA /* Icon dinh vi nho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon dinh vi nho.png"; sourceTree = "<group>"; };
+		26ECFE7D205135CA007095AA /* Hoan thanh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hoan thanh.png"; sourceTree = "<group>"; };
+		26ECFE7E205135CA007095AA /* Notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Notification.png; sourceTree = "<group>"; };
+		26ECFE7F205135CA007095AA /* Vong tron man 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vong tron man 1.png"; sourceTree = "<group>"; };
+		26ECFE81205135CB007095AA /* So dien thoai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "So dien thoai.png"; sourceTree = "<group>"; };
+		26ECFE82205135CB007095AA /* Mat khau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mat khau.png"; sourceTree = "<group>"; };
+		26ECFE83205135CB007095AA /* Icon so dien thoai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon so dien thoai.png"; sourceTree = "<group>"; };
+		26ECFE84205135CB007095AA /* Icon mat khau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon mat khau.png"; sourceTree = "<group>"; };
+		26ECFE85205135CB007095AA /* Login 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login 1.png"; sourceTree = "<group>"; };
+		26ECFE86205135CB007095AA /* Login 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login 2.png"; sourceTree = "<group>"; };
+		26ECFE87205135CB007095AA /* Login 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login 3.png"; sourceTree = "<group>"; };
+		26ECFE88205135CB007095AA /* Nut back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nut back.png"; sourceTree = "<group>"; };
+		26ECFE8A205135CB007095AA /* Khong duoc chon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khong duoc chon.png"; sourceTree = "<group>"; };
+		26ECFE8B205135CB007095AA /* Chu thich da chon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chu thich da chon.png"; sourceTree = "<group>"; };
+		26ECFE8C205135CB007095AA /* Chu thich khong duoc chon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chu thich khong duoc chon.png"; sourceTree = "<group>"; };
+		26ECFE8D205135CB007095AA /* Dang chon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dang chon.png"; sourceTree = "<group>"; };
+		26ECFE8E205135CB007095AA /* Da chon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Da chon.png"; sourceTree = "<group>"; };
+		26ECFE8F205135CB007095AA /* Con trong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Con trong.png"; sourceTree = "<group>"; };
+		26ECFE90205135CB007095AA /* Chu thich con trong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chu thich con trong.png"; sourceTree = "<group>"; };
+		26ECFE91205135CB007095AA /* Icon scroll down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon scroll down.png"; sourceTree = "<group>"; };
+		26ECFE92205135CB007095AA /* Icon loai dich vu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon loai dich vu.png"; sourceTree = "<group>"; };
+		26ECFE93205135CB007095AA /* Nut tick man 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nut tick man 1.png"; sourceTree = "<group>"; };
+		26ECFE94205135CC007095AA /* Khung feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung feedback.png"; sourceTree = "<group>"; };
+		26ECFE95205135CC007095AA /* Icon so nguoi doi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon so nguoi doi.png"; sourceTree = "<group>"; };
+		26ECFE96205135CC007095AA /* Feedback half star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feedback half star.png"; sourceTree = "<group>"; };
+		26ECFE97205135CC007095AA /* Ke trang man 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ke trang man 5.png"; sourceTree = "<group>"; };
+		26ECFE98205135CD007095AA /* Icon dinh vi man 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon dinh vi man 4.png"; sourceTree = "<group>"; };
+		26ECFE99205135CD007095AA /* Mui ten chon dich vu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mui ten chon dich vu.png"; sourceTree = "<group>"; };
+		26ECFE9A205135CD007095AA /* Icon ngay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon ngay.png"; sourceTree = "<group>"; };
+		26ECFE9B205135CD007095AA /* Khung dia diem xanh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung dia diem xanh.png"; sourceTree = "<group>"; };
+		26ECFE9C205135CE007095AA /* Phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phone.png; sourceTree = "<group>"; };
+		26ECFE9D205135CE007095AA /* Moc thoi gian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moc thoi gian.png"; sourceTree = "<group>"; };
+		26ECFE9E205135CE007095AA /* Star feedbank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star feedbank.png"; sourceTree = "<group>"; };
+		26ECFE9F205135CF007095AA /* Avatar teller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Avatar teller.png"; sourceTree = "<group>"; };
+		26ECFEA0205135CF007095AA /* Icon calendar man 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon calendar man 3.png"; sourceTree = "<group>"; };
+		26ECFEA1205135CF007095AA /* Chu thich lua chon man 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chu thich lua chon man 7.png"; sourceTree = "<group>"; };
+		26ECFEA2205135D0007095AA /* Khung dia diem do.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung dia diem do.png"; sourceTree = "<group>"; };
+		26ECFEA3205135D0007095AA /* Chon thoi gian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chon thoi gian.png"; sourceTree = "<group>"; };
+		26ECFEA4205135D1007095AA /* Icon Feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon Feedback.png"; sourceTree = "<group>"; };
+		26ECFEA5205135D1007095AA /* Notification1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Notification1.png; sourceTree = "<group>"; };
+		26ECFEA6205135D1007095AA /* Icon chon calendar man 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon chon calendar man 3.png"; sourceTree = "<group>"; };
+		26ECFEA7205135D2007095AA /* Recent search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recent search.png"; sourceTree = "<group>"; };
+		26ECFEA8205135D2007095AA /* Red circle man 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red circle man 7.png"; sourceTree = "<group>"; };
+		26ECFEA9205135D2007095AA /* Feedback stars 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feedback stars 3.png"; sourceTree = "<group>"; };
+		26ECFEAA205135D3007095AA /* Loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading.png; sourceTree = "<group>"; };
+		26ECFEAB205135D3007095AA /* Icon chon man 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon chon man 6.png"; sourceTree = "<group>"; };
+		26ECFEAC205135D4007095AA /* Khung chon dich vu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung chon dich vu.png"; sourceTree = "<group>"; };
+		26ECFEAD205135D4007095AA /* Nut chon side bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nut chon side bar.png"; sourceTree = "<group>"; };
+		26ECFEAE205135D4007095AA /* Icon HDSD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon HDSD.png"; sourceTree = "<group>"; };
+		26ECFEAF205135D5007095AA /* Khung dia diem man 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung dia diem man 6.png"; sourceTree = "<group>"; };
+		26ECFEB0205135D5007095AA /* Tick ok man 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tick ok man 2.png"; sourceTree = "<group>"; };
+		26ECFEB1205135D6007095AA /* Icon place.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon place.png"; sourceTree = "<group>"; };
+		26ECFEB2205135D6007095AA /* Button mau xanh nho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button mau xanh nho.png"; sourceTree = "<group>"; };
+		26ECFEB3205135D7007095AA /* Icon recent visit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon recent visit.png"; sourceTree = "<group>"; };
+		26ECFEB4205135D7007095AA /* Button mau xanh dai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button mau xanh dai.png"; sourceTree = "<group>"; };
+		26ECFEB5205135D7007095AA /* Dang cho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dang cho.png"; sourceTree = "<group>"; };
+		26ECFEB6205135D8007095AA /* Feedback stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feedback stars.png"; sourceTree = "<group>"; };
+		26ECFEB7205135D8007095AA /* Icon company.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon company.png"; sourceTree = "<group>"; };
+		26ECFEB8205135D9007095AA /* Icon dinh vi mau trang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon dinh vi mau trang.png"; sourceTree = "<group>"; };
+		26ECFEB9205135D9007095AA /* Icon user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon user.png"; sourceTree = "<group>"; };
+		26ECFEBA205135DA007095AA /* Icon warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon warning.png"; sourceTree = "<group>"; };
+		26ECFEBB205135DA007095AA /* Feedback full star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feedback full star.png"; sourceTree = "<group>"; };
+		26ECFEBC205135DA007095AA /* Button mau xanh phan feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button mau xanh phan feedback.png"; sourceTree = "<group>"; };
+		26ECFEBD205135DB007095AA /* Icon thoi gian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon thoi gian.png"; sourceTree = "<group>"; };
+		26ECFEBE205135DB007095AA /* Da huy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Da huy.png"; sourceTree = "<group>"; };
+		26ECFEBF205135DC007095AA /* Icon mess text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon mess text.png"; sourceTree = "<group>"; };
+		26ECFEC0205135DC007095AA /* Icon success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon success.png"; sourceTree = "<group>"; };
+		26ECFEC1205135DC007095AA /* Khung man 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung man 9.png"; sourceTree = "<group>"; };
+		26ECFEC2205135DD007095AA /* Notify circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Notify circle.png"; sourceTree = "<group>"; };
+		26ECFEC3205135DD007095AA /* Icon search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon search.png"; sourceTree = "<group>"; };
+		26ECFEC4205135DE007095AA /* Ma ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ma ticket.png"; sourceTree = "<group>"; };
+		26ECFEC5205135DE007095AA /* Khung man 17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung man 17.png"; sourceTree = "<group>"; };
+		26ECFEC6205135DE007095AA /* Khung tim kiem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Khung tim kiem.png"; sourceTree = "<group>"; };
+		26ECFEC7205135DF007095AA /* Icon my Schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon my Schedule.png"; sourceTree = "<group>"; };
 		332FBCB109D5477225E12F07 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
 		3366CDB511AE969B1F94E088 /* Pods-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Booking/Pods-Booking.debug.xcconfig"; sourceTree = "<group>"; };
 		531FF20F1FD42B1200686E65 /* ChooseBranchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseBranchController.h; sourceTree = "<group>"; };
@@ -297,56 +348,68 @@
 		265B28E0204FEA16006CBEC6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				265B2911204FEA87006CBEC6 /* CETM-BookingApp-2-23.png */,
-				265B2904204FEA86006CBEC6 /* CETM-BookingApp-2-24.png */,
-				265B28F7204FEA84006CBEC6 /* CETM-BookingApp-2-25.png */,
-				265B28FB204FEA85006CBEC6 /* CETM-BookingApp-2-26.png */,
-				265B28E3204FEA82006CBEC6 /* CETM-BookingApp-2-27.png */,
-				265B28E5204FEA82006CBEC6 /* CETM-BookingApp-2-28.png */,
-				265B2902204FEA86006CBEC6 /* CETM-BookingApp-2-29.png */,
-				265B28FE204FEA85006CBEC6 /* CETM-BookingApp-2-30.png */,
-				265B290D204FEA87006CBEC6 /* CETM-BookingApp-2-31.png */,
-				265B2903204FEA86006CBEC6 /* CETM-BookingApp-2-32.png */,
-				265B28EE204FEA83006CBEC6 /* CETM-BookingApp-2-33.png */,
-				265B28ED204FEA83006CBEC6 /* CETM-BookingApp-2-34.png */,
-				265B290B204FEA87006CBEC6 /* CETM-BookingApp-2-35.png */,
-				265B28F9204FEA85006CBEC6 /* CETM-BookingApp-2-36.png */,
-				265B28E6204FEA82006CBEC6 /* CETM-BookingApp-2-37.png */,
-				265B2909204FEA86006CBEC6 /* CETM-BookingApp-2-38.png */,
-				265B28E2204FEA81006CBEC6 /* CETM-BookingApp-2-39.png */,
-				265B28FF204FEA85006CBEC6 /* CETM-BookingApp-2-40.png */,
-				265B28E4204FEA82006CBEC6 /* CETM-BookingApp-2-41.png */,
-				265B290F204FEA87006CBEC6 /* CETM-BookingApp-2-42.png */,
-				265B28F1204FEA83006CBEC6 /* CETM-BookingApp-2-43.png */,
-				265B2905204FEA86006CBEC6 /* CETM-BookingApp-2-44.png */,
-				265B2912204FEA87006CBEC6 /* CETM-BookingApp-2-45.png */,
-				265B28F4204FEA84006CBEC6 /* CETM-BookingApp-2-46.png */,
-				265B28FA204FEA85006CBEC6 /* CETM-BookingApp-2-47.png */,
-				265B28FD204FEA85006CBEC6 /* CETM-BookingApp-2-48.png */,
-				265B28EA204FEA83006CBEC6 /* CETM-BookingApp-2-49.png */,
-				265B290E204FEA87006CBEC6 /* CETM-BookingApp-2-50.png */,
-				265B28F2204FEA83006CBEC6 /* CETM-BookingApp-2-51.png */,
-				265B2900204FEA85006CBEC6 /* CETM-BookingApp-2-52.png */,
-				265B28FC204FEA85006CBEC6 /* CETM-BookingApp-2-53.png */,
-				265B28EC204FEA83006CBEC6 /* CETM-BookingApp-2-54.png */,
-				265B2906204FEA86006CBEC6 /* CETM-BookingApp-2-55.png */,
-				265B2908204FEA86006CBEC6 /* CETM-BookingApp-2-56.png */,
-				265B28E7204FEA82006CBEC6 /* CETM-BookingApp-2-57.png */,
-				265B28F5204FEA84006CBEC6 /* CETM-BookingApp-2-58.png */,
-				265B28E9204FEA82006CBEC6 /* CETM-BookingApp-2-59.png */,
-				265B28F6204FEA84006CBEC6 /* CETM-BookingApp-2-60.png */,
-				265B28F8204FEA85006CBEC6 /* CETM-BookingApp-2-61.png */,
-				265B2907204FEA86006CBEC6 /* CETM-BookingApp-2-62.png */,
-				265B2910204FEA87006CBEC6 /* CETM-BookingApp-2-63.png */,
-				265B290C204FEA87006CBEC6 /* CETM-BookingApp-2-64.png */,
-				265B28EB204FEA83006CBEC6 /* CETM-BookingApp-2-65.png */,
-				265B28E8204FEA82006CBEC6 /* CETM-BookingApp-2-66.png */,
-				265B290A204FEA86006CBEC6 /* CETM-BookingApp-2-67.png */,
-				265B28EF204FEA83006CBEC6 /* CETM-BookingApp-2-68.png */,
-				265B28F0204FEA83006CBEC6 /* CETM-BookingApp-2-69.png */,
-				265B28F3204FEA83006CBEC6 /* CETM-BookingApp-2-70.png */,
-				265B28E1204FEA81006CBEC6 /* CETM-BookingApp-2-71.png */,
-				265B2901204FEA86006CBEC6 /* CETM-BookingApp-2-72.png */,
+				26ECFE9F205135CF007095AA /* Avatar teller.png */,
+				26ECFEB4205135D7007095AA /* Button mau xanh dai.png */,
+				26ECFEB2205135D6007095AA /* Button mau xanh nho.png */,
+				26ECFEBC205135DA007095AA /* Button mau xanh phan feedback.png */,
+				26ECFEA3205135D0007095AA /* Chon thoi gian.png */,
+				26ECFEA1205135CF007095AA /* Chu thich lua chon man 7.png */,
+				26ECFEBE205135DB007095AA /* Da huy.png */,
+				26ECFEB5205135D7007095AA /* Dang cho.png */,
+				26ECFEBB205135DA007095AA /* Feedback full star.png */,
+				26ECFE96205135CC007095AA /* Feedback half star.png */,
+				26ECFEA9205135D2007095AA /* Feedback stars 3.png */,
+				26ECFEB6205135D8007095AA /* Feedback stars.png */,
+				26ECFE7D205135CA007095AA /* Hoan thanh.png */,
+				26ECFEA0205135CF007095AA /* Icon calendar man 3.png */,
+				26ECFEA6205135D1007095AA /* Icon chon calendar man 3.png */,
+				26ECFEAB205135D3007095AA /* Icon chon man 6.png */,
+				26ECFEB7205135D8007095AA /* Icon company.png */,
+				26ECFE98205135CD007095AA /* Icon dinh vi man 4.png */,
+				26ECFEB8205135D9007095AA /* Icon dinh vi mau trang.png */,
+				26ECFE7C205135C9007095AA /* Icon dinh vi nho.png */,
+				26ECFEA4205135D1007095AA /* Icon Feedback.png */,
+				26ECFEAE205135D4007095AA /* Icon HDSD.png */,
+				26ECFE92205135CB007095AA /* Icon loai dich vu.png */,
+				26ECFEBF205135DC007095AA /* Icon mess text.png */,
+				26ECFEC7205135DF007095AA /* Icon my Schedule.png */,
+				26ECFE9A205135CD007095AA /* Icon ngay.png */,
+				26ECFEB1205135D6007095AA /* Icon place.png */,
+				26ECFEB3205135D7007095AA /* Icon recent visit.png */,
+				26ECFE91205135CB007095AA /* Icon scroll down.png */,
+				26ECFEC3205135DD007095AA /* Icon search.png */,
+				26ECFE95205135CC007095AA /* Icon so nguoi doi.png */,
+				26ECFEC0205135DC007095AA /* Icon success.png */,
+				26ECFEBD205135DB007095AA /* Icon thoi gian.png */,
+				26ECFEB9205135D9007095AA /* Icon user.png */,
+				26ECFEBA205135DA007095AA /* Icon warning.png */,
+				26ECFE97205135CC007095AA /* Ke trang man 5.png */,
+				26ECFEAC205135D4007095AA /* Khung chon dich vu.png */,
+				26ECFEA2205135D0007095AA /* Khung dia diem do.png */,
+				26ECFEAF205135D5007095AA /* Khung dia diem man 6.png */,
+				26ECFE9B205135CD007095AA /* Khung dia diem xanh.png */,
+				26ECFE94205135CC007095AA /* Khung feedback.png */,
+				26ECFEC1205135DC007095AA /* Khung man 9.png */,
+				26ECFEC5205135DE007095AA /* Khung man 17.png */,
+				26ECFEC6205135DE007095AA /* Khung tim kiem.png */,
+				26ECFEAA205135D3007095AA /* Loading.png */,
+				26ECFE80205135CB007095AA /* Login icons */,
+				26ECFEC4205135DE007095AA /* Ma ticket.png */,
+				26ECFE9D205135CE007095AA /* Moc thoi gian.png */,
+				26ECFE99205135CD007095AA /* Mui ten chon dich vu.png */,
+				26ECFE7E205135CA007095AA /* Notification.png */,
+				26ECFEA5205135D1007095AA /* Notification1.png */,
+				26ECFEC2205135DD007095AA /* Notify circle.png */,
+				26ECFE88205135CB007095AA /* Nut back.png */,
+				26ECFEAD205135D4007095AA /* Nut chon side bar.png */,
+				26ECFE93205135CB007095AA /* Nut tick man 1.png */,
+				26ECFE9C205135CE007095AA /* Phone.png */,
+				26ECFEA7205135D2007095AA /* Recent search.png */,
+				26ECFEA8205135D2007095AA /* Red circle man 7.png */,
+				26ECFE9E205135CE007095AA /* Star feedbank.png */,
+				26ECFEB0205135D5007095AA /* Tick ok man 2.png */,
+				26ECFE89205135CB007095AA /* Time selection */,
+				26ECFE7F205135CA007095AA /* Vong tron man 1.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -473,6 +536,34 @@
 			path = WSCalendar;
 			sourceTree = "<group>";
 		};
+		26ECFE80205135CB007095AA /* Login icons */ = {
+			isa = PBXGroup;
+			children = (
+				26ECFE81205135CB007095AA /* So dien thoai.png */,
+				26ECFE82205135CB007095AA /* Mat khau.png */,
+				26ECFE83205135CB007095AA /* Icon so dien thoai.png */,
+				26ECFE84205135CB007095AA /* Icon mat khau.png */,
+				26ECFE85205135CB007095AA /* Login 1.png */,
+				26ECFE86205135CB007095AA /* Login 2.png */,
+				26ECFE87205135CB007095AA /* Login 3.png */,
+			);
+			path = "Login icons";
+			sourceTree = "<group>";
+		};
+		26ECFE89205135CB007095AA /* Time selection */ = {
+			isa = PBXGroup;
+			children = (
+				26ECFE8A205135CB007095AA /* Khong duoc chon.png */,
+				26ECFE8B205135CB007095AA /* Chu thich da chon.png */,
+				26ECFE8C205135CB007095AA /* Chu thich khong duoc chon.png */,
+				26ECFE8D205135CB007095AA /* Dang chon.png */,
+				26ECFE8E205135CB007095AA /* Da chon.png */,
+				26ECFE8F205135CB007095AA /* Con trong.png */,
+				26ECFE90205135CB007095AA /* Chu thich con trong.png */,
+			);
+			path = "Time selection";
+			sourceTree = "<group>";
+		};
 		407CA06B74CA37615DFB7B7E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +653,8 @@
 				53B00D861FD7D8CD00044E1B /* SearchLocationController.m */,
 				26868DCD204D30F600686887 /* BookingServiceVC.h */,
 				26868DCE204D30F700686887 /* BookingServiceVC.m */,
+				26ECFE7920511D17007095AA /* ConfirmVC.h */,
+				26ECFE7A20511D17007095AA /* ConfirmVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -665,64 +758,88 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265B292B204FEA87006CBEC6 /* CETM-BookingApp-2-36.png in Resources */,
-				265B2944204FEA87006CBEC6 /* CETM-BookingApp-2-45.png in Resources */,
-				265B2932204FEA87006CBEC6 /* CETM-BookingApp-2-52.png in Resources */,
-				265B2931204FEA87006CBEC6 /* CETM-BookingApp-2-40.png in Resources */,
-				265B2927204FEA87006CBEC6 /* CETM-BookingApp-2-58.png in Resources */,
+				26ECFEE3205135DF007095AA /* Mui ten chon dich vu.png in Resources */,
+				26ECFF0D205135DF007095AA /* Icon search.png in Resources */,
+				26ECFEF7205135DF007095AA /* Nut chon side bar.png in Resources */,
+				26ECFED4205135DF007095AA /* Khong duoc chon.png in Resources */,
 				532721011FCA694300A7D494 /* LaunchScreen.storyboard in Resources */,
-				265B2922204FEA87006CBEC6 /* CETM-BookingApp-2-69.png in Resources */,
-				265B291E204FEA87006CBEC6 /* CETM-BookingApp-2-54.png in Resources */,
-				265B291F204FEA87006CBEC6 /* CETM-BookingApp-2-34.png in Resources */,
-				265B2921204FEA87006CBEC6 /* CETM-BookingApp-2-68.png in Resources */,
-				265B2917204FEA87006CBEC6 /* CETM-BookingApp-2-28.png in Resources */,
-				265B293E204FEA87006CBEC6 /* CETM-BookingApp-2-64.png in Resources */,
-				265B2925204FEA87006CBEC6 /* CETM-BookingApp-2-70.png in Resources */,
-				265B2920204FEA87006CBEC6 /* CETM-BookingApp-2-33.png in Resources */,
-				265B292A204FEA87006CBEC6 /* CETM-BookingApp-2-61.png in Resources */,
-				265B2914204FEA87006CBEC6 /* CETM-BookingApp-2-39.png in Resources */,
+				26ECFEF8205135DF007095AA /* Icon HDSD.png in Resources */,
+				26ECFED7205135DF007095AA /* Dang chon.png in Resources */,
+				26ECFED0205135DF007095AA /* Login 1.png in Resources */,
+				26ECFEE8205135DF007095AA /* Star feedbank.png in Resources */,
+				26ECFEDE205135DF007095AA /* Khung feedback.png in Resources */,
+				26ECFEE7205135DF007095AA /* Moc thoi gian.png in Resources */,
 				26ECFE722050F9DA007095AA /* WSCalendarView.xib in Resources */,
-				265B2915204FEA87006CBEC6 /* CETM-BookingApp-2-27.png in Resources */,
-				265B292C204FEA87006CBEC6 /* CETM-BookingApp-2-47.png in Resources */,
+				26ECFEE1205135DF007095AA /* Ke trang man 5.png in Resources */,
+				26ECFED2205135DF007095AA /* Login 3.png in Resources */,
+				26ECFEC9205135DF007095AA /* Hoan thanh.png in Resources */,
+				26ECFF0C205135DF007095AA /* Notify circle.png in Resources */,
+				26ECFEEF205135DF007095AA /* Notification1.png in Resources */,
+				26ECFED8205135DF007095AA /* Da chon.png in Resources */,
+				26ECFF02205135DF007095AA /* Icon dinh vi mau trang.png in Resources */,
+				26ECFED6205135DF007095AA /* Chu thich khong duoc chon.png in Resources */,
+				26ECFECE205135DF007095AA /* Icon so dien thoai.png in Resources */,
+				26ECFEFC205135DF007095AA /* Button mau xanh nho.png in Resources */,
+				26ECFEFF205135DF007095AA /* Dang cho.png in Resources */,
+				26ECFEDD205135DF007095AA /* Nut tick man 1.png in Resources */,
+				26ECFF00205135DF007095AA /* Feedback stars.png in Resources */,
+				26ECFEFB205135DF007095AA /* Icon place.png in Resources */,
 				532493281FD0036C00E341A1 /* ServiceCell.xib in Resources */,
-				265B293D204FEA87006CBEC6 /* CETM-BookingApp-2-35.png in Resources */,
-				265B2941204FEA87006CBEC6 /* CETM-BookingApp-2-42.png in Resources */,
-				265B293F204FEA87006CBEC6 /* CETM-BookingApp-2-31.png in Resources */,
-				265B2939204FEA87006CBEC6 /* CETM-BookingApp-2-62.png in Resources */,
-				265B2942204FEA87006CBEC6 /* CETM-BookingApp-2-63.png in Resources */,
-				265B291B204FEA87006CBEC6 /* CETM-BookingApp-2-59.png in Resources */,
-				265B291C204FEA87006CBEC6 /* CETM-BookingApp-2-49.png in Resources */,
-				265B293A204FEA87006CBEC6 /* CETM-BookingApp-2-56.png in Resources */,
-				265B292D204FEA87006CBEC6 /* CETM-BookingApp-2-26.png in Resources */,
+				26ECFEE5205135DF007095AA /* Khung dia diem xanh.png in Resources */,
+				26ECFF06205135DF007095AA /* Button mau xanh phan feedback.png in Resources */,
+				26ECFF04205135DF007095AA /* Icon warning.png in Resources */,
+				26ECFEDC205135DF007095AA /* Icon loai dich vu.png in Resources */,
 				53C776A91FD141320011AF1B /* TicketCell.xib in Resources */,
-				265B292F204FEA87006CBEC6 /* CETM-BookingApp-2-48.png in Resources */,
-				265B2935204FEA87006CBEC6 /* CETM-BookingApp-2-32.png in Resources */,
-				265B2940204FEA87006CBEC6 /* CETM-BookingApp-2-50.png in Resources */,
-				265B2916204FEA87006CBEC6 /* CETM-BookingApp-2-41.png in Resources */,
-				265B291A204FEA87006CBEC6 /* CETM-BookingApp-2-66.png in Resources */,
-				265B291D204FEA87006CBEC6 /* CETM-BookingApp-2-65.png in Resources */,
-				265B2928204FEA87006CBEC6 /* CETM-BookingApp-2-60.png in Resources */,
-				265B2930204FEA87006CBEC6 /* CETM-BookingApp-2-30.png in Resources */,
+				26ECFEF9205135DF007095AA /* Khung dia diem man 6.png in Resources */,
+				26ECFEEC205135DF007095AA /* Khung dia diem do.png in Resources */,
 				531FF2161FD42B3A00686E65 /* BranchCell.xib in Resources */,
-				265B2924204FEA87006CBEC6 /* CETM-BookingApp-2-51.png in Resources */,
-				265B2926204FEA87006CBEC6 /* CETM-BookingApp-2-46.png in Resources */,
-				265B2937204FEA87006CBEC6 /* CETM-BookingApp-2-44.png in Resources */,
-				265B293B204FEA87006CBEC6 /* CETM-BookingApp-2-38.png in Resources */,
-				265B2936204FEA87006CBEC6 /* CETM-BookingApp-2-24.png in Resources */,
-				265B2929204FEA87006CBEC6 /* CETM-BookingApp-2-25.png in Resources */,
-				265B292E204FEA87006CBEC6 /* CETM-BookingApp-2-53.png in Resources */,
-				265B2933204FEA87006CBEC6 /* CETM-BookingApp-2-72.png in Resources */,
+				26ECFF11205135DF007095AA /* Icon my Schedule.png in Resources */,
+				26ECFEC8205135DF007095AA /* Icon dinh vi nho.png in Resources */,
+				26ECFF0F205135DF007095AA /* Khung man 17.png in Resources */,
+				26ECFF03205135DF007095AA /* Icon user.png in Resources */,
+				26ECFF01205135DF007095AA /* Icon company.png in Resources */,
+				26ECFEE2205135DF007095AA /* Icon dinh vi man 4.png in Resources */,
+				26ECFF08205135DF007095AA /* Da huy.png in Resources */,
+				26ECFEF1205135DF007095AA /* Recent search.png in Resources */,
+				26ECFEDF205135DF007095AA /* Icon so nguoi doi.png in Resources */,
+				26ECFED9205135DF007095AA /* Con trong.png in Resources */,
+				26ECFF0E205135DF007095AA /* Ma ticket.png in Resources */,
+				26ECFED1205135DF007095AA /* Login 2.png in Resources */,
+				26ECFED3205135DF007095AA /* Nut back.png in Resources */,
+				26ECFEF4205135DF007095AA /* Loading.png in Resources */,
+				26ECFEF5205135DF007095AA /* Icon chon man 6.png in Resources */,
+				26ECFEDA205135DF007095AA /* Chu thich con trong.png in Resources */,
+				26ECFED5205135DF007095AA /* Chu thich da chon.png in Resources */,
+				26ECFF0A205135DF007095AA /* Icon success.png in Resources */,
+				26ECFEF3205135DF007095AA /* Feedback stars 3.png in Resources */,
+				26ECFEDB205135DF007095AA /* Icon scroll down.png in Resources */,
+				26ECFECF205135DF007095AA /* Icon mat khau.png in Resources */,
+				26ECFF07205135DF007095AA /* Icon thoi gian.png in Resources */,
+				26ECFEED205135DF007095AA /* Chon thoi gian.png in Resources */,
+				26ECFF05205135DF007095AA /* Feedback full star.png in Resources */,
+				26ECFECC205135DF007095AA /* So dien thoai.png in Resources */,
+				26ECFECA205135DF007095AA /* Notification.png in Resources */,
+				26ECFF0B205135DF007095AA /* Khung man 9.png in Resources */,
+				26ECFEF6205135DF007095AA /* Khung chon dich vu.png in Resources */,
+				26ECFEEA205135DF007095AA /* Icon calendar man 3.png in Resources */,
+				26ECFF10205135DF007095AA /* Khung tim kiem.png in Resources */,
+				26ECFEE9205135DF007095AA /* Avatar teller.png in Resources */,
+				26ECFECB205135DF007095AA /* Vong tron man 1.png in Resources */,
+				26ECFEEE205135DF007095AA /* Icon Feedback.png in Resources */,
+				26ECFEE4205135DF007095AA /* Icon ngay.png in Resources */,
+				26ECFEFD205135DF007095AA /* Icon recent visit.png in Resources */,
+				26ECFEF2205135DF007095AA /* Red circle man 7.png in Resources */,
+				26ECFECD205135DF007095AA /* Mat khau.png in Resources */,
+				26ECFEE0205135DF007095AA /* Feedback half star.png in Resources */,
+				26ECFEF0205135DF007095AA /* Icon chon calendar man 3.png in Resources */,
 				5380D9C81FD3EDD200AB1B0F /* ScheduleTimeCell.xib in Resources */,
-				265B2938204FEA87006CBEC6 /* CETM-BookingApp-2-55.png in Resources */,
+				26ECFEFE205135DF007095AA /* Button mau xanh dai.png in Resources */,
+				26ECFEFA205135DF007095AA /* Tick ok man 2.png in Resources */,
+				26ECFEEB205135DF007095AA /* Chu thich lua chon man 7.png in Resources */,
+				26ECFEE6205135DF007095AA /* Phone.png in Resources */,
+				26ECFF09205135DF007095AA /* Icon mess text.png in Resources */,
 				532720FE1FCA694300A7D494 /* Assets.xcassets in Resources */,
 				532720FC1FCA694300A7D494 /* Main.storyboard in Resources */,
-				265B2919204FEA87006CBEC6 /* CETM-BookingApp-2-57.png in Resources */,
-				265B2913204FEA87006CBEC6 /* CETM-BookingApp-2-71.png in Resources */,
-				265B2923204FEA87006CBEC6 /* CETM-BookingApp-2-43.png in Resources */,
-				265B2943204FEA87006CBEC6 /* CETM-BookingApp-2-23.png in Resources */,
-				265B2934204FEA87006CBEC6 /* CETM-BookingApp-2-29.png in Resources */,
-				265B293C204FEA87006CBEC6 /* CETM-BookingApp-2-67.png in Resources */,
-				265B2918204FEA87006CBEC6 /* CETM-BookingApp-2-37.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +946,7 @@
 				26E3499B1FD1251D00800DC0 /* WCSTimelineCell.m in Sources */,
 				532B213B1FCEB3D500210506 /* ScheduceTimeController.m in Sources */,
 				26E349921FD1251D00800DC0 /* MASViewConstraint.m in Sources */,
+				26ECFE7B20511D17007095AA /* ConfirmVC.m in Sources */,
 				26E349981FD1251D00800DC0 /* WCSLabel.m in Sources */,
 				53C776AC1FD145130011AF1B /* TicketModel.m in Sources */,
 				5324932B1FD00BA500E341A1 /* RecentVisitsController.m in Sources */,
